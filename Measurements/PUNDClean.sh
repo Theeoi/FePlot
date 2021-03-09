@@ -2,12 +2,12 @@
 
 usage(){
     echo -e "To call PUNDClean please use:"
-    echo -e "$0 <File Path> <Destination Path>"
+    echo -e "$0 <Data Path> <Destination Path>"
     echo -e "-----"
-}
+} ## Example: ./PUNDClean.sh InAsFlashIntA/FE\ PUND...csv ../Data/InAsFlashIntA/
 
 FILEPATH0=$1
-DATADEST=$2/PUND
+DATADEST=${2}PUND
 
 if [[ "x$DATADEST" == "x" ]]; then
     DATADEST=.
@@ -58,10 +58,14 @@ ENDLINE=$(( $END - $ENDLINE + 2 ))
 head -n -$ENDLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
 mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
 
+SAMPLENUM=$(echo $FILENAME | cut -f 7 -d'_')
+CONDENNUM=$(echo $FILENAME | cut -f 9 -d'_' | sed 's/([^)]*)//g')
+mkdir -p $DATADEST/$SAMPLENUM/$CONDENNUM
+
 NEWFILENAME=$(echo $FILENAME | cut -f 2-3,6-9 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
 
-echo "Removing spaces in data. Resulting file in $DATADEST/${NEWFILENAME}.csv"
-sed 's/ //g' $DATALOC/temp_$FILENAME > $DATADEST/$NEWFILENAME.csv
+echo "Removing spaces in data. Resulting file in $DATADEST/$SAMPLENUM/$CONDENNUM/${NEWFILENAME}.csv"
+sed 's/ //g' $DATALOC/temp_$FILENAME > $DATADEST/$SAMPLENUM/$CONDENNUM/$NEWFILENAME.csv
 
 echo "Removing temporary files."
 rm -r $DATALOC/temp_$FILENAME $FILEPATH
