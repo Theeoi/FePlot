@@ -7,7 +7,7 @@ usage(){
 }
 
 FILEPATH0=$1
-DATADEST=$2
+DATADEST=$2/PUND
 
 if [[ "x$DATADEST" == "x" ]]; then
     DATADEST=.

@@ -2,6 +2,7 @@
 
 ### USAGE ###
 # ./PUNDPlot.py <Path to clean PUND data>
+# Example: ./PUNDPlot.py ../Data/InAsFlashIntA/PUND
 
 import sys
 import matplotlib.pyplot as plt

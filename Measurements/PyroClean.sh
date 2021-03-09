@@ -7,7 +7,7 @@ usage(){
 }
 
 FILEPATH=$1
-DATADEST=$2
+DATADEST=$2/Pyro
 
 if [[ "x$DATADEST" == "x" ]]; then
     DATADEST=.
