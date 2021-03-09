@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 usage(){
     echo -e "To call PUNDClean please use:"

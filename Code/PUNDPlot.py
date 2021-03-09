@@ -5,42 +5,55 @@
 # Example: ./PUNDPlot.py ../Data/InAsFlashIntA/PUND
 
 import sys
+import os
+import numpy as np
 import matplotlib.pyplot as plt
 
 ## Read data
 
 PUNDpath = sys.argv[1]
-PUNDfile = open(PUNDpath)
-PUNDfilelines = PUNDfile.readlines()
+PUNDfiles = os.listdir(PUNDpath)
+PUNDfiles.sort()
+numfiles = len(PUNDfiles)
 
-PUNDTime = []
-PUNDCurrent = []
-PUNDVoltage = []
-for line in PUNDfilelines:
-    PUNDTime.append(float(line.split(",")[1]))
-    PUNDCurrent.append(float(line.split(",")[2]))
-    PUNDVoltage.append(float(line.split(",")[3]))
+PUNDTime = [0] * numfiles
+PUNDCurrent = [0] * numfiles
+PUNDVoltage = [0] * numfiles
 
-PUNDfile.close()
+i = 0
+for file in PUNDfiles:
+    if file.endswith('.csv'):
+        PUNDfile = open(os.path.join(PUNDpath, file), 'r')
+        PUNDfilelines = PUNDfile.readlines()
 
-fig = plt.figure(figsize = (9,6))
-ax1 = fig.add_subplot(111)
-ax2 = ax1.twinx()
+        PUNDTime[i] = [float(line.split(",")[1]) for line in PUNDfilelines]
+        PUNDCurrent[i] = [float(line.split(",")[2]) for line in PUNDfilelines]
+        PUNDVoltage[i] = [float(line.split(",")[3]) for line in PUNDfilelines]
 
-ax1.plot([t * 10**3 for t in PUNDTime], [i * 10**6 for i in PUNDCurrent], label = "Current", color = "b")
+        PUNDfile.close()
 
-ax2.plot([t * 10**3 for t in PUNDTime], PUNDVoltage, label = "Voltage", color = "c")
+        fig = plt.figure(figsize = (9,6))
+        ax1 = fig.add_subplot(111)
+        ax2 = ax1.twinx()
 
-fig.legend(fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = ax1.transAxes)
+        ax1.plot([t * 10**3 for t in PUNDTime[i]], [c * 10**6 for c in PUNDCurrent[i]], label = "Current", color = "b")
 
-ax1.tick_params('both', labelsize = "x-large")
-ax2.tick_params('both', labelsize = "x-large")
+        ax2.plot([t * 10**3 for t in PUNDTime[i]], PUNDVoltage[i], label = "Voltage", color = "c")
 
-ax1.set_xlabel("Time [ms]", fontsize = "xx-large")
-ax1.set_ylabel("Current [uA]", fontsize = "xx-large")
-ax2.set_ylabel("Voltage [V]", fontsize = "xx-large")
+        plt.title(file)
+        fig.legend(fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = ax1.transAxes)
 
-#plt.savefig('../Fig/PLE_Y.png')
+        ax1.tick_params('both', labelsize = "x-large")
+        ax2.tick_params('both', labelsize = "x-large")
+
+        ax1.set_xlabel("Time [ms]", fontsize = "xx-large")
+        ax1.set_ylabel("Current [uA]", fontsize = "xx-large")
+        ax2.set_ylabel("Voltage [V]", fontsize = "xx-large")
+
+        i += 1
+
+
+
 plt.show()
 
 
