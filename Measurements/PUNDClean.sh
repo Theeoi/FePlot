@@ -2,71 +2,85 @@
 
 usage(){
     echo -e "To call PUNDClean please use:"
-    echo -e "$0 <Data Path> <Destination Path>"
+    echo -e "$0 <DataDir Path> <Destination Path>"
     echo -e "-----"
-} ## Example: ./PUNDClean.sh InAsFlashIntA/FE\ PUND...csv ../Data/InAsFlashIntA/
+} ## Example: ./PUNDClean.sh InAsFlashIntA/ ../Data/InAsFlashIntA/
 
-FILEPATH0=$1
+OIFS="$IFS"
+IFS=$'\n'
+FILEPATHS=$(find $1 -type f -name 'FE PUND'*)
 DATADEST=${2}PUND
 
 if [[ "x$DATADEST" == "x" ]]; then
     DATADEST=.
 fi
 
-if [[ "x$FILEPATH0" == "x" ]]; then
+if [[ "x$FILEPATHS" == "x" ]]; then
     echo "Missing input file parameter. Exiting."
     usage
-fi
-
-echo "Removing spaces in file name."
-cp -a "$FILEPATH0" `echo $FILEPATH0 | tr ' ' '_'`
-FILEPATH=`echo $FILEPATH0 | tr ' ' '_'`
-
-FILENAME=$(basename "$FILEPATH")
-DATALOC=$(dirname "$FILEPATH")
-
-echo "Copying input file $FILEPATH to $DATALOC/temp_$FILENAME"
-cp -a $FILEPATH $DATALOC/temp_$FILENAME
-
-echo "Finding first line containing 'DataName'..."
-STARTLINE=$(grep -n "DataName" $DATALOC/temp_$FILENAME | cut -f1 -d: | head -n 1)
-
-if [[ "x$STARTLINE" == "x" ]]; then
-    echo "No line containing 'DataName' was found. Exiting."
-    rm -r $DATALOC/temp_$FILENAME
     exit 1
 fi
 
-STARTLINE=$(( $STARTLINE + 1 ))
+for FILEPATH0 in $FILEPATHS; do
 
-echo "Removing the first $STARTLINE lines."
-tail -n +$STARTLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
-mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
+    if [[ "x$FILEPATH0" == "x" ]]; then
+        echo "Error in file listing. Exiting."
+        usage
+        exit 1
+    fi
 
-echo "Finding first line containing 'SetupTitle, WGFMU'..."
-ENDLINE=$(grep -n "SetupTitle, WGFMU" $DATALOC/temp_$FILENAME | cut -f1 -d:)
+    echo "Removing spaces in file name."
+    cp -a "$FILEPATH0" `echo $FILEPATH0 | tr ' ' '_'`
+    FILEPATH=`echo $FILEPATH0 | tr ' ' '_'`
 
-if [[ "x$ENDLINE" == "x" ]]; then
-    echo "No line containing 'SetupTitle, WGFMU' was found. Exiting."
-    rm -r $DATALOC/temp_$FILENAME
-    exit 1
-fi
+    FILENAME=$(basename "$FILEPATH")
+    DATALOC=$(dirname "$FILEPATH")
 
-echo "Removing all lines after line $ENDLINE."
-END=$(wc -l $DATALOC/temp_$FILENAME | cut -f1 -d' ')
-ENDLINE=$(( $END - $ENDLINE + 2 ))
-head -n -$ENDLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
-mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
+    echo "Copying input file $FILEPATH to $DATALOC/temp_$FILENAME"
+    cp -a $FILEPATH $DATALOC/temp_$FILENAME
 
-SAMPLENUM=$(echo $FILENAME | cut -f 7 -d'_')
-CONDENNUM=$(echo $FILENAME | cut -f 9 -d'_' | sed 's/([^)]*)//g')
-mkdir -p $DATADEST/$SAMPLENUM/$CONDENNUM
+    echo "Finding first line containing 'DataName'..."
+    STARTLINE=$(grep -n "DataName" $DATALOC/temp_$FILENAME | cut -f1 -d: | head -n 1)
 
-NEWFILENAME=$(echo $FILENAME | cut -f 2-3,6-9 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
+    if [[ "x$STARTLINE" == "x" ]]; then
+        echo "No line containing 'DataName' was found. Skipping file."
+        rm -r $DATALOC/temp_$FILENAME
+        continue
+    fi
 
-echo "Removing spaces in data. Resulting file in $DATADEST/$SAMPLENUM/$CONDENNUM/${NEWFILENAME}.csv"
-sed 's/ //g' $DATALOC/temp_$FILENAME > $DATADEST/$SAMPLENUM/$CONDENNUM/$NEWFILENAME.csv
+    STARTLINE=$(( $STARTLINE + 1 ))
 
-echo "Removing temporary files."
-rm -r $DATALOC/temp_$FILENAME $FILEPATH
-echo "Done."
+    echo "Removing the first $STARTLINE lines."
+    tail -n +$STARTLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
+    mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
+
+    echo "Finding first line containing 'SetupTitle, WGFMU'..."
+    ENDLINE=$(grep -n "SetupTitle, WGFMU" $DATALOC/temp_$FILENAME | cut -f1 -d:)
+
+    if [[ "x$ENDLINE" == "x" ]]; then
+        echo "No line containing 'SetupTitle, WGFMU' was found. Skipping file."
+        rm -r $DATALOC/temp_$FILENAME
+        continue
+    fi
+
+    echo "Removing all lines after line $ENDLINE."
+    END=$(wc -l $DATALOC/temp_$FILENAME | cut -f1 -d' ')
+    ENDLINE=$(( $END - $ENDLINE + 2 ))
+    head -n -$ENDLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
+    mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
+
+    SAMPLENUM=$(echo $FILENAME | cut -f 7 -d'_')
+    CONDENNUM=$(echo $FILENAME | cut -f 9 -d'_' | sed 's/([^)]*)//g')
+    mkdir -p $DATADEST/$SAMPLENUM/$CONDENNUM
+
+    NEWFILENAME=$(echo $FILENAME | cut -f 2-3,6-9 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
+
+    echo "Removing spaces in data. Resulting file in $DATADEST/$SAMPLENUM/$CONDENNUM/${NEWFILENAME}.csv"
+    sed 's/ //g' $DATALOC/temp_$FILENAME > $DATADEST/$SAMPLENUM/$CONDENNUM/$NEWFILENAME.csv
+
+    echo "Removing temporary files."
+    rm -r $DATALOC/temp_$FILENAME $FILEPATH
+    echo "Done."
+done
+
+rm -r $DATALOC/FE_*
