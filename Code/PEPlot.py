@@ -22,7 +22,6 @@ PUNDTime = [0] * numfiles
 PUNDCurrent = [0] * numfiles
 PUNDVoltage = [0] * numfiles
 
-r = 25e-6 ## Condensator radius (Will implement automatically later)
 d = 10e-9 ## Ferroelectric layer thickness (m)
 
 i = 0
@@ -36,30 +35,31 @@ for Pfile in PUNDfiles:
         PUNDVoltage[i] = [float(line.split(",")[3]) for line in PUNDfilelines]
 
         PUNDfile.close()
-        
+
+        r = float(Pfile.split("_")[4].replace('um','')) * 10**-6
+
         peak_ind, _ = find_peaks(np.abs(PUNDVoltage[i]), 0.1)
         numpeaks = len(peak_ind)
         peak_width = np.average(peak_ind[0:2])
         
         peak_range = [np.arange(peak_ind[j]-peak_width*0.49, peak_ind[j]+peak_width*0.49 + 1, dtype=int) for j in range(numpeaks)]
         
+        EFieldPeaks = np.append([v/d for v in [PUNDVoltage[i][j] for j in peak_range[1]]], [v/d for v in [PUNDVoltage[i][j] for j in peak_range[3]]])
+
         FECurrentDown = np.subtract([PUNDCurrent[i][j] for j in peak_range[1]], [PUNDCurrent[i][j] for j in peak_range[2]])
         FECurrentUp = np.subtract([PUNDCurrent[i][j] for j in peak_range[3]], [PUNDCurrent[i][j] for j in peak_range[4]])
+        FECurrent = np.append(FECurrentDown, FECurrentUp)
 
-        QFEDown = [0] * len(FECurrentDown)
-        QFEUp = [0] * len(FECurrentUp)
-        for t in range(1, len(FECurrentDown)):
+        QFE = [0] * len(FECurrent)
+        for t in range(1, len(FECurrent)):
             dTime = PUNDTime[i][t] - PUNDTime[i][t-1]
-            QFEDown[t] = FECurrentDown[t] * dTime + QFEDown[t-1]
-            QFEUp[t] = FECurrentUp[t] * dTime + QFEUp[t-1]
+            QFE[t] = FECurrent[t] * dTime + QFE[t-1]
 
-        QFEDown = np.subtract(QFEDown, (np.max(QFEDown) + np.min(QFEDown))/2)
-        QFEUp = np.subtract(QFEUp, (np.max(QFEUp) + np.min(QFEUp))/2)
+        QFE = np.subtract(QFE, (np.max(QFE) + np.min(QFE))/2)
 
-        QFEDownScaled = [(k / (pi * r**2)) for k in QFEDown]
-        QFEUpScaled = [(k / (pi * r**2)) for k in QFEUp]
+        QFEScaled = [(k / (pi * r**2)) for k in QFE]
 
-        Pr = round(QFEDownScaled[-1] * 10**2, 2)
+        Pr = round(QFEScaled[len(FECurrentUp)] * 10**2, 2)
 
         ### Plotting PUND Measurements
         fig = plt.figure(figsize = (9,6))
@@ -80,31 +80,28 @@ for Pfile in PUNDfiles:
         ax1.set_ylabel("Current [$\mu$A]", fontsize = "xx-large")
         ax2.set_ylabel("Voltage [V]", fontsize = "xx-large")
 
-        plt.savefig('../Fig/InAsFlashIntA/%s.png'%Pfile)
+        #plt.savefig('../Fig/InAsFlashIntA/%s.png'%Pfile)
 
         ### Plotting I-E
         fig = plt.figure(figsize = (9,6))
         ax1 = fig.add_subplot(111)
 
-        ax1.plot([(v * 10**-8)/d for v in [PUNDVoltage[i][j] for j in peak_range[1]]], [c * 10**6 for c in FECurrentDown], label = "Down Current", color = "b")
-        ax1.plot([(v * 10**-8)/d for v in [PUNDVoltage[i][j] for j in peak_range[3]]], [c * 10**6 for c in FECurrentUp], label = "Up Current", color = "r")
+        ax1.plot([e * 10**-8 for e in EFieldPeaks], [c * 10**6 for c in FECurrent], color = "b")
 
         plt.title(Pfile)
-        fig.legend(fontsize = 'x-large', loc = 1, bbox_to_anchor = (1,1), bbox_transform = ax1.transAxes)
 
         ax1.tick_params('both', labelsize = "x-large")
 
         ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
         ax1.set_ylabel("FE Current [$\mu$A]", fontsize = "xx-large")
 
-        plt.savefig('../Fig/InAsFlashIntA/IE_%s.png'%Pfile)
+        #plt.savefig('../Fig/InAsFlashIntA/IE_%s.png'%Pfile)
 
         ### Plotting P-E
         fig = plt.figure(figsize = (9,6))
         ax1 = fig.add_subplot(111)
 
-        ax1.plot([(v * 10**-8)/d for v in [PUNDVoltage[i][j] for j in peak_range[1]]], [p * 10**2 for p in QFEDownScaled], color = "b")
-        ax1.plot([(v * 10**-8)/d for v in [PUNDVoltage[i][j] for j in peak_range[3]]], [p * 10**2 for p in QFEUpScaled], color = "b")
+        ax1.plot([e * 10**-8 for e in EFieldPeaks], [p * 10**2 for p in QFEScaled], color = "b")
 
         plt.title(Pfile)
         fig.text(0.68, 0.83, '$P_r$ = %s $\mu$C/cm²'%Pr, fontsize = "x-large")
@@ -114,7 +111,7 @@ for Pfile in PUNDfiles:
         ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
         ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
-        plt.savefig('../Fig/InAsFlashIntA/PE_%s.png'%Pfile)
+        #plt.savefig('../Fig/InAsFlashIntA/PE_%s.png'%Pfile)
 
         i += 1
 

@@ -69,11 +69,31 @@ for FILEPATH0 in $FILEPATHS; do
     head -n -$ENDLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
     mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
 
-    SAMPLENUM=$(echo $FILENAME | cut -f 7 -d'_')
-    CONDENNUM=$(echo $FILENAME | cut -f 9 -d'_' | sed 's/([^)]*)//g')
-    mkdir -p $DATADEST/$SAMPLENUM/$CONDENNUM
+    if [[ $FILENAME == *'PRESET'* ]]; then
+       
+        FILENAME=$(echo $FILENAME | sed 's/PRESET.*\[/PRESET_[/g')
+        
+        SAMPLENUM=$(echo $FILENAME | cut -f 5 -d'_')
+        CONDENNUM=$(echo $FILENAME | cut -f 7 -d'_' | sed 's/([^)]*)//g')
+    
+        NEWFILENAME=$(echo $FILENAME | cut -f 3-7 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
 
-    NEWFILENAME=$(echo $FILENAME | cut -f 2-3,6-9 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
+    elif [[ $FILENAME == *'reverse'* ]]; then
+
+        SAMPLENUM=$(echo $FILENAME | cut -f 7 -d'_')
+        CONDENNUM=$(echo $FILENAME | cut -f 9 -d'_' | sed 's/([^)]*)//g')
+    
+        NEWFILENAME=$(echo $FILENAME | cut -f 2-3,6-9 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
+
+    else
+       
+        echo "Could not identify sample. Skipping file."
+        rm -r $DATALOC/temp_$FILENAME
+        continue
+
+    fi
+    
+    mkdir -p $DATADEST/$SAMPLENUM/$CONDENNUM
 
     echo "Removing spaces in data. Resulting file in $DATADEST/$SAMPLENUM/$CONDENNUM/${NEWFILENAME}.csv"
     sed 's/ //g' $DATALOC/temp_$FILENAME > $DATADEST/$SAMPLENUM/$CONDENNUM/$NEWFILENAME.csv
