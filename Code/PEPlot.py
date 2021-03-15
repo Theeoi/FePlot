@@ -44,11 +44,22 @@ for Pfile in PUNDfiles:
         
         peak_range = [np.arange(peak_ind[j]-peak_width*0.49, peak_ind[j]+peak_width*0.49 + 1, dtype=int) for j in range(numpeaks)]
         
-        EFieldPeaks = np.append([v/d for v in [PUNDVoltage[i][j] for j in peak_range[1]]], [v/d for v in [PUNDVoltage[i][j] for j in peak_range[3]]])
+        if (numpeaks == 1):
+            EFieldPeaks = [v/d for v in [PUNDVoltage[i][j] for j in peak_range[0]]]
+            
+            FECurrent = [PUNDCurrent[i][j] for j in peak_range[0]]
 
-        FECurrentDown = np.subtract([PUNDCurrent[i][j] for j in peak_range[1]], [PUNDCurrent[i][j] for j in peak_range[2]])
-        FECurrentUp = np.subtract([PUNDCurrent[i][j] for j in peak_range[3]], [PUNDCurrent[i][j] for j in peak_range[4]])
-        FECurrent = np.append(FECurrentDown, FECurrentUp)
+        elif (numpeaks > 4):
+            EFieldPeaks = np.append([v/d for v in [PUNDVoltage[i][j] for j in peak_range[1]]], [v/d for v in [PUNDVoltage[i][j] for j in peak_range[3]]])
+
+            FECurrentDown = np.subtract([PUNDCurrent[i][j] for j in peak_range[1]], [PUNDCurrent[i][j] for j in peak_range[2]])
+            FECurrentUp = np.subtract([PUNDCurrent[i][j] for j in peak_range[3]], [PUNDCurrent[i][j] for j in peak_range[4]])
+            FECurrent = np.append(FECurrentDown, FECurrentUp)
+
+        else:
+            print("Could not calculate PE curve for file: %s."%Pfile)
+            print("Skipping file.")
+            continue
 
         QFE = [0] * len(FECurrent)
         for t in range(1, len(FECurrent)):
@@ -59,7 +70,7 @@ for Pfile in PUNDfiles:
 
         QFEScaled = [(k / (pi * r**2)) for k in QFE]
 
-        Pr = round(QFEScaled[len(FECurrentUp)] * 10**2, 2)
+        Pr = round(np.abs(QFEScaled[0]) * 10**2, 1)
 
         ### Plotting PUND Measurements
         fig = plt.figure(figsize = (9,6))
@@ -80,7 +91,7 @@ for Pfile in PUNDfiles:
         ax1.set_ylabel("Current [$\mu$A]", fontsize = "xx-large")
         ax2.set_ylabel("Voltage [V]", fontsize = "xx-large")
 
-        #plt.savefig('../Fig/InAsFlashIntA/%s.png'%Pfile)
+        plt.savefig('../Fig/InAsFlashIntA/%s.png'%Pfile)
 
         ### Plotting I-E
         fig = plt.figure(figsize = (9,6))
@@ -95,7 +106,7 @@ for Pfile in PUNDfiles:
         ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
         ax1.set_ylabel("FE Current [$\mu$A]", fontsize = "xx-large")
 
-        #plt.savefig('../Fig/InAsFlashIntA/IE_%s.png'%Pfile)
+        plt.savefig('../Fig/InAsFlashIntA/IE_%s.png'%Pfile)
 
         ### Plotting P-E
         fig = plt.figure(figsize = (9,6))
@@ -111,7 +122,7 @@ for Pfile in PUNDfiles:
         ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
         ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
-        #plt.savefig('../Fig/InAsFlashIntA/PE_%s.png'%Pfile)
+        plt.savefig('../Fig/InAsFlashIntA/PE_%s.png'%Pfile)
 
         i += 1
 

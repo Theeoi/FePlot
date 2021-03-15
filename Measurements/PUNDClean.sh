@@ -8,15 +8,15 @@ usage(){
 
 OIFS="$IFS"
 IFS=$'\n'
-FILEPATHS=$(find $1 -type f -name 'FE PUND'*)
+FILEPATHS=$(find $1 -type f -name 'FE PUND*')
 DATADEST=${2}PUND
 
 if [[ "x$DATADEST" == "x" ]]; then
-    DATADEST=.
+    DATADEST=./
 fi
 
 if [[ "x$FILEPATHS" == "x" ]]; then
-    echo "Missing input file parameter. Exiting."
+    echo "No files were found in the DataDir Path. Exiting."
     usage
     exit 1
 fi
@@ -69,14 +69,12 @@ for FILEPATH0 in $FILEPATHS; do
     head -n -$ENDLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
     mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
 
-    if [[ $FILENAME == *'PRESET'* ]]; then
+    if [[ $FILENAME == *'PRESET'* ]]; then ## THIS WILL GIVE AN ERROR IF "PRESET [FlashInt..."
        
-        FILENAME=$(echo $FILENAME | sed 's/PRESET.*\[/PRESET_[/g')
-        
-        SAMPLENUM=$(echo $FILENAME | cut -f 5 -d'_')
-        CONDENNUM=$(echo $FILENAME | cut -f 7 -d'_' | sed 's/([^)]*)//g')
+        SAMPLENUM=$(echo $FILENAME | cut -f 6 -d'_')
+        CONDENNUM=$(echo $FILENAME | cut -f 8 -d'_' | sed 's/([^)]*)//g')
     
-        NEWFILENAME=$(echo $FILENAME | cut -f 3-7 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
+        NEWFILENAME=$(echo "FTJ_$FILENAME" | sed 's/PRESET.*\[/PRESET_[/g' | cut -f 1,4-8 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
 
     elif [[ $FILENAME == *'reverse'* ]]; then
 
@@ -103,4 +101,4 @@ for FILEPATH0 in $FILEPATHS; do
     echo "Done."
 done
 
-rm -r $DATALOC/FE_*
+rm -rf $DATALOC/FE_* $DATALOC/temp_FE_*
