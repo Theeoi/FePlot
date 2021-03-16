@@ -40,7 +40,7 @@ for Pfile in PUNDfiles:
 
         peak_ind, _ = find_peaks(np.abs(PUNDVoltage[i]), 0.1)
         numpeaks = len(peak_ind)
-        peak_width = np.average(peak_ind[0:2])
+        peak_width = np.average(peak_ind[0:2]) #Finds index between the first and second peak.
         
         peak_range = [np.arange(peak_ind[j]-peak_width*0.49, peak_ind[j]+peak_width*0.49 + 1, dtype=int) for j in range(numpeaks)]
         
@@ -61,6 +61,14 @@ for Pfile in PUNDfiles:
             print("Skipping file.")
             continue
 
+        IE_min = min(FECurrent)
+        IE_min_xs = [e for e in EFieldPeaks if FECurrent[np.where(EFieldPeaks == e)[0][0]] < IE_min/2.0] 
+        IE_min_FWHM = round((max(IE_min_xs) - min(IE_min_xs)) * 10**-8, 2)
+
+        IE_max = max(FECurrent)
+        IE_max_xs = [e for e in EFieldPeaks if FECurrent[np.where(EFieldPeaks == e)[0][0]] > IE_max/2.0]
+        IE_max_FWHM = round((max(IE_max_xs) - min(IE_max_xs)) * 10**-8, 2)
+
         QFE = [0] * len(FECurrent)
         for t in range(1, len(FECurrent)):
             dTime = PUNDTime[i][t] - PUNDTime[i][t-1]
@@ -70,12 +78,12 @@ for Pfile in PUNDfiles:
 
         QFEScaled = np.array([(k / (pi * r**2)) for k in QFE])
 
-        Prpos = round(QFEScaled[0] * 10**2, 1)
-        Prneg = round(QFEScaled[int(len(FECurrent)/2)] * 10**2, 1)
+        Prpos = round(QFEScaled[0] * 10**2, 2)
+        Prneg = round(QFEScaled[int(len(FECurrent)/2)] * 10**2, 2)
 
         Ec_ind = np.where((QFEScaled > -10**-2) & (QFEScaled < 10**-2))
-        Ecneg = round(EFieldPeaks[Ec_ind[0][0]] * 10**-8, 1)
-        Ecpos = round(EFieldPeaks[Ec_ind[0][-1]] * 10**-8, 1)
+        Ecneg = round(EFieldPeaks[Ec_ind[0][0]] * 10**-8, 2)
+        Ecpos = round(EFieldPeaks[Ec_ind[0][-1]] * 10**-8, 2)
 
         ### Plotting PUND Measurements
         fig = plt.figure(figsize = (9,6))
@@ -104,7 +112,12 @@ for Pfile in PUNDfiles:
 
         ax1.plot([e * 10**-8 for e in EFieldPeaks], [c * 10**6 for c in FECurrent], color = "b")
 
+        ax1.hlines(IE_min/2 * 10**6, min(IE_min_xs) * 10**-8, max(IE_min_xs) * 10**-8, linestyles = 'dashed')
+        ax1.hlines(IE_max/2 * 10**6, min(IE_max_xs) * 10**-8, max(IE_max_xs) * 10**-8, linestyles = 'dashed')
+
         plt.title(Pfile)
+        plt.text(max(IE_min_xs) * 10**-8 + 0.1, IE_min/2 * 10**6, '%s MV/cm²'%IE_min_FWHM, fontsize = "x-large")
+        plt.text(max(IE_max_xs) * 10**-8 + 0.1, IE_max/2 * 10**6, '%s MV/cm²'%IE_max_FWHM, fontsize = "x-large")
 
         ax1.tick_params('both', labelsize = "x-large")
 
@@ -119,11 +132,16 @@ for Pfile in PUNDfiles:
 
         ax1.plot([e * 10**-8 for e in EFieldPeaks], [p * 10**2 for p in QFEScaled], color = "b")
 
+        ax1.plot(0, Prpos, marker = 'o', fillstyle = 'none', markersize = 15, color = 'g')
+        ax1.plot(0, Prneg, marker = 'o', fillstyle = 'none', markersize = 15, color = 'g')
+        ax1.plot(Ecneg, 0, marker = 'o', fillstyle = 'none', markersize = 15, color = 'r')
+        ax1.plot(Ecpos, 0, marker = 'o', fillstyle = 'none', markersize = 15, color = 'r')
+
         plt.title(Pfile)
-        fig.text(0.15, 0.83, '$P_r^+$ = %s $\mu$C/cm²'%Prpos, fontsize = "x-large")
-        fig.text(0.67, 0.15, '$P_r^-$ = %s $\mu$C/cm²'%Prneg, fontsize = "x-large")
-        fig.text(0.15, 0.50, '$E_c^-$ = %s MV/cm²'%Ecneg, fontsize = "x-large")
-        fig.text(0.67, 0.50, '$E_c^+$ = %s MV/cm²'%Ecpos, fontsize = "x-large")
+        plt.text(0, Prpos * 0.85, '%s $\mu$C/cm²'%Prpos, fontsize = "x-large")
+        plt.text(Ecneg * 0.25, Prneg * 0.9, '%s $\mu$C/cm²'%Prneg, fontsize = "x-large")
+        plt.text(Ecneg * 0.85, 0, '%s MV/cm²'%Ecneg, fontsize = "x-large")
+        plt.text(Ecpos * 1.1, 0, '%s MV/cm²'%Ecpos, fontsize = "x-large")
 
         ax1.tick_params('both', labelsize = "x-large")
 
