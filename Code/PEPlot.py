@@ -54,7 +54,7 @@ for Pfile in PUNDfiles:
 
             FECurrentDown = np.subtract([PUNDCurrent[i][j] for j in peak_range[1]], [PUNDCurrent[i][j] for j in peak_range[2]])
             FECurrentUp = np.subtract([PUNDCurrent[i][j] for j in peak_range[3]], [PUNDCurrent[i][j] for j in peak_range[4]])
-            FECurrent = np.append(FECurrentDown, FECurrentUp)
+            FECurrent = np.append(FECurrentUp, FECurrentDown)
 
         else:
             print("Could not calculate PE curve for file: %s."%Pfile)
@@ -68,9 +68,14 @@ for Pfile in PUNDfiles:
 
         QFE = np.subtract(QFE, (np.max(QFE) + np.min(QFE))/2)
 
-        QFEScaled = [(k / (pi * r**2)) for k in QFE]
+        QFEScaled = np.array([(k / (pi * r**2)) for k in QFE])
 
-        Pr = round(np.abs(QFEScaled[0]) * 10**2, 1)
+        Prpos = round(QFEScaled[0] * 10**2, 1)
+        Prneg = round(QFEScaled[int(len(FECurrent)/2)] * 10**2, 1)
+
+        Ec_ind = np.where((QFEScaled > -10**-2) & (QFEScaled < 10**-2))
+        Ecneg = round(EFieldPeaks[Ec_ind[0][0]] * 10**-8, 1)
+        Ecpos = round(EFieldPeaks[Ec_ind[0][-1]] * 10**-8, 1)
 
         ### Plotting PUND Measurements
         fig = plt.figure(figsize = (9,6))
@@ -115,7 +120,10 @@ for Pfile in PUNDfiles:
         ax1.plot([e * 10**-8 for e in EFieldPeaks], [p * 10**2 for p in QFEScaled], color = "b")
 
         plt.title(Pfile)
-        fig.text(0.68, 0.83, '$P_r$ = %s $\mu$C/cm²'%Pr, fontsize = "x-large")
+        fig.text(0.15, 0.83, '$P_r^+$ = %s $\mu$C/cm²'%Prpos, fontsize = "x-large")
+        fig.text(0.67, 0.15, '$P_r^-$ = %s $\mu$C/cm²'%Prneg, fontsize = "x-large")
+        fig.text(0.15, 0.50, '$E_c^-$ = %s MV/cm²'%Ecneg, fontsize = "x-large")
+        fig.text(0.67, 0.50, '$E_c^+$ = %s MV/cm²'%Ecpos, fontsize = "x-large")
 
         ax1.tick_params('both', labelsize = "x-large")
 
