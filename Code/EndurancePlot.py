@@ -15,9 +15,10 @@ import matplotlib.pyplot as plt
 
 EnduPath = sys.argv[1]
 Endufiles = os.listdir(EnduPath)
-Endufiles.sort()
+Endufiles.sort(key = lambda x: x.split("_")[2])
 numfiles = len(Endufiles)
 
+Cycles = [0] * numfiles
 EFieldPeaks = [0] * numfiles
 QFEScaled = [0] * numfiles
 Prpos = [0] * numfiles
@@ -37,6 +38,7 @@ for Efile in Endufiles:
         EnduFile.close()
 
         r = float(Efile.split("_")[6].replace('um','')) * 10**-6
+        Cycles[i] = float(Efile.split("_")[2])
 
         peak_ind, _ = find_peaks(np.abs(EnduVoltage), 0.1)
         numpeaks = len(peak_ind)
@@ -69,8 +71,8 @@ for Efile in Endufiles:
 
         fig.legend(fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = ax1.transAxes)
 
-        ax1.tick_params('both', labelsize = "x-large")
-        ax2.tick_params('both', labelsize = "x-large")
+        ax1.tick_params('both', labelsize = "xx-large")
+        ax2.tick_params('both', labelsize = "xx-large")
 
         ax1.set_xlabel("Time [ms]", fontsize = "xx-large")
         ax1.set_ylabel("Current [uA]", fontsize = "xx-large")
@@ -78,18 +80,30 @@ for Efile in Endufiles:
 
         i += 1
 
-print(Prpos)
+fig = plt.figure(figsize = (9,6))
+ax1 = fig.add_subplot(111)
+
+for i in range(numfiles - 1) :
+    ax1.plot([e * 10**-8 for e in EFieldPeaks[i]], [p * 10**2 for p in QFEScaled[i]])
+
+plt.ylim(np.min(QFEScaled[0:-1]) * 10**2, np.max(QFEScaled[0:-1]) * 10**2)
+
+ax1.tick_params('both', labelsize = "xx-large")
+
+ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
+ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
+
 
 fig = plt.figure(figsize = (9,6))
 ax1 = fig.add_subplot(111)
 
-for i in range(numfiles):
-    ax1.plot([e * 10**-8 for e in EFieldPeaks[i]], [p * 10**2 for p in QFEScaled[i]])
+ax1.semilogx(Cycles, Prpos, marker = 'o')
+plt.ylim(min(Prpos), Prpos[0]*2)
 
-ax1.tick_params('both', labelsize = "x-large")
+ax1.tick_params('both', labelsize = "xx-large")
 
-ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
-ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
+ax1.set_xlabel("Cycles", fontsize = "xx-large")
+ax1.set_ylabel("Remnant Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
 #plt.savefig('../Fig/PLE_Y.png')
 plt.show()
