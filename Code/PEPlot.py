@@ -44,6 +44,11 @@ for Pfile in PUNDfiles:
         
         peak_range = [np.arange(peak_ind[j]-peak_width*0.49, peak_ind[j]+peak_width*0.49 + 1, dtype=int) for j in range(numpeaks)]
         
+        if (min([PUNDCurrent[i][j] for j in peak_range[0]]) < -100 * 10**-6):
+            print("PUND Current is to high. Device is probably broken.")
+            print("Skipping file: %s"%Pfile)
+            continue
+
         if (numpeaks == 1):
             EFieldPeaks = [v/d for v in [PUNDVoltage[i][j] for j in peak_range[0]]]
             
@@ -81,7 +86,7 @@ for Pfile in PUNDfiles:
         Prpos = round(QFEScaled[0] * 10**2, 2)
         Prneg = round(QFEScaled[int(len(FECurrent)/2)] * 10**2, 2)
 
-        Ec_ind = np.where((QFEScaled > -10**-2) & (QFEScaled < 10**-2))
+        Ec_ind = np.where((QFEScaled > -5 * 10**-3) & (QFEScaled < 5 * 10**-3))
         Ecneg = round(EFieldPeaks[Ec_ind[0][0]] * 10**-8, 2)
         Ecpos = round(EFieldPeaks[Ec_ind[0][-1]] * 10**-8, 2)
 
