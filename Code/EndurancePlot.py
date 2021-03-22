@@ -61,6 +61,7 @@ for Efile in Endufiles:
         Prpos[i] = round(QFEScaled[i][0] * 10**2, 2)
         Prneg = round(QFEScaled[i][int(len(FECurrent)/2)] * 10**2, 2)
 
+        ## Plotting raw Endurance Data
         fig = plt.figure(figsize = (9,6))
         ax1 = fig.add_subplot(111)
         ax2 = ax1.twinx()
@@ -80,6 +81,9 @@ for Efile in Endufiles:
 
         i += 1
 
+SampleID = Efile.split("_")[5] + "_" + Efile.split("_")[7]
+
+## Plotting PE-curves
 fig = plt.figure(figsize = (9,6))
 ax1 = fig.add_subplot(111)
 
@@ -93,7 +97,9 @@ ax1.tick_params('both', labelsize = "xx-large")
 ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
 ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
+plt.savefig('../Fig/InAsFlashIntA/PE_Endu_%s.png'%SampleID)
 
+## Plotting Pr vs Cycle
 fig = plt.figure(figsize = (9,6))
 ax1 = fig.add_subplot(111)
 
@@ -105,7 +111,8 @@ ax1.tick_params('both', labelsize = "xx-large")
 ax1.set_xlabel("Cycles", fontsize = "xx-large")
 ax1.set_ylabel("Remnant Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
-#plt.savefig('../Fig/PLE_Y.png')
+plt.savefig('../Fig/InAsFlashIntA/Pr_Endu_%s.png'%SampleID)
+
 plt.show()
 
 
