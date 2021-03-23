@@ -57,9 +57,9 @@ for Pfile in PUNDfiles:
         elif (numpeaks > 4):
             EFieldPeaks = np.append([v/d for v in [PUNDVoltage[i][j] for j in peak_range[1]]], [v/d for v in [PUNDVoltage[i][j] for j in peak_range[3]]])
 
-            FECurrentDown = np.subtract([PUNDCurrent[i][j] for j in peak_range[1]], [PUNDCurrent[i][j] for j in peak_range[2]])
-            FECurrentUp = np.subtract([PUNDCurrent[i][j] for j in peak_range[3]], [PUNDCurrent[i][j] for j in peak_range[4]])
-            FECurrent = np.append(FECurrentUp, FECurrentDown)
+            FECurrentDown = np.subtract([-PUNDCurrent[i][j] for j in peak_range[1]], [-PUNDCurrent[i][j] for j in peak_range[2]])
+            FECurrentUp = np.subtract([-PUNDCurrent[i][j] for j in peak_range[3]], [-PUNDCurrent[i][j] for j in peak_range[4]])
+            FECurrent = np.append(FECurrentDown, FECurrentUp)
 
         else:
             print("Could not calculate PE curve for file: %s."%Pfile)
@@ -121,8 +121,8 @@ for Pfile in PUNDfiles:
         ax1.hlines(IE_max/2 * 10**6, min(IE_max_xs) * 10**-8, max(IE_max_xs) * 10**-8, linestyles = 'dashed')
 
         plt.title(Pfile)
-        plt.text(max(IE_min_xs) * 10**-8 + 0.1, IE_min/2 * 10**6, '%s MV/cm²'%IE_min_FWHM, fontsize = "x-large")
-        plt.text(max(IE_max_xs) * 10**-8 + 0.1, IE_max/2 * 10**6, '%s MV/cm²'%IE_max_FWHM, fontsize = "x-large")
+        plt.text(max(IE_min_xs) * 10**-8 + 0.1, IE_min/2 * 10**6, '%s MV/cm'%IE_min_FWHM, fontsize = "x-large")
+        plt.text(max(IE_max_xs) * 10**-8 + 0.1, IE_max/2 * 10**6, '%s MV/cm'%IE_max_FWHM, fontsize = "x-large")
 
         ax1.tick_params('both', labelsize = "x-large")
 
@@ -145,8 +145,8 @@ for Pfile in PUNDfiles:
         plt.title(Pfile)
         plt.text(0, Prpos * 0.85, '%s $\mu$C/cm²'%Prpos, fontsize = "x-large")
         plt.text(Ecneg * 0.25, Prneg * 0.9, '%s $\mu$C/cm²'%Prneg, fontsize = "x-large")
-        plt.text(Ecneg * 0.85, 0, '%s MV/cm²'%Ecneg, fontsize = "x-large")
-        plt.text(Ecpos * 1.1, 0, '%s MV/cm²'%Ecpos, fontsize = "x-large")
+        plt.text(Ecneg * 0.85, 0, '%s MV/cm'%Ecneg, fontsize = "x-large")
+        plt.text(Ecpos * 1.1, 0, '%s MV/cm'%Ecpos, fontsize = "x-large")
 
         ax1.tick_params('both', labelsize = "x-large")
 

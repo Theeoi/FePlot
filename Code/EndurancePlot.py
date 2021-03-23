@@ -48,7 +48,7 @@ for Efile in Endufiles:
 
         EFieldPeaks[i] = np.append([v/d for v in [EnduVoltage[j] for j in peak_range[1]]], [v/d for v in [EnduVoltage[j] for j in peak_range[2]]])
 
-        FECurrent = np.append([EnduCurrent[j] for j in peak_range[2]], [EnduCurrent[j] for j in peak_range[1]])
+        FECurrent = np.append([-EnduCurrent[j] for j in peak_range[1]], [-EnduCurrent[j] for j in peak_range[2]])
 
         QFE = [0] * len(FECurrent)
         for t in range(1, len(FECurrent)):
@@ -58,7 +58,7 @@ for Efile in Endufiles:
         QFE = np.subtract(QFE, (np.max(QFE) + np.min(QFE))/2)
         QFEScaled[i] = np.array([(k / (pi * r**2)) for k in QFE])
 
-        Prpos[i] = round(QFEScaled[i][0] * 10**2, 2)
+        Prpos[i] = round(QFEScaled[i][-1] * 10**2, 2)
         Prneg = round(QFEScaled[i][int(len(FECurrent)/2)] * 10**2, 2)
 
         ## Plotting raw Endurance Data
@@ -71,6 +71,7 @@ for Efile in Endufiles:
         ax2.plot([t * 10**3 for t in EnduTime], EnduVoltage, label = "Voltage", color = "c")
 
         fig.legend(fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = ax1.transAxes)
+        plt.title(Efile)
 
         ax1.tick_params('both', labelsize = "xx-large")
         ax2.tick_params('both', labelsize = "xx-large")
