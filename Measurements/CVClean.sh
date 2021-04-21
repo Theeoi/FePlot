@@ -21,6 +21,9 @@ if [[ "x$FILEPATHS" == "x" ]]; then
     exit 1
 fi
 
+TOTFILES=$(find $1 -type f -name 'CV_*' | wc -l)
+NUMFILES=$((0))
+echo "Found $TOTFILES matching files. Cleaning data.."
 for FILEPATH0 in $FILEPATHS; do
 
     if [[ "x$FILEPATH0" == "x" ]]; then
@@ -29,17 +32,17 @@ for FILEPATH0 in $FILEPATHS; do
         exit 1
     fi
 
-    echo "Removing spaces in file name."
+    #echo "Removing spaces in file name."
     cp -a "$FILEPATH0" `echo $FILEPATH0 | sed 's/0.00f/f/g' | tr ' ' '_'`
     FILEPATH=`echo $FILEPATH0 | sed 's/0.00f/f/g' | tr ' ' '_'`
 
     FILENAME=$(basename "$FILEPATH")
     DATALOC=$(dirname "$FILEPATH")
 
-    echo "Copying input file $FILEPATH to $DATALOC/temp_$FILENAME"
+    #echo "Copying input file $FILEPATH to $DATALOC/temp_$FILENAME"
     cp -a $FILEPATH $DATALOC/temp_$FILENAME
 
-    echo "Finding first line containing 'Real'..."
+    #echo "Finding first line containing 'Real'..."
     STARTLINE=$(grep -n "Real" $DATALOC/temp_$FILENAME | cut -f1 -d: | head -n 1)
 
     if [[ "x$STARTLINE" == "x" ]]; then
@@ -50,7 +53,7 @@ for FILEPATH0 in $FILEPATHS; do
 
     STARTLINE=$(( $STARTLINE + 1 ))
 
-    echo "Removing the first $STARTLINE lines."
+    #echo "Removing the first $STARTLINE lines."
     tail -n +$STARTLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
     mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
 
@@ -61,10 +64,11 @@ for FILEPATH0 in $FILEPATHS; do
 
     mkdir -p $DATADEST/$SAMPLENUM/$CONDENNUM
 
-    echo "Replacing delimiter with commas in data. Resulting file in $DATADEST/$SAMPLENUM/$CONDENNUM/${NEWFILENAME}.csv"
+    #echo "Replacing delimiter with commas in data. Resulting file in $DATADEST/$SAMPLENUM/$CONDENNUM/${NEWFILENAME}.csv"
     sed 's/\t/,/g' $DATALOC/temp_$FILENAME > $DATADEST/$SAMPLENUM/$CONDENNUM/$NEWFILENAME.csv
 
-    echo "Removing temporary files."
+    #echo "Removing temporary files."
     rm -r $DATALOC/temp_$FILENAME $FILEPATH
-    echo "Done."
+    NUMFILES=$((NUMFILES + 1))
+    echo "$NUMFILES / $TOTFILES files cleaned."
 done
