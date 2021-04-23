@@ -109,7 +109,7 @@ for Pfile in PUNDfiles:
         ax1.set_ylabel("Current [$\mu$A]", fontsize = "xx-large")
         ax2.set_ylabel("Voltage [V]", fontsize = "xx-large")
 
-        plt.savefig('../Fig/InAsFlashIntA/%s.png'%Pfile)
+        #plt.savefig('../Fig/InAsFlashIntB/%s.png'%Pfile)
 
         ### Plotting I-E
         fig = plt.figure(figsize = (9,6))
@@ -129,7 +129,7 @@ for Pfile in PUNDfiles:
         ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
         ax1.set_ylabel("FE Current [$\mu$A]", fontsize = "xx-large")
 
-        plt.savefig('../Fig/InAsFlashIntA/IE_%s.png'%Pfile)
+        #plt.savefig('../Fig/InAsFlashIntB/IE_%s.png'%Pfile)
 
         ### Plotting P-E
         fig = plt.figure(figsize = (9,6))
@@ -153,7 +153,7 @@ for Pfile in PUNDfiles:
         ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
         ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
-        plt.savefig('../Fig/InAsFlashIntA/PE_%s.png'%Pfile)
+        #plt.savefig('../Fig/InAsFlashIntB/PE_%s.png'%Pfile)
 
         i += 1
 

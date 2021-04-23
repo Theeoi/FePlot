@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 EnduPath = sys.argv[1]
 Endufiles = os.listdir(EnduPath)
-Endufiles.sort(key = lambda x: x.split("_")[2])
+Endufiles.sort(key = lambda x: int(x.split("_")[2]))
 numfiles = len(Endufiles)
 
 Cycles = [0] * numfiles
@@ -98,21 +98,21 @@ ax1.tick_params('both', labelsize = "xx-large")
 ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
 ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
-plt.savefig('../Fig/InAsFlashIntA/PE_Endu_%s.png'%SampleID)
+plt.savefig('../Fig/InAsFlashIntB/PE_Endu_%s.png'%SampleID)
 
 ## Plotting Pr vs Cycle
 fig = plt.figure(figsize = (9,6))
 ax1 = fig.add_subplot(111)
 
 ax1.semilogx(Cycles, Prpos, marker = 'o')
-plt.ylim(min(Prpos), Prpos[0]*2)
+plt.ylim(min(Prpos), max(Prpos[0:-2]) + 1)
 
 ax1.tick_params('both', labelsize = "xx-large")
 
 ax1.set_xlabel("Cycles", fontsize = "xx-large")
 ax1.set_ylabel("Remnant Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
-plt.savefig('../Fig/InAsFlashIntA/Pr_Endu_%s.png'%SampleID)
+plt.savefig('../Fig/InAsFlashIntB/Pr_Endu_%s.png'%SampleID)
 
 plt.show()
 

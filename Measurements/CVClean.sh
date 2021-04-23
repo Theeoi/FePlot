@@ -60,7 +60,7 @@ for FILEPATH0 in $FILEPATHS; do
     SAMPLENUM=$(echo $FILENAME | cut -f 4 -d'_')
     CONDENNUM=$(echo $FILENAME | cut -f 5 -d'_')
 
-    NEWFILENAME=$(echo $FILENAME | cut -f 1-7,9 -d'_' | sed 's/\([[:digit:]]\)Vt/\1V/g' | sed 's/f\([[:digit:]]\+\)up.dat/\1_Hz_up/g' | sed 's/f\([[:digit:]]\+\)down.dat/\1_Hz_down/g')
+    NEWFILENAME=$(echo $FILENAME | cut -f 1-7,9 -d'_' | sed 's/\([[:digit:]]\)Vt/\1V/g' | sed 's/f\([[:digit:]]\+\)up.dat/\1Hz_up/g' | sed 's/f\([[:digit:]]\+\)down.dat/\1Hz_down/g')
 
     mkdir -p $DATADEST/$SAMPLENUM/$CONDENNUM
 
