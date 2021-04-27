@@ -20,7 +20,6 @@ Filter2 = sys.argv[3] if len(sys.argv) > 3 else ''
 CVPath = sys.argv[1]
 CVFiles = os.listdir(CVPath)
 CVFiles.sort()
-#numfiles = len(CVFiles)
 
 CVVoltage = []
 freq = []
@@ -29,7 +28,7 @@ epsilon_r = []
 
 i = 0
 for Cfile in CVFiles:
-    if Cfile.endswith('.csv') and Cfile.find(Filter1) != -1 and Cfile.find(Filter2) != -1: #Add a find to only allow files with string
+    if Cfile.endswith('.csv') and Cfile.find(Filter1) != -1 and Cfile.find(Filter2) != -1: #find filters to Filter
         CVFile = open(os.path.join(CVPath, Cfile), 'r')
         CVFilelines = CVFile.readlines()
 
@@ -45,14 +44,13 @@ for Cfile in CVFiles:
         C_HZO.append(np.array([1 / (2 * pi * freq[i] * X * A) for X in CVX]))
         epsilon_r.append(np.array([(d / epsilon_0) * c for c in C_HZO[i]]))
 
-        Temp = Cfile.split("_")[1]
         i += 1
 
 if i == 0:
     print("Didn't find any matching data. Exiting...")
     exit(1)
 
-SampleID = Cfile.split("_")[3] + "_" + Cfile.split("_")[4] + "_" + Temp
+SampleID = Cfile.split("_")[2] + "_" + Cfile.split("_")[3] + "_" + Cfile.split("_")[4] + "_" + Cfile.split("_")[1]
 
 ## Plot Capacitance and Epsilon
 fig = plt.figure(figsize = (10,6))
@@ -65,7 +63,7 @@ colors = iter(cmap(np.linspace(0,1,9)))
 for i in range(i):
     if i % 2 == 0:
         color = next(colors)
-        ax1.plot(CVVoltage[i], [c * 10**2 for c in C_HZO[i]], label = '%s kHz'%int(freq[i] * 10**-3), color = color)
+        ax1.plot(CVVoltage[i], [c * 10**2 for c in C_HZO[i]], label = '%s MHz'%int(freq[i] * 10**-6) if freq[i] % 1000000 == 0 else '%s kHz'%int(freq[i] * 10**-3), color = color)
 
         ax2.plot(CVVoltage[i], epsilon_r[i], color = "r", alpha = 0)
     else:
@@ -87,7 +85,7 @@ ax1.set_xlabel("Voltage [V]", fontsize = "xx-large")
 ax1.set_ylabel("Capacitance [$\mu$F/cm²]", fontsize = "xx-large")
 ax2.set_ylabel("Dielectric Constant $\epsilon_r$", fontsize = "xx-large")
 
-plt.savefig('../Fig/InAsFlashIntB/CV_%s.png'%SampleID)
+#plt.savefig('../Fig/InAs%s'%Cfile.split("_")[2] + '/CV_%s.png'%SampleID)
 plt.show()
 
 

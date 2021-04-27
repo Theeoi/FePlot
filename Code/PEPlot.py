@@ -11,54 +11,53 @@ from scipy.signal import find_peaks
 from scipy.constants import pi
 import matplotlib.pyplot as plt
 
+d = 10e-9 ## Ferroelectric layer thickness (m)
+Filter = sys.argv[2] if len(sys.argv) > 2 else ''
+
 ## Read data
 
 PUNDpath = sys.argv[1]
 PUNDfiles = os.listdir(PUNDpath)
 PUNDfiles.sort()
-numfiles = len(PUNDfiles)
-
-PUNDTime = [0] * numfiles
-PUNDCurrent = [0] * numfiles
-PUNDVoltage = [0] * numfiles
-
-d = 10e-9 ## Ferroelectric layer thickness (m)
 
 i = 0
 for Pfile in PUNDfiles:
-    if Pfile.endswith('.csv'):
+    if Pfile.endswith('.csv') and Pfile.find(Filter) != -1: #find filters to Filter (optional)
         PUNDfile = open(os.path.join(PUNDpath, Pfile), 'r')
         PUNDfilelines = PUNDfile.readlines()
 
-        PUNDTime[i] = [float(line.split(",")[1]) for line in PUNDfilelines]
-        PUNDCurrent[i] = [float(line.split(",")[2]) for line in PUNDfilelines]
-        PUNDVoltage[i] = [float(line.split(",")[3]) for line in PUNDfilelines]
+        PUNDTime = [float(line.split(",")[1]) for line in PUNDfilelines]
+        PUNDCurrent = [float(line.split(",")[2]) for line in PUNDfilelines]
+        PUNDVoltage = [float(line.split(",")[3]) for line in PUNDfilelines]
 
         PUNDfile.close()
 
         r = float(Pfile.split("_")[4].replace('um','')) * 10**-6
 
-        peak_ind, _ = find_peaks(np.abs(PUNDVoltage[i]), 0.1)
+        peak_ind, _ = find_peaks(np.abs(PUNDVoltage), 0.1)
         numpeaks = len(peak_ind)
         peak_width = np.average(peak_ind[0:2]) #Finds index between the first and second peak.
         
         peak_range = [np.arange(peak_ind[j]-peak_width*0.49, peak_ind[j]+peak_width*0.49 + 1, dtype=int) for j in range(numpeaks)]
         
+        """
+        ## Not working properly. Find another way to identify broken devices.
         if (min([PUNDCurrent[i][j] for j in peak_range[0]]) < -100 * 10**-6):
             print("PUND Current is to high. Device is probably broken.")
             print("Skipping file: %s"%Pfile)
             continue
+        """
 
-        if (numpeaks == 1):
-            EFieldPeaks = [v/d for v in [PUNDVoltage[i][j] for j in peak_range[0]]]
+        if (numpeaks == 1): ## Detecting PRESET Measurement. Not necessary.
+            EFieldPeaks = [v/d for v in [PUNDVoltage[j] for j in peak_range[0]]]
             
-            FECurrent = [PUNDCurrent[i][j] for j in peak_range[0]]
+            FECurrent = [PUNDCurrent[j] for j in peak_range[0]]
 
         elif (numpeaks > 4):
-            EFieldPeaks = np.append([v/d for v in [PUNDVoltage[i][j] for j in peak_range[1]]], [v/d for v in [PUNDVoltage[i][j] for j in peak_range[3]]])
+            EFieldPeaks = np.append([v/d for v in [PUNDVoltage[j] for j in peak_range[1]]], [v/d for v in [PUNDVoltage[j] for j in peak_range[3]]])
 
-            FECurrentDown = np.subtract([-PUNDCurrent[i][j] for j in peak_range[1]], [-PUNDCurrent[i][j] for j in peak_range[2]])
-            FECurrentUp = np.subtract([-PUNDCurrent[i][j] for j in peak_range[3]], [-PUNDCurrent[i][j] for j in peak_range[4]])
+            FECurrentDown = np.subtract([-PUNDCurrent[j] for j in peak_range[1]], [-PUNDCurrent[j] for j in peak_range[2]])
+            FECurrentUp = np.subtract([-PUNDCurrent[j] for j in peak_range[3]], [-PUNDCurrent[j] for j in peak_range[4]])
             FECurrent = np.append(FECurrentDown, FECurrentUp)
 
         else:
@@ -76,7 +75,7 @@ for Pfile in PUNDfiles:
 
         QFE = [0] * len(FECurrent)
         for t in range(1, len(FECurrent)):
-            dTime = PUNDTime[i][t] - PUNDTime[i][t-1]
+            dTime = PUNDTime[t] - PUNDTime[t-1]
             QFE[t] = FECurrent[t] * dTime + QFE[t-1]
 
         QFE = np.subtract(QFE, (np.max(QFE) + np.min(QFE))/2)
@@ -90,16 +89,18 @@ for Pfile in PUNDfiles:
         Ecneg = round(EFieldPeaks[Ec_ind[0][0]] * 10**-8, 2)
         Ecpos = round(EFieldPeaks[Ec_ind[0][-1]] * 10**-8, 2)
 
+        SampleID = Pfile.split("_")[2] + "_" + Pfile.split("_")[3] + "_" + Pfile.split("_")[5].replace('.csv','')
+
         ### Plotting PUND Measurements
         fig = plt.figure(figsize = (9,6))
         ax1 = fig.add_subplot(111)
         ax2 = ax1.twinx()
 
-        ax1.plot([t * 10**3 for t in PUNDTime[i]], [c * 10**6 for c in PUNDCurrent[i]], label = "Current", color = "b")
+        ax1.plot([t * 10**3 for t in PUNDTime], [c * 10**6 for c in PUNDCurrent], label = "Current", color = "b")
 
-        ax2.plot([t * 10**3 for t in PUNDTime[i]], PUNDVoltage[i], label = "Voltage", color = "c")
+        ax2.plot([t * 10**3 for t in PUNDTime], PUNDVoltage, label = "Voltage", color = "c")
 
-        plt.title(Pfile)
+        plt.title(SampleID)
         fig.legend(fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = ax1.transAxes)
 
         ax1.tick_params('both', labelsize = "x-large")
@@ -109,7 +110,7 @@ for Pfile in PUNDfiles:
         ax1.set_ylabel("Current [$\mu$A]", fontsize = "xx-large")
         ax2.set_ylabel("Voltage [V]", fontsize = "xx-large")
 
-        #plt.savefig('../Fig/InAsFlashIntB/%s.png'%Pfile)
+        #plt.savefig('../Fig/InAs%s'%Pfile.split("_")[2] + '/PUND_%s.png'%SampleID)
 
         ### Plotting I-E
         fig = plt.figure(figsize = (9,6))
@@ -120,7 +121,7 @@ for Pfile in PUNDfiles:
         ax1.hlines(IE_min/2 * 10**6, min(IE_min_xs) * 10**-8, max(IE_min_xs) * 10**-8, linestyles = 'dashed')
         ax1.hlines(IE_max/2 * 10**6, min(IE_max_xs) * 10**-8, max(IE_max_xs) * 10**-8, linestyles = 'dashed')
 
-        plt.title(Pfile)
+        plt.title(SampleID)
         plt.text(max(IE_min_xs) * 10**-8 + 0.1, IE_min/2 * 10**6, '%s MV/cm'%IE_min_FWHM, fontsize = "x-large")
         plt.text(max(IE_max_xs) * 10**-8 + 0.1, IE_max/2 * 10**6, '%s MV/cm'%IE_max_FWHM, fontsize = "x-large")
 
@@ -129,7 +130,7 @@ for Pfile in PUNDfiles:
         ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
         ax1.set_ylabel("FE Current [$\mu$A]", fontsize = "xx-large")
 
-        #plt.savefig('../Fig/InAsFlashIntB/IE_%s.png'%Pfile)
+        #plt.savefig('../Fig/InAs%s'%Pfile.split("_")[2] + '/IE_%s.png'%SampleID)
 
         ### Plotting P-E
         fig = plt.figure(figsize = (9,6))
@@ -142,7 +143,7 @@ for Pfile in PUNDfiles:
         ax1.plot(Ecneg, 0, marker = 'o', fillstyle = 'none', markersize = 15, color = 'r')
         ax1.plot(Ecpos, 0, marker = 'o', fillstyle = 'none', markersize = 15, color = 'r')
 
-        plt.title(Pfile)
+        plt.title(SampleID)
         plt.text(0, Prpos * 0.85, '%s $\mu$C/cm²'%Prpos, fontsize = "x-large")
         plt.text(Ecneg * 0.25, Prneg * 0.9, '%s $\mu$C/cm²'%Prneg, fontsize = "x-large")
         plt.text(Ecneg * 0.85, 0, '%s MV/cm'%Ecneg, fontsize = "x-large")
@@ -153,7 +154,7 @@ for Pfile in PUNDfiles:
         ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
         ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 
-        #plt.savefig('../Fig/InAsFlashIntB/PE_%s.png'%Pfile)
+        #plt.savefig('../Fig/InAs%s'%Pfile.split("_")[2] + '/PE_%s.png'%SampleID)
 
         i += 1
 
