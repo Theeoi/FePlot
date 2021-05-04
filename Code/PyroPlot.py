@@ -21,7 +21,7 @@ for line in PyroFilelines:
 
 PyroFile.close()
 
-Tpeak = np.max(PyroTemp) + 273.15
+Tpeak = round(np.max(PyroTemp) + 273.15, 2)
 
 fig = plt.figure(figsize = (9,6))
 ax1 = fig.add_subplot(111)

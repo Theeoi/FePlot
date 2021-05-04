@@ -7,7 +7,8 @@ usage(){
 }
 
 FILEPATH=$1
-DATADEST=$2/Pyro
+DATADEST=$2Pyro
+mkdir $DATADEST
 
 if [[ "x$DATADEST" == "x" ]]; then
     DATADEST=.
@@ -60,5 +61,5 @@ echo "Cleaning up Time data. Resulting file in $DATADEST/Pyro_$FILENAME"
 awk -F'[:,]' '{printf $1 * 60 * 60 + $2 * 60 + $3","; for (i=4; i<=NF; i++) printf $i","; print $NF}' $DATALOC/temp_$FILENAME > $DATADEST/Pyro_$FILENAME
 
 echo "Removing temporary files."
-rm -r $DATALOC/temp_$FILENAME
+rm -r $DATALOC/temp_$FILENAME $DATALOC/*.tmp
 echo "Done."
