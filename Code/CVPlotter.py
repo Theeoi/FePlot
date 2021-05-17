@@ -20,6 +20,9 @@ def SortAndFilterDir(DataArray):
     if len(files) < 1:
         print("Didn't find any matching data for '%s' with specified filter: %s.\nExiting..."%(path, dataFilter))
         exit(1)
+    elif len(files) > 10:
+        print("Found too many matching data for '%s' with specified filter: %s.\nExiting..."%(path, dataFilter))
+        exit(1)
 
     return path, files
 
@@ -57,7 +60,7 @@ def GetCVData(CVPath, CVFiles):
     return CVVoltage, freq, C_HZO, epsilon_r, Cdisp
             
 ### Takes array of arrays with directory and 2 optional filters and plots CV curves for all files in directory matching the filter. 
-def PlotCV(dataArray):
+def PlotCV(dataArray, saveFig = ''):
     for data in dataArray:
         CVPath, CVFiles = SortAndFilterDir(data)
 
@@ -70,7 +73,7 @@ def PlotCV(dataArray):
         ax2 = ax1.twinx()
 
         cmap = plt.get_cmap('Set1')
-        colors = iter(cmap(np.linspace(0,1,9)))
+        colors = iter(cmap(np.linspace(0,1,len(CVFiles))))
 
         for i in range(len(CVFiles)):
             if i % 2 == 0:
@@ -96,9 +99,12 @@ def PlotCV(dataArray):
         ax1.set_xlabel("Voltage [V]", fontsize = "xx-large")
         ax1.set_ylabel("Capacitance [$\mu$F/cm²]", fontsize = "xx-large")
         ax2.set_ylabel("Dielectric Constant $\epsilon_r$", fontsize = "xx-large")
+        
+        if saveFig != '':
+            plt.savefig(saveFig + 'CV_%s.png'%SampleID)
 
 ### Takes array of arrays with directory and 2 optional filters and plots frequency dispersion for all files matching the filter.
-def PlotFreqDisp(dataArray):
+def PlotFreqDisp(dataArray, saveFig = ''):
     fig = plt.figure(figsize = (10,6))
     ax1 = fig.add_subplot(111)
     
@@ -118,4 +124,8 @@ def PlotFreqDisp(dataArray):
     ax1.set_ylabel('Frequency Dispersion @ +%s'%V_max + ' [%/dec]', fontsize = "xx-large")
 
     ax1.legend(fontsize = 10, loc = 1, bbox_to_anchor = (1,1), bbox_transform = ax1.transAxes)
+
+    if saveFig != '':
+        figName = str(V_max) + "_%s_%s"%(CVFiles[0].split("_")[2], CVFiles[0].split("_")[3])
+        plt.savefig(saveFig + 'FreqDisp_%s.png'%figName) 
 

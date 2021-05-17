@@ -4,11 +4,12 @@ import matplotlib.pyplot as plt
 import CVPlotter
 
 dataLoc = "../Data/InAsFlashIntC/CV/"
+saveFig = "../Fig/test/"
 
 dataToPlot = [ 
         ["%s1/C12/"%dataLoc, "2.5V"],
-        #["%s1/D13/"%dataLoc, "2.5V"],
-        #["%s1/D2/"%dataLoc, "293K", "2.5V"],
+        ["%s1/D13/"%dataLoc, "2.5V"],
+        ["%s1/D2/"%dataLoc, "293K", "2.5V"],
         #["%s1/D2/"%dataLoc, "13K", "2.5V"],
         #["%s1/E5/"%dataLoc, "3V"],
         #["%s1/D2/"%dataLoc, "293K", "3V"],
