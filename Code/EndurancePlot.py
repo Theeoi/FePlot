@@ -21,6 +21,7 @@ Cycles = []
 EFieldPeaks = []
 QFEScaled = []
 Prpos = []
+LeakCurr = []
 
 d = 10e-9 ## Ferroelectric layer thickness (m)
 
@@ -60,6 +61,14 @@ for Efile in Endufiles:
         Prpos.append(round(QFEScaled[i][-1] * 10**2, 2))
         Prneg = round(QFEScaled[i][int(len(FECurrent)/2)] * 10**2, 2)
         
+        ## Finding leakcurrent
+        LeakRange = np.arange(peak_ind[1] - 10, peak_ind[1] + 10 + 1, dtype = int)
+        LeakPeak, _ = find_peaks([EnduCurrent[j] for j in LeakRange], 0.1 * 10**-6)
+        LeakCurr.extend([EnduCurrent[LeakRange[j]] for j in LeakPeak])
+
+        if len(LeakCurr) < len(Cycles):
+            LeakCurr.append(10 * 10**-6)
+
         """
         ## Plotting raw Endurance Data
         fig = plt.figure(figsize = (9,6))
@@ -107,15 +116,23 @@ ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
 ## Plotting Pr vs Cycle
 fig = plt.figure(figsize = (9,6))
 ax1 = fig.add_subplot(111)
+ax2 = ax1.twinx()
 
-ax1.semilogx(Cycles, Prpos, marker = 'o')
-plt.ylim(min(Prpos), max(Prpos[0:-2]) + 1)
+ax1.semilogx(Cycles, Prpos, marker = 'o', label = 'Remnant Polarization')
+ax1.set_ylim([0, max(Prpos[0:-2]) + 1])
+
+ax2.semilogx(Cycles, [i * 10**6 for i in LeakCurr], linestyle = '--', marker = 'x', color = 'g', label = 'Leak Current')
+ax2.set_ylim([0, (max(LeakCurr[0:-2]) + 10**-6) * 10**6])
+
+fig.legend(fontsize = 'x-large', loc = 3, bbox_to_anchor = (0,0), bbox_transform = ax1.transAxes)
 
 plt.title(SampleID)
 ax1.tick_params('both', labelsize = "xx-large")
+ax2.tick_params('both', labelsize = "xx-large")
 
 ax1.set_xlabel("Cycles", fontsize = "xx-large")
 ax1.set_ylabel("Remnant Polarization [$\mu$C/cm²]", fontsize = "xx-large")
+ax2.set_ylabel("Leak Current [$\mu$A]", fontsize = "xx-large")
 
 #plt.savefig('../Fig/InAs%s'%Efile.split("_")[4] + '/PrEndu_%s.png'%SampleID)
 

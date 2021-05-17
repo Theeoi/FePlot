@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 ### USAGE ###
 # ./CapacitancePlot.py <Path to clean CV data directory>
@@ -9,7 +9,12 @@ import os
 import numpy as np
 from scipy.constants import pi
 from scipy.constants import epsilon_0
+import math
 import matplotlib.pyplot as plt
+
+import warnings
+warnings.filterwarnings("ignore", message = "invalid value encountered in double_scalars")
+warnings.filterwarnings("ignore", message = "divide by zero encountered in double_scalars")
 
 d = 10e-9 #Ferroelectric layer thickness (m)
 Filter1 = sys.argv[2] if len(sys.argv) > 2 else ''
@@ -31,6 +36,8 @@ for Cfile in CVFiles:
     if Cfile.endswith('.csv') and Cfile.find(Filter1) != -1 and Cfile.find(Filter2) != -1: #find filters to Filter
         CVFile = open(os.path.join(CVPath, Cfile), 'r')
         CVFilelines = CVFile.readlines()
+        V_max = Cfile.split("_")[6]
+        SampleID = Cfile.split("_")[2] + "_" + Cfile.split("_")[3] + "_" + Cfile.split("_")[4] + "_" + Cfile.split("_")[1]
 
         CVVoltage.append([float(line.split(",")[2]) for line in CVFilelines])
         CVX = [float(line.split(",")[1]) * -1 for line in CVFilelines]
@@ -50,7 +57,7 @@ if i == 0:
     print("Didn't find any matching data. Exiting...")
     exit(1)
 
-SampleID = Cfile.split("_")[2] + "_" + Cfile.split("_")[3] + "_" + Cfile.split("_")[4] + "_" + Cfile.split("_")[1]
+Cdisp = [(((C_HZO[0::2][-1][-1] - C_HZO[0::2][j][-1])/C_HZO[0::2][-1][-1]) * 10**2)/math.log10(freq[0::2][j]/freq[-1]) for j in range(int(i/2))]
 
 ## Plot Capacitance and Epsilon
 fig = plt.figure(figsize = (10,6))
@@ -86,6 +93,22 @@ ax1.set_ylabel("Capacitance [$\mu$F/cm²]", fontsize = "xx-large")
 ax2.set_ylabel("Dielectric Constant $\epsilon_r$", fontsize = "xx-large")
 
 #plt.savefig('../Fig/InAs%s'%Cfile.split("_")[2] + '/CV_%s.png'%SampleID)
+
+## Plot Frequency-Dispersion
+fig = plt.figure(figsize = (10,6))
+ax1 = fig.add_subplot(111)
+
+ax1.semilogx(freq[0::2], Cdisp, marker = 'o', markersize = 15, ls = ':')
+ax1.set_ylim([0, max(Cdisp) + 1])
+
+plt.title(SampleID)
+
+ax1.tick_params('both', labelsize = "x-large")
+ax1.set_xlabel("Frequency [Hz]", fontsize = "xx-large")
+ax1.set_ylabel('Frequency Dispersion @ +%s'%V_max + ' [%/dec]', fontsize = "xx-large")
+
+#plt.savefig('../Fig/InAs%s'%Cfile.split("_")[2] + '/FreqDisp_%s.png'%SampleID)
+
 plt.show()
 
 

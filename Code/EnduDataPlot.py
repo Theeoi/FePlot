@@ -5,6 +5,10 @@
 
 import sys
 import matplotlib.pyplot as plt
+"""
+from scipy.signal import find_peaks
+import numpy as np
+"""
 
 ## Read data
 
@@ -21,6 +25,16 @@ for line in EnduFilelines:
     EnduVoltage.append(float(line.split(",")[3]))
 
 EnduFile.close()
+
+"""
+## Finding leakcurrent
+peak_ind, _ = find_peaks(np.abs(EnduVoltage), 0.1)
+LeakRange = np.arange(peak_ind[1] - 10, peak_ind[1] + 10 + 1, dtype = int)
+
+LeakPeak, _ = find_peaks([EnduCurrent[j] for j in LeakRange], 0.1 * 10**-6)
+LeakCurr = [EnduCurrent[LeakRange[j]] for j in LeakPeak]
+print(LeakCurr)
+"""
 
 fig = plt.figure(figsize = (9,6))
 ax1 = fig.add_subplot(111)
