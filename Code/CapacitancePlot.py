@@ -17,8 +17,8 @@ warnings.filterwarnings("ignore", message = "invalid value encountered in double
 warnings.filterwarnings("ignore", message = "divide by zero encountered in double_scalars")
 
 d = 10e-9 #Ferroelectric layer thickness (m)
-Filter1 = sys.argv[2] if len(sys.argv) > 2 else ''
-Filter2 = sys.argv[3] if len(sys.argv) > 3 else ''
+Filter1 = sys.argv[3] if len(sys.argv) > 3 else ''
+Filter2 = sys.argv[4] if len(sys.argv) > 4 else ''
 
 ## Read data
 
@@ -58,7 +58,7 @@ if i == 0:
     exit(1)
 
 Cdisp = [(((C_HZO[0::2][-1][-1] - C_HZO[0::2][j][-1])/C_HZO[0::2][-1][-1]) * 10**2)/math.log10(freq[0::2][j]/freq[-1]) for j in range(int(i/2))]
-
+"""
 ## Plot Capacitance and Epsilon
 fig = plt.figure(figsize = (10,6))
 ax1 = fig.add_subplot(111)
@@ -93,10 +93,10 @@ ax1.set_ylabel("Capacitance [$\mu$F/cm²]", fontsize = "xx-large")
 ax2.set_ylabel("Dielectric Constant $\epsilon_r$", fontsize = "xx-large")
 
 #plt.savefig('../Fig/InAs%s'%Cfile.split("_")[2] + '/CV_%s.png'%SampleID)
-
+"""
 ## Plot Frequency-Dispersion
-fig = plt.figure(figsize = (10,6))
-ax1 = fig.add_subplot(111)
+#fig = plt.figure(figsize = (10,6))
+#ax1 = fig.add_subplot(111)
 
 ax1.semilogx(freq[0::2], Cdisp, marker = 'o', markersize = 15, ls = ':')
 ax1.set_ylim([0, max(Cdisp) + 1])
