@@ -18,8 +18,7 @@ def SortAndFilterDir(DataArray):
     files.sort()
 
     if len(files) < 1:
-        print("Didn't find any matching data for '%s' with specified filter: %s.\nExiting..."%(path, dataFilter))
-        exit(1)
+        print("Didn't find any matching data for '%s' with specified filter: %s."%(path, dataFilter))
     elif len(files) > 10:
         print("Found too many matching data for '%s' with specified filter: %s.\nExiting..."%(path, dataFilter))
         exit(1)
@@ -105,35 +104,10 @@ def PlotCV(dataArray, saveFig = ''):
 
 ### Takes array of arrays with directory and 2 optional filters and plots frequency dispersion for all files matching the filter.
 def PlotFreqDisp(dataArray, saveFig = ''):
-    fig = plt.figure(figsize = (10,6))
-    ax1 = fig.add_subplot(111)
+    fig = plt.figure(figsize = (10,8))
+    ax1 = fig.add_subplot(211)
+    ax2 = fig.add_subplot(212, sharex = ax1)
     
-    for data in dataArray:
-        CVPath, CVFiles = SortAndFilterDir(data)
-
-        SampleID = CVFiles[0].split("_")[2] + "_" + CVFiles[0].split("_")[3] + "_" + CVFiles[0].split("_")[4] + "_" + CVFiles[0].split("_")[1]
-
-        _, freq, _, _, Cdisp = GetCVData(CVPath, CVFiles)
-
-        ax1.semilogx(freq[0::2], Cdisp, marker = 'o', markersize = 15, ls = ':', label = SampleID)
-
-    V_max = CVFiles[0].split("_")[6]
-    
-    ax1.tick_params('both', labelsize = "x-large")
-    ax1.set_xlabel("Frequency [Hz]", fontsize = "xx-large")
-    ax1.set_ylabel('Frequency Dispersion @ +%s'%V_max + ' [%/dec]', fontsize = "xx-large")
-
-    ax1.legend(fontsize = 10, loc = 1, bbox_to_anchor = (1,1), bbox_transform = ax1.transAxes)
-
-    if saveFig != '':
-        figName = str(V_max) + "_%s_%s"%(CVFiles[0].split("_")[2], CVFiles[0].split("_")[3])
-        plt.savefig(saveFig + 'FreqDisp_%s.png'%figName) 
-
-###
-def PlotFreqDispAvg(dataArray, saveFig = ''):
-    fig = plt.figure(figsize = (10,6))
-    ax1 = fig.add_subplot(111)
-
     collectedCdisp = []
     avgCdisp = []
     stdCdisp = []
@@ -141,26 +115,52 @@ def PlotFreqDispAvg(dataArray, saveFig = ''):
     for data in dataArray:
         CVPath, CVFiles = SortAndFilterDir(data)
 
+        if len(CVFiles) < 1:
+            print("Skipping...")
+            continue
+
+        SampleID = CVFiles[0].split("_")[2] + "_" + CVFiles[0].split("_")[3] + "_" + CVFiles[0].split("_")[4] + "_" + CVFiles[0].split("_")[1]
+        V_max = CVFiles[0].split("_")[6]
+
         _, freq, _, _, Cdisp = GetCVData(CVPath, CVFiles)
         collectedCdisp.append(Cdisp)
+
+        ax1.semilogx(freq[0::2], Cdisp, marker = 'o', markersize = 15, ls = ':', label = SampleID)
 
     collectedCdisp = np.array(collectedCdisp).transpose()
     for i in range(len(collectedCdisp)):
         avgCdisp.append(np.average(collectedCdisp[i]))
         stdCdisp.append(np.std(collectedCdisp[i]))
 
-    ax1.errorbar(freq[0::2], avgCdisp, yerr = stdCdisp, marker = 'o', markersize = 15, ls = ':', capsize = 10)
+    ax2.errorbar(freq[0::2], avgCdisp, yerr = stdCdisp, marker = 'o', markersize = 15, ls = ':', capsize = 10, label = 'Average $\pm$ Standard Deviation')
+
+    ax1.tick_params('both', labelsize = "x-large")
+    ax2.tick_params('both', labelsize = "x-large")
+    ax2.set_xlabel("Frequency [Hz]", fontsize = "xx-large")
+    fig.supylabel('Frequency Dispersion @ +%s'%V_max + ' [%/dec]', fontsize = "xx-large")
+
+    ax1.legend(fontsize = 10, loc = 1, bbox_to_anchor = (1,1), bbox_transform = ax1.transAxes)
+    ax2.legend(fontsize = 10, loc = 1, bbox_to_anchor = (1,1), bbox_transform = ax2.transAxes)
+
+    if saveFig != '':
+        figName = "%s_%s_%s_%s"%(CVFiles[0].split("_")[2], CVFiles[0].split("_")[3], CVFiles[0].split("_")[1], str(V_max))
+        plt.savefig(saveFig + 'FreqDisp_%s.png'%figName) 
+
+    return freq, avgCdisp, stdCdisp, SampleID, V_max
+
+###
+def PlotFreqDispGroup(dataArray, saveFig = ''):
+    fig = plt.figure(figsize = (10,6))
+    ax1 = fig.add_subplot(111)
+
+    for i in range(len(dataArray)):
+        freq, avgCdisp, stdCdisp, SampleID, V_max = PlotFreqDisp(dataArray[i], saveFig)
+
+        ax1.errorbar(freq[0::2], avgCdisp, yerr = stdCdisp, marker = 'o', markersize = 15, ls = ':', capsize = 10, label = "%s_%s_%s"%(SampleID.split("_")[0], SampleID.split("_")[1], SampleID.split("_")[3]))
+
     ax1.set_xscale('log')
+    ax1.legend(fontsize = 10, loc = 1, bbox_to_anchor = (1,1), bbox_transform = ax1.transAxes)
 
-    V_max = CVFiles[0].split("_")[6]
-    SampleID = CVFiles[0].split("_")[2] + '_' + CVFiles[0].split("_")[3] + '_' + CVFiles[0].split("_")[1]
-
-    plt.title(SampleID)
-    
     ax1.tick_params('both', labelsize = "x-large")
     ax1.set_xlabel("Frequency [Hz]", fontsize = "xx-large")
     ax1.set_ylabel('Frequency Dispersion @ +%s'%V_max + ' [%/dec]', fontsize = "xx-large")
-
-    if saveFig != '':
-        figName = str(V_max) + "_%s_%s"%(CVFiles[0].split("_")[2], CVFiles[0].split("_")[3])
-        plt.savefig(saveFig + 'FreqDispAvg_%s.png'%figName) 
