@@ -1,0 +1,179 @@
+\documentclass[11pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage[margin=1.5cm]{caption}
+%\usepackage[framed,numbered]{mcode}
+\usepackage{amsmath}
+%\usepackage{arevmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage[version=4]{mhchem}
+\usepackage{array}
+\usepackage{cases}
+\usepackage{pbox}
+\usepackage{hepnames}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+\setlength{\parindent}{0.3cm}
+\addtolength{\oddsidemargin}{-5mm}
+\addtolength{\evensidemargin}{-5mm}
+\addtolength{\textwidth}{10mm}
+\setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
+
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			\hrule
+			\vspace*{1cm}
+			
+			\textbf{\LARGE{Flashlamp Annealing for Improved Ferroelectric Junctions}}\\ 
+			\vspace{0.5cm}
+			\Large{Master's Degree Project}
+			
+			\vspace{1.5cm}
+			
+			\textbf{\Large{Theodor Blom}} \\
+			\small{Lund University} \\
+			\vspace{0.2cm}
+            \small{Project Duration: 12 months, 60 hp}\\
+            \vspace{0.2cm}
+			\small{\today}
+			
+			\vfill
+			
+			\includegraphics[width=0.35\textwidth]{~/Pictures/lu_logo-portrait-en.png}
+			
+			\vspace{1cm}
+
+            \begin{minipage}{0.51\textwidth}
+                \centering
+                \textbf{\Large{Mattias Borg}} \\
+			    \vspace{0.2cm}
+                Division of Nano Electronics,\\
+                Department of Electrical and Informations Technology,\\
+                Faculty of Engineering, LTH,\\
+			    Lund University\\
+            \end{minipage}
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \textbf{\Large{Rainer Timm}} \\
+			    \vspace{0.2cm}
+                Division of Synchrotron Radiation,\\
+                Department of Physics,\\
+                Faculty of Science,\\
+			    Lund University\\
+            \end{minipage}
+			\vspace{1cm}
+			\hrule
+		\end{center}
+	\end{titlepage}
+\newpage
+    \thispagestyle{empty}
+    \mbox{}
+\newpage
+    \tableofcontents
+    \begin{abstract}
+        Abstract here!
+    \end{abstract}
+\newpage \pagenumbering{arabic}
+    \section{Introduction}
+
+    Mål: Introducera området och ge en överblick.\cite{atle2019development}
+
+    \section{Semiconductors and Ferroelectrics}
+
+    Mål: Klargöra varför III-V (utgå från Si) och FE är intressant. Varför gör vi detta? Vad är applikationerna!
+
+        \subsection{III-V Semiconductors}
+
+        Mål: Redogör för varför III-V är intressant.
+
+        \subsection{Ferroelectricity}
+
+        Mål: Basics of FE;\ Kristallstrukturer, Polarisation, Domäner och PE-kurvor.
+
+        \subsection{\ce{HfZrO2}}
+
+        Mål: Redogör för FE-\ce{HfO2} och beskriv hur \ce{Zr} kommer in i bilden.
+
+            \subsubsection{TiN-capping?}
+
+            Mål: Ta upp varför vi använder TiN. Ta upp W?\ 
+
+        \subsection{Energyband Theory and Leakage Mechanics}
+
+        Mål: Redogör för hur energibanden ser ut med Semiconductor-Insulator-Metal-cap och gå igenom de olika tunnelsätten.
+
+        \subsection{FTJs}
+
+        Mål: Sammanställ allt genom att beskriva hur FTJer funkar och fördelarna med dem.
+
+    \section{Fabrication}
+
+    Mål: Redogör för hela processen på LNL.\ 
+
+        \subsection{Processing Methods}
+
+        Mål: Redogör för dem mest intressanta/relevanta metoderna. Kanske bara ALD och FLA?\ 
+
+            \subsubsection{ALD}
+
+
+            \subsubsection{Sputtering}
+
+
+            \subsubsection{Flashlamp Annealing}
+
+
+            \subsubsection{Thermal Evaporation}
+
+
+        \subsection{Sample Fabrication Process}
+
+        Mål: Redogör för hela min process.
+
+    \section{Electrical Charcterization}
+
+    Mål: Redogör för metoderna på E-huset.
+
+        \subsection{PUND and Endurance}
+
+
+        \subsection{CV}
+
+
+    \section{Results and Analysis}
+
+    Mål: Presentera serierna i en rimlig ordning och dra slutsatser från varje serie.
+
+    Tre steg: 1. FlashInt och Temperatur 2. FlashNum vid olika FlashInt 3. Utforska olika kompositioner (laminat och superlattice)
+
+    Fokus på frågeställingar!
+    \begin{itemize}
+        \item Utforska möjligheten kring FLA
+        \item Hur bra devices kan vi göra? PUND och Endurance
+        \item Fokus på interface defects genom CV!\  
+    \end{itemize}
+
+    \section{Conclussion}
+
+    Mål: Wrap it up. Lägg fram de främsta resultaten/ideerna och ge tips på hur man kan undersöka vidare.
+
+    \section{References}
+        \bibliography{MasterThesis.bib}
+        \bibliographystyle{ieeetr}
+
+\end{document}

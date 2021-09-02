@@ -55,17 +55,22 @@ def GetCVData(CVPath, CVFiles):
     warnings.filterwarnings("ignore", message = "divide by zero encountered in double_scalars")
     
     Cdisp = [(((C_HZO[0::2][-1][-1] - C_HZO[0::2][j][-1])/C_HZO[0::2][-1][-1]) * 10**2)/math.log10(freq[0::2][j]/freq[-1]) for j in range(int(i/2))]
+    Wdep = [((1 / C_HZO[1::2][j][-1]) - (1 / C_HZO[1::2][j][0])) * (15.15 * epsilon_0) for j in range(int(i/2))]
 
-    return CVVoltage, freq, C_HZO, epsilon_r, Cdisp
+    return CVVoltage, freq, C_HZO, epsilon_r, Cdisp, Wdep
             
 ### Takes array of arrays with directory and 2 optional filters and plots CV curves for all files in directory matching the filter. 
 def PlotCV(dataArray, saveFig = ''):
     for data in dataArray:
         CVPath, CVFiles = SortAndFilterDir(data)
 
-        SampleID = CVFiles[0].split("_")[2] + "_" + CVFiles[0].split("_")[3] + "_" + CVFiles[0].split("_")[4] + "_" + CVFiles[0].split("_")[1]
+        if len(CVFiles) < 1:
+            print("Skipping...")
+            continue
 
-        CVVoltage, freq, C_HZO, epsilon_r, _ = GetCVData(CVPath, CVFiles)
+        CVVoltage, freq, C_HZO, epsilon_r, _, Wdep = GetCVData(CVPath, CVFiles)
+
+        SampleID = CVFiles[0].split("_")[2] + "_" + CVFiles[0].split("_")[3] + "_" + CVFiles[0].split("_")[4] + "_" + CVFiles[0].split("_")[1]
 
         fig = plt.figure(figsize = (10,6))
         ax1 = fig.add_subplot(111)
@@ -77,7 +82,7 @@ def PlotCV(dataArray, saveFig = ''):
         for i in range(len(CVFiles)):
             if i % 2 == 0:
                 color = next(colors)
-                ax1.plot(CVVoltage[i], [c * 10**2 for c in C_HZO[i]], label = '%s MHz'%int(freq[i] * 10**-6) if freq[i] % 1000000 == 0 else '%s kHz'%int(freq[i] * 10**-3), color = color)
+                ax1.plot(CVVoltage[i], [c * 10**2 for c in C_HZO[i]], label = '%s MHz\t$W_{dep}$ = %s nm'%(int(freq[i] * 10**-6), round(Wdep[int(i/2)] * 10**9, 1)) if freq[i] % 1000000 == 0 else '%s kHz\t$W_{dep}$ = %s nm'%(int(freq[i] * 10**-3), round(Wdep[int(i/2)] * 10**9, 1)), color = color)
 
                 ax2.plot(CVVoltage[i], epsilon_r[i], color = "r", alpha = 0)
             else:
@@ -100,7 +105,8 @@ def PlotCV(dataArray, saveFig = ''):
         ax2.set_ylabel("Dielectric Constant $\epsilon_r$", fontsize = "xx-large")
         
         if saveFig != '':
-            plt.savefig(saveFig + 'CV_%s.png'%SampleID)
+            figName = '%s_%sV'%(SampleID, str(round(np.max(CVVoltage), 1)))
+            plt.savefig(saveFig + 'CV_%s.png'%figName)
 
 ### Takes array of arrays with directory and 2 optional filters and plots frequency dispersion for all files matching the filter.
 def PlotFreqDisp(dataArray, saveFig = ''):
@@ -122,7 +128,7 @@ def PlotFreqDisp(dataArray, saveFig = ''):
         SampleID = CVFiles[0].split("_")[2] + "_" + CVFiles[0].split("_")[3] + "_" + CVFiles[0].split("_")[4] + "_" + CVFiles[0].split("_")[1]
         V_max = CVFiles[0].split("_")[6]
 
-        _, freq, _, _, Cdisp = GetCVData(CVPath, CVFiles)
+        _, freq, _, _, Cdisp, _ = GetCVData(CVPath, CVFiles)
         collectedCdisp.append(Cdisp)
 
         ax1.semilogx(freq[0::2], Cdisp, marker = 'o', markersize = 15, ls = ':', label = SampleID)
