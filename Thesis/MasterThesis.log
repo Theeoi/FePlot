@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.8.2)  18 AUG 2021 13:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.8.2)  10 NOV 2021 17:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -67,10 +67,29 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen140
 \Gin@req@width=\dimen141
+) (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen142
+\lightrulewidth=\dimen143
+\cmidrulewidth=\dimen144
+\belowrulesep=\dimen145
+\belowbottomsep=\dimen146
+\aboverulesep=\dimen147
+\abovetopsep=\dimen148
+\cmidrulesep=\dimen149
+\cmidrulekern=\dimen150
+\defaultaddspace=\dimen151
+\@cmidla=\count189
+\@cmidlb=\count190
+\@aboverulesep=\dimen152
+\@belowrulesep=\dimen153
+\@thisruleclass=\count191
+\@lastruleclass=\count192
+\@thisrulewidth=\dimen154
 ) (/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen142
-\WF@size=\dimen143
-\c@WF@wrappedlines=\count189
+\wrapoverhang=\dimen155
+\WF@size=\dimen156
+\c@WF@wrappedlines=\count193
 \WF@box=\box47
 \WF@everypar=\toks18
 Package: wrapfig 2003/01/31  v 3.6
@@ -80,21 +99,21 @@ Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
  (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen144
-\captionmargin@=\dimen145
-\captionwidth=\dimen146
-\caption@tempdima=\dimen147
-\caption@indent=\dimen148
-\caption@parindent=\dimen149
-\caption@hangindent=\dimen150
+\captionmargin=\dimen157
+\captionmargin@=\dimen158
+\captionwidth=\dimen159
+\caption@tempdima=\dimen160
+\caption@indent=\dimen161
+\caption@parindent=\dimen162
+\caption@hangindent=\dimen163
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count190
-\c@continuedfloat=\count191
+\c@caption@flags=\count194
+\c@continuedfloat=\count195
 Package caption Info: wrapfig package is loaded.
 )
-\c@subfigure=\count192
-\c@subtable=\count193
+\c@subfigure=\count196
+\c@subtable=\count197
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip49
@@ -105,44 +124,44 @@ Package: amstext 2000/06/29 v2.01 AMS text
  (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
-\ex@=\dimen151
+\ex@=\dimen164
 )) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen152
+\pmbraise@=\dimen165
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count194
+\inf@bad=\count198
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count195
-\leftroot@=\count196
+\uproot@=\count199
+\leftroot@=\count266
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count197
-\DOTSCASE@=\count198
+\classnum@=\count267
+\DOTSCASE@=\count268
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box48
 \strutbox@=\box49
-\big@size=\dimen153
+\big@size=\dimen166
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count199
-\c@MaxMatrixCols=\count266
+\macc@depth=\count269
+\c@MaxMatrixCols=\count270
 \dotsspace@=\muskip16
-\c@parentequation=\count267
-\dspbrk@lvl=\count268
+\c@parentequation=\count271
+\dspbrk@lvl=\count272
 \tag@help=\toks20
-\row@=\count269
-\column@=\count270
-\maxfields@=\count271
+\row@=\count273
+\column@=\count274
+\maxfields@=\count275
 \andhelp@=\toks21
-\eqnshift@=\dimen154
-\alignsep@=\dimen155
-\tagshift@=\dimen156
-\tagwidth@=\dimen157
-\totwidth@=\dimen158
-\lineht@=\dimen159
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
 \@envbody=\toks22
 \multlinegap=\skip50
 \multlinetaggap=\skip51
@@ -175,7 +194,7 @@ Package: physics
 Package: expl3 2021-02-18 L3 programming layer (loader) 
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count272
+\l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box50
 )) (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))) (/usr/share/texmf-dist/tex/latex/mhchem/mhchem.sty
 Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
@@ -183,22 +202,22 @@ Package: mhchem 2018/06/22 v4.08 for typesetting chemical formulae
 Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count273
-\calc@Bcount=\count274
-\calc@Adimen=\dimen160
-\calc@Bdimen=\dimen161
+\calc@Acount=\count277
+\calc@Bcount=\count278
+\calc@Adimen=\dimen173
+\calc@Bdimen=\dimen174
 \calc@Askip=\skip55
 \calc@Bskip=\skip56
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count275
+\calc@Ccount=\count279
 \calc@Cskip=\skip57
 ) (/usr/share/texmf-dist/tex/latex/chemgreek/chemgreek.sty
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
-\l__chemgreek_tmpa_int=\count276
-\g__chemgreek_tmpa_int=\count277
+\l__chemgreek_tmpa_int=\count280
+\g__chemgreek_tmpa_int=\count281
 )
-\l__mhchem_ce_distanceFromLastComma_int=\count278
+\l__mhchem_ce_distanceFromLastComma_int=\count282
 \__mhchem_arrow_extPgfLength_skip=\skip58
 \mhchem@minispace@tmp=\skip59
 \mhchem@minibackspace@tmp=\skip60
@@ -209,23 +228,23 @@ Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use 
 \mhchem@smallbondwidth=\skip65
 \mhchem@bondtmp@minussidebearingleft=\skip66
 \mhchem@bondtmp@minussidebearingright=\skip67
-\l__mhchem_option_version_int=\count279
-\mhchem@option@minusmathsidebearingleft=\dimen162
-\mhchem@option@minusmathsidebearingright=\dimen163
-\mhchem@option@minustextsidebearingleft=\dimen164
-\mhchem@option@minustextsidebearingright=\dimen165
+\l__mhchem_option_version_int=\count283
+\mhchem@option@minusmathsidebearingleft=\dimen175
+\mhchem@option@minusmathsidebearingright=\dimen176
+\mhchem@option@minustextsidebearingleft=\dimen177
+\mhchem@option@minustextsidebearingright=\dimen178
 ) (/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen166
+\col@sep=\dimen179
 \ar@mcellbox=\box51
-\extrarowheight=\dimen167
+\extrarowheight=\dimen180
 \NC@list=\toks30
 \extratabsurround=\skip68
 \backup@length=\skip69
 \ar@cellbox=\box52
 ) (/usr/share/texmf-dist/tex/latex/cases/cases.sty
 Package: cases 2020/03/29 ver 3.2
-\numc@numwid=\dimen168
+\numc@numwid=\dimen181
 ) (/usr/share/texmf-dist/tex/latex/pbox/pbox.sty
 Package: pbox 2011/12/07 v1.2 Dynamic parboxes
  (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
@@ -254,39 +273,39 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )))) (/usr/share/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2021/03/27 v2.8c A comprehensive (SI) units package
 \l__siunitx_tmp_box=\box53
-\l__siunitx_tmp_dim=\dimen169
-\l__siunitx_tmp_int=\count280
-\l__siunitx_number_mantissa_length_int=\count281
-\l__siunitx_number_uncert_length_int=\count282
-\l__siunitx_round_int=\count283
-\l__siunitx_process_decimal_int=\count284
-\l__siunitx_process_uncertainty_int=\count285
-\l__siunitx_process_fixed_int=\count286
-\l__siunitx_process_integer_min_int=\count287
-\l__siunitx_process_precision_int=\count288
-\l__siunitx_group_min_int=\count289
+\l__siunitx_tmp_dim=\dimen182
+\l__siunitx_tmp_int=\count284
+\l__siunitx_number_mantissa_length_int=\count285
+\l__siunitx_number_uncert_length_int=\count286
+\l__siunitx_round_int=\count287
+\l__siunitx_process_decimal_int=\count288
+\l__siunitx_process_uncertainty_int=\count289
+\l__siunitx_process_fixed_int=\count290
+\l__siunitx_process_integer_min_int=\count291
+\l__siunitx_process_precision_int=\count292
+\l__siunitx_group_min_int=\count293
 \l__siunitx_angle_marker_box=\box54
 \l__siunitx_angle_unit_box=\box55
-\l__siunitx_angle_marker_dim=\dimen170
-\l__siunitx_angle_unit_dim=\dimen171
-\l__siunitx_unit_int=\count290
-\l__siunitx_unit_denominator_int=\count291
-\l__siunitx_unit_numerator_int=\count292
-\l__siunitx_unit_prefix_int=\count293
-\l__siunitx_unit_prefix_base_int=\count294
-\l__siunitx_unit_prefix_gram_int=\count295
-\l__siunitx_number_product_int=\count296
+\l__siunitx_angle_marker_dim=\dimen183
+\l__siunitx_angle_unit_dim=\dimen184
+\l__siunitx_unit_int=\count294
+\l__siunitx_unit_denominator_int=\count295
+\l__siunitx_unit_numerator_int=\count296
+\l__siunitx_unit_prefix_int=\count297
+\l__siunitx_unit_prefix_base_int=\count298
+\l__siunitx_unit_prefix_gram_int=\count299
+\l__siunitx_number_product_int=\count300
 \c__siunitx_one_fill_skip=\skip71
 \l__siunitx_table_unit_align_skip=\skip72
-\l__siunitx_table_exponent_dim=\dimen172
-\l__siunitx_table_integer_dim=\dimen173
-\l__siunitx_table_mantissa_dim=\dimen174
-\l__siunitx_table_marker_dim=\dimen175
-\l__siunitx_table_result_dim=\dimen176
-\l__siunitx_table_uncert_dim=\dimen177
-\l__siunitx_table_fill_pre_dim=\dimen178
-\l__siunitx_table_fill_post_dim=\dimen179
-\l__siunitx_table_fill_mid_dim=\dimen180
+\l__siunitx_table_exponent_dim=\dimen185
+\l__siunitx_table_integer_dim=\dimen186
+\l__siunitx_table_mantissa_dim=\dimen187
+\l__siunitx_table_marker_dim=\dimen188
+\l__siunitx_table_result_dim=\dimen189
+\l__siunitx_table_uncert_dim=\dimen190
+\l__siunitx_table_fill_pre_dim=\dimen191
+\l__siunitx_table_fill_post_dim=\dimen192
+\l__siunitx_table_fill_mid_dim=\dimen193
 \l__siunitx_table_pre_box=\box56
 \l__siunitx_table_post_box=\box57
 \l__siunitx_table_mantissa_box=\box58
@@ -298,11 +317,11 @@ Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 )) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip75
-\enit@outerparindent=\dimen181
+\enit@outerparindent=\dimen194
 \enit@toks=\toks31
 \enit@inbox=\box60
-\enit@count@id=\count297
-\enitdp@description=\count298
+\enit@count@id=\count301
+\enitdp@description=\count302
 ) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
 \f@nch@headwidth=\skip76
@@ -316,36 +335,36 @@ Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footer
 \f@nch@O@orf=\skip84
 ) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count299
+\etb@tempcnta=\count303
 ) (./MasterThesis.aux)
 \openout1 = `MasterThesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count300
-\scratchdimen=\dimen182
+\scratchcounter=\count304
+\scratchdimen=\dimen195
 \scratchbox=\box61
-\nofMPsegments=\count301
-\nofMParguments=\count302
+\nofMPsegments=\count305
+\nofMParguments=\count306
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count303
-\MPscratchDim=\dimen183
-\MPnumerator=\count304
-\makeMPintoPDFobject=\count305
+\MPscratchCnt=\count307
+\MPscratchDim=\dimen196
+\MPnumerator=\count308
+\makeMPintoPDFobject=\count309
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -356,25 +375,25 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 36.
+Package chemgreek Info: Activating mapping `default' on line 37.
 
  (/usr/share/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 ) (/usr/share/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 36.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <~/Pictures/lu_logo-portrait-en.png, id=1, 339.1872pt x 427.3566pt>
 File: ~/Pictures/lu_logo-portrait-en.png Graphic file (type png)
 <use ~/Pictures/lu_logo-portrait-en.png>
-Package pdftex.def Info: ~/Pictures/lu_logo-portrait-en.png  used on input line 57.
+Package pdftex.def Info: ~/Pictures/lu_logo-portrait-en.png  used on input line 58.
 (pdftex.def)             Requested size: 164.89014pt x 207.75676pt.
  [1
 
@@ -382,20 +401,87 @@ Package pdftex.def Info: ~/Pictures/lu_logo-portrait-en.png  used on input line 
 \tf@toc=\write3
 \openout3 = `MasterThesis.toc'.
 
- [2] [1] (./MasterThesis.bbl) [2] (./MasterThesis.aux) ) 
+ [2] [1]
+<~/Pictures/image-placeholder-500.jpg, id=25, 501.875pt x 501.875pt>
+File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
+<use ~/Pictures/image-placeholder-500.jpg>
+Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 173.
+(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
+ [2 </home/theodorb/Pictures/image-placeholder-500.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+<../Fig/InAsFlashIntC/PrTrends_FlashIntC.png, id=30, 649.7073pt x 432.8973pt>
+File: ../Fig/InAsFlashIntC/PrTrends_FlashIntC.png Graphic file (type png)
+<use ../Fig/InAsFlashIntC/PrTrends_FlashIntC.png>
+Package pdftex.def Info: ../Fig/InAsFlashIntC/PrTrends_FlashIntC.png  used on input line 220.
+(pdftex.def)             Requested size: 211.99648pt x 141.25142pt.
+<../Fig/InAsFlashIntC/EcTrends_FlashIntC.png, id=31, 649.7073pt x 432.8973pt>
+File: ../Fig/InAsFlashIntC/EcTrends_FlashIntC.png Graphic file (type png)
+<use ../Fig/InAsFlashIntC/EcTrends_FlashIntC.png>
+Package pdftex.def Info: ../Fig/InAsFlashIntC/EcTrends_FlashIntC.png  used on input line 221.
+(pdftex.def)             Requested size: 211.99648pt x 141.25142pt.
+<../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png, id=32, 649.7073pt x 432.8973pt>
+File: ../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png Graphic file (type png)
+<use ../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png>
+Package pdftex.def Info: ../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png  used on input line 222.
+(pdftex.def)             Requested size: 211.99648pt x 141.25142pt.
+<../Fig/InAsFlashIntC/DDTrend_FlashIntC.png, id=33, 484.209pt x 419.8887pt>
+File: ../Fig/InAsFlashIntC/DDTrend_FlashIntC.png Graphic file (type png)
+<use ../Fig/InAsFlashIntC/DDTrend_FlashIntC.png>
+Package pdftex.def Info: ../Fig/InAsFlashIntC/DDTrend_FlashIntC.png  used on input line 223.
+(pdftex.def)             Requested size: 211.99648pt x 183.8354pt.
+<../Fig/InAsFlashNumA/PrTrends_FlashNumA.png, id=34, 649.7073pt x 432.8973pt>
+File: ../Fig/InAsFlashNumA/PrTrends_FlashNumA.png Graphic file (type png)
+<use ../Fig/InAsFlashNumA/PrTrends_FlashNumA.png>
+Package pdftex.def Info: ../Fig/InAsFlashNumA/PrTrends_FlashNumA.png  used on input line 229.
+(pdftex.def)             Requested size: 226.12909pt x 150.66422pt.
+<../Fig/InAsFlashNumA/EcTrends_FlashNumA.png, id=35, 649.7073pt x 432.8973pt>
+File: ../Fig/InAsFlashNumA/EcTrends_FlashNumA.png Graphic file (type png)
+<use ../Fig/InAsFlashNumA/EcTrends_FlashNumA.png>
+Package pdftex.def Info: ../Fig/InAsFlashNumA/EcTrends_FlashNumA.png  used on input line 230.
+(pdftex.def)             Requested size: 226.12909pt x 150.66422pt.
+<../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png, id=36, 649.7073pt x 432.8973pt>
+File: ../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png Graphic file (type png)
+<use ../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png>
+Package pdftex.def Info: ../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png  used on input line 231.
+(pdftex.def)             Requested size: 226.12909pt x 150.66422pt.
+<../Fig/InAsFlashNumA/DDTrend_FlashNumA.png, id=37, 510.9489pt x 453.8556pt>
+File: ../Fig/InAsFlashNumA/DDTrend_FlashNumA.png Graphic file (type png)
+<use ../Fig/InAsFlashNumA/DDTrend_FlashNumA.png>
+Package pdftex.def Info: ../Fig/InAsFlashNumA/DDTrend_FlashNumA.png  used on input line 232.
+(pdftex.def)             Requested size: 226.12909pt x 200.86052pt.
+File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
+<use ~/Pictures/image-placeholder-500.jpg>
+Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 238.
+(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
+File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
+<use ~/Pictures/image-placeholder-500.jpg>
+Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 239.
+(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
+File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
+<use ~/Pictures/image-placeholder-500.jpg>
+Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 240.
+(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
+File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
+<use ~/Pictures/image-placeholder-500.jpg>
+Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 241.
+(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
+[3] (./MasterThesis.bbl) [4 <../Fig/InAsFlashIntC/PrTrends_FlashIntC.png> <../Fig/InAsFlashIntC/EcTrends_FlashIntC.png> <../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png> <../Fig/InAsFlashIntC/DDTrend_FlashIntC.png>] [5 <../Fig/InAsFlashNumA/PrTrends_FlashNumA.png> <../Fig/InAsFlashNumA/EcTrends_FlashNumA.png> <../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png> <../Fig/InAsFlashNumA/DDTrend_FlashNumA.png>] [6] (./MasterThesis.aux) ) 
 Here is how much of TeX's memory you used:
- 10871 strings out of 478994
- 188030 string characters out of 5864752
- 505079 words of memory out of 5000000
- 28199 multiletter control sequences out of 15000+600000
- 420585 words of font info for 93 fonts, out of 8000000 for 9000
+ 11012 strings out of 478994
+ 191576 string characters out of 5864752
+ 514961 words of memory out of 5000000
+ 28322 multiletter control sequences out of 15000+600000
+ 420630 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,10n,102p,515b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on MasterThesis.pdf (5 pages, 175140 bytes).
+ 98i,18n,102p,979b,1056s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on MasterThesis.pdf (9 pages, 572200 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

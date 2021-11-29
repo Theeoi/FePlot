@@ -145,74 +145,120 @@ def PlotIE(dataArray, saveFig = ''):
 
 def PlotPE(dataArray, saveFig = ''):
     avgPr = []
+    stdPr = []
     avgEc = []
+    stdEc = []
 
-    for data in dataArray:
-        PUNDpath, PUNDfiles = SortAndFilterDir(data)
+    voltageFilters = ["3V"]
+    x = dataArray.pop(0)
 
-        _, _, _, EFieldPeaks, _, QFEScaled = GetPUNDData(PUNDpath, PUNDfiles)
+    for gf in voltageFilters:
+        collPr = []
+        collEc = []
 
-        label = data[1]
+        for data in dataArray:
+            data.append(gf)
+            PUNDpath, PUNDfiles = SortAndFilterDir(data)
+            data.pop()
 
-        if PUNDfiles:
-            SampleID = PUNDfiles[0].split("_")[2] + "_" + PUNDfiles[0].split("_")[3] + "_" + PUNDfiles[0].split("_")[5].replace('.csv','')
+            _, _, _, EFieldPeaks, _, QFEScaled = GetPUNDData(PUNDpath, PUNDfiles)
+
+            if PUNDfiles:
+                SampleID = PUNDfiles[0].split("_")[2] + "_" + PUNDfiles[0].split("_")[3] + "_" + PUNDfiles[0].split("_")[5].replace('.csv','')
+            else:
+                collPr.append(None)
+                collEc.append(None)
+                print("Skipping...")
+                continue
+
+            for i in range(len(PUNDfiles)):
+                Prpos = round(QFEScaled[i][0] * 10**2, 2)
+                Prneg = round(QFEScaled[i][int(len(QFEScaled[i])/2)] * 10**2, 2)
+                collPr.append(np.mean(np.abs([Prpos, Prneg])))
+
+                Ec_ind = np.where((QFEScaled[i] > -5 * 10**-3) & (QFEScaled[i] < 5 * 10**-3))
+                Ecneg = round(EFieldPeaks[i][Ec_ind[0][0]] * 10**-8, 2)
+                Ecpos = round(EFieldPeaks[i][Ec_ind[0][-1]] * 10**-8, 2)
+                collEc.append(np.mean(np.abs([Ecpos, Ecneg])))
+
+                fig = plt.figure(figsize = (9,6))
+                ax1 = fig.add_subplot(111)
+
+                ax1.plot([e * 10**-8 for e in EFieldPeaks[i]], [p * 10**2 for p in QFEScaled[i]], color = "b")
+
+                ax1.plot(0, Prpos, marker = 'o', fillstyle = 'none', markersize = 15, color = 'g')
+                ax1.plot(0, Prneg, marker = 'o', fillstyle = 'none', markersize = 15, color = 'g')
+                ax1.plot(Ecneg, 0, marker = 'o', fillstyle = 'none', markersize = 15, color = 'r')
+                ax1.plot(Ecpos, 0, marker = 'o', fillstyle = 'none', markersize = 15, color = 'r')
+
+                plt.title(SampleID)
+                plt.text(0, Prpos * 0.85, '%s $\mu$C/cm²'%Prpos, fontsize = "x-large")
+                plt.text(Ecneg * 0.25, Prneg * 0.9, '%s $\mu$C/cm²'%Prneg, fontsize = "x-large")
+                plt.text(Ecneg * 0.85, 0, '%s MV/cm'%Ecneg, fontsize = "x-large")
+                plt.text(Ecpos * 1.1, 0, '%s MV/cm'%Ecpos, fontsize = "x-large")
+
+                ax1.tick_params('both', labelsize = "x-large")
+
+                ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
+                ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
+
+                if saveFig != '':
+                    plt.savefig(saveFig + 'PE_%s.png'%SampleID)
+
+        collPr = np.array(collPr)
+        collPr = collPr[collPr != np.array(None)]
+        collEc = np.array(collEc)
+        collEc = collEc[collEc != np.array(None)]
+
+        if len(collPr) != 0:
+            avgPr.append(np.average(collPr))
+            stdPr.append(np.std(collPr))
+            avgEc.append(np.average(collEc))
+            stdEc.append(np.std(collEc))
         else:
-            avgPr.append(None)
-            avgEc.append(None)
-            print("Skipping...")
-            continue
+            avgPr.append(float("NaN"))
+            stdPr.append(float("NaN"))
+            avgEc.append(float("NaN"))
+            stdEc.append(float("NaN"))
+    
+    return avgPr, stdPr, avgEc, stdEc, voltageFilters, x
 
-        for i in range(len(PUNDfiles)):
-            Prpos = round(QFEScaled[i][0] * 10**2, 2)
-            Prneg = round(QFEScaled[i][int(len(QFEScaled[i])/2)] * 10**2, 2)
-            avgPr.append(np.mean(np.abs([Prpos, Prneg])))
-
-            Ec_ind = np.where((QFEScaled[i] > -5 * 10**-3) & (QFEScaled[i] < 5 * 10**-3))
-            Ecneg = round(EFieldPeaks[i][Ec_ind[0][0]] * 10**-8, 2)
-            Ecpos = round(EFieldPeaks[i][Ec_ind[0][-1]] * 10**-8, 2)
-            avgEc.append(np.mean(np.abs([Ecpos, Ecneg])))
-
-            fig = plt.figure(figsize = (9,6))
-            ax1 = fig.add_subplot(111)
-
-            ax1.plot([e * 10**-8 for e in EFieldPeaks[i]], [p * 10**2 for p in QFEScaled[i]], color = "b")
-
-            ax1.plot(0, Prpos, marker = 'o', fillstyle = 'none', markersize = 15, color = 'g')
-            ax1.plot(0, Prneg, marker = 'o', fillstyle = 'none', markersize = 15, color = 'g')
-            ax1.plot(Ecneg, 0, marker = 'o', fillstyle = 'none', markersize = 15, color = 'r')
-            ax1.plot(Ecpos, 0, marker = 'o', fillstyle = 'none', markersize = 15, color = 'r')
-
-            plt.title(SampleID)
-            plt.text(0, Prpos * 0.85, '%s $\mu$C/cm²'%Prpos, fontsize = "x-large")
-            plt.text(Ecneg * 0.25, Prneg * 0.9, '%s $\mu$C/cm²'%Prneg, fontsize = "x-large")
-            plt.text(Ecneg * 0.85, 0, '%s MV/cm'%Ecneg, fontsize = "x-large")
-            plt.text(Ecpos * 1.1, 0, '%s MV/cm'%Ecpos, fontsize = "x-large")
-
-            ax1.tick_params('both', labelsize = "x-large")
-
-            ax1.set_xlabel("Electric Field [MV/cm]", fontsize = "xx-large")
-            ax1.set_ylabel("Polarization [$\mu$C/cm²]", fontsize = "xx-large")
-
-            if saveFig != '':
-                plt.savefig(saveFig + 'PE_%s.png'%SampleID)
-
-    return avgPr, avgEc, label
-
-def PUNDTrend(dataArray, xaxes, **kwargs):
-    figPr = plt.figure(figsize = (9,6))
+def PUNDTrend(dataArray, saveFig = '', legendlabel = [''], **kwargs): #xlabel and legendlabel needed in kwargs
+    figPr = plt.figure(figsize = (6,5))
     axPr = figPr.add_subplot(111)
 
-    figEc = plt.figure(figsize = (9,6))
+    figEc = plt.figure(figsize = (6,5))
     axEc = figEc.add_subplot(111)
 
-    for i in range(len(dataArray)):
-        avgPr, avgEc, label = PlotPE(dataArray[i])
+    for j, batch in enumerate(dataArray):
+        collAvgPr = []
+        collStdPr = []
+        collAvgEc = []
+        collStdEc = []
+        xaxes = []
 
-        axPr.plot(xaxes, avgPr, label=label, marker='o', ls='--')
-        axEc.plot(xaxes, avgEc, label=label, marker='o', ls='--')
+        for i in range(len(batch)):
+            avgPr, stdPr, avgEc, stdEc, voltageFilter, x = PlotPE(batch[i], saveFig)
 
-    figPr.legend(title="Cycling Voltage", fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = axPr.transAxes)
-    figEc.legend(title="Cycling Voltage", fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = axEc.transAxes)
+            xaxes.append(x)
+            collAvgPr.append(avgPr)
+            collStdPr.append(stdPr)
+            collAvgEc.append(avgEc)
+            collStdEc.append(stdEc)
+
+        collAvgPr = np.array(collAvgPr).transpose()
+        collStdPr = np.array(collStdPr).transpose()
+        collAvgEc = np.array(collAvgEc).transpose()
+        collStdEc = np.array(collStdEc).transpose()
+
+        for i in range(len(voltageFilter)):
+            if np.isnan(collAvgPr[i]).all() == False:
+                axPr.errorbar(xaxes, collAvgPr[i], yerr = collStdPr[i], marker = 'o', ms = 25, mec = 'black', ls = ':', lw = 3, capsize = 15, elinewidth = 1, label = legendlabel[j])
+                axEc.errorbar(xaxes, collAvgEc[i], yerr = collStdEc[i], marker = 'o', ms = 25, mec = 'black', ls = ':', lw = 3, capsize = 15, elinewidth = 1, label = legendlabel[j])
+        
+    if len(legendlabel) > 1:
+        figPr.legend(fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = axPr.transAxes)
+        figEc.legend(fontsize = 'x-large', loc = 4, bbox_to_anchor = (1,0), bbox_transform = axEc.transAxes)
 
     axPr.tick_params('both', labelsize = "x-large")
     axEc.tick_params('both', labelsize = "x-large")
@@ -221,5 +267,8 @@ def PUNDTrend(dataArray, xaxes, **kwargs):
     axEc.set_xlabel(kwargs.get('xlabel'), fontsize = "xx-large")
     axPr.set_ylabel("Remnant Polarization [$\mu$C/cm²]", fontsize = "xx-large")
     axEc.set_ylabel("Coercive Field [MV/cm]", fontsize = "xx-large")
+
+    figPr.tight_layout()
+    figEc.tight_layout()
 
 
