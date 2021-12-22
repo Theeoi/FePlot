@@ -32,10 +32,15 @@ def GetEnduData(Endupath, Endufiles):
         EnduFile = open(os.path.join(Endupath, Efile), 'r')
         EnduFilelines = EnduFile.readlines()
 
-        EnduTime = [float(line.split(",")[1]) for line in EnduFilelines]
-        EnduCurrent = [float(line.split(",")[2]) for line in EnduFilelines]
-        EnduVoltage = [float(line.split(",")[3]) for line in EnduFilelines]
-
+        if Efile.split("_")[0] == 'EnduranceP':
+            EnduTime = [float(line.split(",")[2]) for line in EnduFilelines]
+            EnduCurrent = [float(line.split(",")[0]) for line in EnduFilelines]
+            EnduVoltage = [float(line.split(",")[1]) for line in EnduFilelines]
+        else:
+            EnduTime = [float(line.split(",")[1]) for line in EnduFilelines]
+            EnduCurrent = [float(line.split(",")[2]) for line in EnduFilelines]
+            EnduVoltage = [float(line.split(",")[3]) for line in EnduFilelines]
+        
         EnduFile.close()
 
         maxV = Efile.split("_")[1]
@@ -48,9 +53,17 @@ def GetEnduData(Endupath, Endufiles):
 
         peak_range = [np.arange(peak_ind[j]-peak_width*0.49, peak_ind[j]+peak_width*0.49 + 1, dtype=int) for j in range(numpeaks)]
 
-        EFieldPeaks.append(np.append([v/d for v in [EnduVoltage[j] for j in peak_range[1]]], [v/d for v in [EnduVoltage[j] for j in peak_range[2]]]))
+        if Efile.split("_")[0] == 'EnduranceP':
+            EFieldPeaks.append(np.append([v/d for v in [EnduVoltage[j] for j in peak_range[1]]], [v/d for v in [EnduVoltage[j] for j in peak_range[3]]]))
+            
+            FECurrentDown = np.subtract([-EnduCurrent[j] for j in peak_range[1]], [-EnduCurrent[j] for j in peak_range[2]])
+            FECurrentUp = np.subtract([-EnduCurrent[j] for j in peak_range[3]], [-EnduCurrent[j] for j in peak_range[4]])
+            FECurrent = np.append(FECurrentDown, FECurrentUp)
 
-        FECurrent = np.append([-EnduCurrent[j] for j in peak_range[1]], [-EnduCurrent[j] for j in peak_range[2]])
+        else:
+            EFieldPeaks.append(np.append([v/d for v in [EnduVoltage[j] for j in peak_range[1]]], [v/d for v in [EnduVoltage[j] for j in peak_range[2]]]))
+
+            FECurrent = np.append([-EnduCurrent[j] for j in peak_range[1]], [-EnduCurrent[j] for j in peak_range[2]])
 
         QFE = [0] * len(FECurrent)
         for t in range(1, len(FECurrent)):
@@ -112,7 +125,7 @@ def PlotEndu(dataArray, label, saveFig = ''):
 
     fig.legend(fontsize = 'x-large', loc = 3, bbox_to_anchor = (0,0), bbox_transform = ax1.transAxes)
 
-    ax1.set_ylim([-1, 30])
+    ax1.set_ylim([-1, 32])
 
     #plt.title(SampleID)
     ax1.tick_params('both', labelsize = "x-large")

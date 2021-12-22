@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.8.2)  10 NOV 2021 17:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.8.2)  3 DEC 2021 12:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -408,80 +408,114 @@ File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
 Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 173.
 (pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
  [2 </home/theodorb/Pictures/image-placeholder-500.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
-<../Fig/InAsFlashIntC/PrTrends_FlashIntC.png, id=30, 649.7073pt x 432.8973pt>
-File: ../Fig/InAsFlashIntC/PrTrends_FlashIntC.png Graphic file (type png)
-<use ../Fig/InAsFlashIntC/PrTrends_FlashIntC.png>
-Package pdftex.def Info: ../Fig/InAsFlashIntC/PrTrends_FlashIntC.png  used on input line 220.
-(pdftex.def)             Requested size: 211.99648pt x 141.25142pt.
-<../Fig/InAsFlashIntC/EcTrends_FlashIntC.png, id=31, 649.7073pt x 432.8973pt>
-File: ../Fig/InAsFlashIntC/EcTrends_FlashIntC.png Graphic file (type png)
-<use ../Fig/InAsFlashIntC/EcTrends_FlashIntC.png>
-Package pdftex.def Info: ../Fig/InAsFlashIntC/EcTrends_FlashIntC.png  used on input line 221.
-(pdftex.def)             Requested size: 211.99648pt x 141.25142pt.
-<../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png, id=32, 649.7073pt x 432.8973pt>
-File: ../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png Graphic file (type png)
-<use ../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png>
-Package pdftex.def Info: ../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png  used on input line 222.
-(pdftex.def)             Requested size: 211.99648pt x 141.25142pt.
-<../Fig/InAsFlashIntC/DDTrend_FlashIntC.png, id=33, 484.209pt x 419.8887pt>
-File: ../Fig/InAsFlashIntC/DDTrend_FlashIntC.png Graphic file (type png)
-<use ../Fig/InAsFlashIntC/DDTrend_FlashIntC.png>
-Package pdftex.def Info: ../Fig/InAsFlashIntC/DDTrend_FlashIntC.png  used on input line 223.
-(pdftex.def)             Requested size: 211.99648pt x 183.8354pt.
-<../Fig/InAsFlashNumA/PrTrends_FlashNumA.png, id=34, 649.7073pt x 432.8973pt>
-File: ../Fig/InAsFlashNumA/PrTrends_FlashNumA.png Graphic file (type png)
-<use ../Fig/InAsFlashNumA/PrTrends_FlashNumA.png>
-Package pdftex.def Info: ../Fig/InAsFlashNumA/PrTrends_FlashNumA.png  used on input line 229.
-(pdftex.def)             Requested size: 226.12909pt x 150.66422pt.
-<../Fig/InAsFlashNumA/EcTrends_FlashNumA.png, id=35, 649.7073pt x 432.8973pt>
-File: ../Fig/InAsFlashNumA/EcTrends_FlashNumA.png Graphic file (type png)
-<use ../Fig/InAsFlashNumA/EcTrends_FlashNumA.png>
-Package pdftex.def Info: ../Fig/InAsFlashNumA/EcTrends_FlashNumA.png  used on input line 230.
-(pdftex.def)             Requested size: 226.12909pt x 150.66422pt.
-<../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png, id=36, 649.7073pt x 432.8973pt>
-File: ../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png Graphic file (type png)
-<use ../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png>
-Package pdftex.def Info: ../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png  used on input line 231.
-(pdftex.def)             Requested size: 226.12909pt x 150.66422pt.
-<../Fig/InAsFlashNumA/DDTrend_FlashNumA.png, id=37, 510.9489pt x 453.8556pt>
-File: ../Fig/InAsFlashNumA/DDTrend_FlashNumA.png Graphic file (type png)
-<use ../Fig/InAsFlashNumA/DDTrend_FlashNumA.png>
-Package pdftex.def Info: ../Fig/InAsFlashNumA/DDTrend_FlashNumA.png  used on input line 232.
-(pdftex.def)             Requested size: 226.12909pt x 200.86052pt.
-File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
-<use ~/Pictures/image-placeholder-500.jpg>
-Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 238.
-(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
-File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
-<use ~/Pictures/image-placeholder-500.jpg>
-Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 239.
-(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
-File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
-<use ~/Pictures/image-placeholder-500.jpg>
-Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 240.
-(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
-File: ~/Pictures/image-placeholder-500.jpg Graphic file (type jpg)
-<use ~/Pictures/image-placeholder-500.jpg>
-Package pdftex.def Info: ~/Pictures/image-placeholder-500.jpg  used on input line 241.
-(pdftex.def)             Requested size: 188.43971pt x 188.44005pt.
-[3] (./MasterThesis.bbl) [4 <../Fig/InAsFlashIntC/PrTrends_FlashIntC.png> <../Fig/InAsFlashIntC/EcTrends_FlashIntC.png> <../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png> <../Fig/InAsFlashIntC/DDTrend_FlashIntC.png>] [5 <../Fig/InAsFlashNumA/PrTrends_FlashNumA.png> <../Fig/InAsFlashNumA/EcTrends_FlashNumA.png> <../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png> <../Fig/InAsFlashNumA/DDTrend_FlashNumA.png>] [6] (./MasterThesis.aux) ) 
+<../Fig/FlashIntC_PrTrends.png, id=30, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashIntC_PrTrends.png Graphic file (type png)
+<use ../Fig/FlashIntC_PrTrends.png>
+Package pdftex.def Info: ../Fig/FlashIntC_PrTrends.png  used on input line 219.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashIntC_EcTrends.png, id=31, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashIntC_EcTrends.png Graphic file (type png)
+<use ../Fig/FlashIntC_EcTrends.png>
+Package pdftex.def Info: ../Fig/FlashIntC_EcTrends.png  used on input line 220.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashIntC_EnduTrends.png, id=32, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashIntC_EnduTrends.png Graphic file (type png)
+<use ../Fig/FlashIntC_EnduTrends.png>
+Package pdftex.def Info: ../Fig/FlashIntC_EnduTrends.png  used on input line 221.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashIntC_DDTrends.png, id=33, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashIntC_DDTrends.png Graphic file (type png)
+<use ../Fig/FlashIntC_DDTrends.png>
+Package pdftex.def Info: ../Fig/FlashIntC_DDTrends.png  used on input line 222.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumA+C_PrTrends.png, id=34, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumA+C_PrTrends.png Graphic file (type png)
+<use ../Fig/FlashNumA+C_PrTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumA+C_PrTrends.png  used on input line 228.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumA+C_EcTrends.png, id=35, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumA+C_EcTrends.png Graphic file (type png)
+<use ../Fig/FlashNumA+C_EcTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumA+C_EcTrends.png  used on input line 229.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumA_EnduTrends.png, id=36, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumA_EnduTrends.png Graphic file (type png)
+<use ../Fig/FlashNumA_EnduTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumA_EnduTrends.png  used on input line 235.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumA_DDTrends.png, id=37, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumA_DDTrends.png Graphic file (type png)
+<use ../Fig/FlashNumA_DDTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumA_DDTrends.png  used on input line 236.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumC_EnduTrends.png, id=38, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumC_EnduTrends.png Graphic file (type png)
+<use ../Fig/FlashNumC_EnduTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumC_EnduTrends.png  used on input line 237.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumC_DDTrends.png, id=39, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumC_DDTrends.png Graphic file (type png)
+<use ../Fig/FlashNumC_DDTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumC_DDTrends.png  used on input line 238.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashIntC+E_PrTrends.png, id=40, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashIntC+E_PrTrends.png Graphic file (type png)
+<use ../Fig/FlashIntC+E_PrTrends.png>
+Package pdftex.def Info: ../Fig/FlashIntC+E_PrTrends.png  used on input line 244.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashIntC+E_EcTrends.png, id=41, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashIntC+E_EcTrends.png Graphic file (type png)
+<use ../Fig/FlashIntC+E_EcTrends.png>
+Package pdftex.def Info: ../Fig/FlashIntC+E_EcTrends.png  used on input line 245.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashIntE_EnduTrends.png, id=42, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashIntE_EnduTrends.png Graphic file (type png)
+<use ../Fig/FlashIntE_EnduTrends.png>
+Package pdftex.def Info: ../Fig/FlashIntE_EnduTrends.png  used on input line 246.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashIntE_DDTrends.png, id=43, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashIntE_DDTrends.png Graphic file (type png)
+<use ../Fig/FlashIntE_DDTrends.png>
+Package pdftex.def Info: ../Fig/FlashIntE_DDTrends.png  used on input line 247.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumD_PrTrends.png, id=44, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumD_PrTrends.png Graphic file (type png)
+<use ../Fig/FlashNumD_PrTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumD_PrTrends.png  used on input line 253.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumD_EcTrends.png, id=45, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumD_EcTrends.png Graphic file (type png)
+<use ../Fig/FlashNumD_EcTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumD_EcTrends.png  used on input line 254.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumD_EnduTrends.png, id=46, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumD_EnduTrends.png Graphic file (type png)
+<use ../Fig/FlashNumD_EnduTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumD_EnduTrends.png  used on input line 255.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+<../Fig/FlashNumD_DDTrends.png, id=47, 432.86719pt x 360.59718pt>
+File: ../Fig/FlashNumD_DDTrends.png Graphic file (type png)
+<use ../Fig/FlashNumD_DDTrends.png>
+Package pdftex.def Info: ../Fig/FlashNumD_DDTrends.png  used on input line 256.
+(pdftex.def)             Requested size: 211.99648pt x 176.60062pt.
+(./MasterThesis.bbl [3]) [4 <../Fig/FlashIntC_PrTrends.png> <../Fig/FlashIntC_EcTrends.png> <../Fig/FlashIntC_EnduTrends.png> <../Fig/FlashIntC_DDTrends.png>] [5 <../Fig/FlashNumA+C_PrTrends.png> <../Fig/FlashNumA+C_EcTrends.png>] [6 <../Fig/FlashNumA_EnduTrends.png> <../Fig/FlashNumA_DDTrends.png> <../Fig/FlashNumC_EnduTrends.png> <../Fig/FlashNumC_DDTrends.png>] [7 <../Fig/FlashIntC+E_PrTrends.png> <../Fig/FlashIntC+E_EcTrends.png> <../Fig/FlashIntE_EnduTrends.png> <../Fig/FlashIntE_DDTrends.png>] [8 <../Fig/FlashNumD_PrTrends.png> <../Fig/FlashNumD_EcTrends.png> <../Fig/FlashNumD_EnduTrends.png> <../Fig/FlashNumD_DDTrends.png>] (./MasterThesis.aux) ) 
 Here is how much of TeX's memory you used:
- 11012 strings out of 478994
- 191576 string characters out of 5864752
- 514961 words of memory out of 5000000
- 28322 multiletter control sequences out of 15000+600000
+ 11073 strings out of 478994
+ 192953 string characters out of 5864752
+ 515979 words of memory out of 5000000
+ 28374 multiletter control sequences out of 15000+600000
  420630 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  98i,18n,102p,979b,1056s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on MasterThesis.pdf (9 pages, 572200 bytes).
+Output written on MasterThesis.pdf (11 pages, 1094278 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

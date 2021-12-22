@@ -91,7 +91,7 @@
     \end{abstract}
 \newpage \pagenumbering{arabic}
     \section{Introduction}
-
+    
     Mål: Introducera området och ge en överblick.\cite{atle2019development}
 
     \section{Semiconductors and Ferroelectrics}
@@ -174,7 +174,7 @@
         \caption{Figure showing how flashintensity relates to the peaktemperarure of the films through simulations. From this figure onwards we can then stick to Peak Temperature instead of Flash Intensity.}\label{fig:res_ComsolSim}
     \end{figure}
 
-    Explain in detail the figure above here and conclude the subsection. What type of figure(s) can I expect here??
+    Explain in detail the figure above here and conclude the subsection. What type of figure (s) can I expect here??
 
     \subsection{Sample Specifications and Characterization}
     In addition to the samples of focus in this work, samples were processed using RTP as the annealing method in paralell with FLA samples. These samples proves as a point of comparison for the characterization of the FLA samples throughout the work. The RTP samples were annealed at a temperature of \SI{600}{\celsius} for 30 seconds. Through the electrical characterization described in Section~\ref{sec:PandE} the remnant polarization ($P_r$), coercive field ($E_c$) and endurance were measured and tabulated in table~\ref{tab:RTPref}.
@@ -202,8 +202,7 @@
             \multicolumn{2}{l}{Sample Number} & 1 & 2 & 3 & 4 & 5 \\\midrule
             \multicolumn{1}{c}{HZO} & & & & & & \\
             Growth Temperature & [\si{\celsius}] & 200 & 200 & 200 & 200 & 200 \\
-            Film Thickness & [\si{\nano\meter}] & 10 & 10 & 10 & 10 & 10 \\
-            Epilayer & &-&-&-&-&-\\\midrule
+            Film Thickness & [\si{\nano\meter}] & 10 & 10 & 10 & 10 & 10 \\\midrule
             \multicolumn{1}{c}{FLA} & & & & & & \\
             Preheat Temperature & [\si{\celsius}] & 250 & 250 & 250 & 250 & 250 \\
             Flash Intensity & [\si{\joule/\centi\meter^2}] & \textbf{15} & \textbf{20} & \textbf{25} & \textbf{30} & \textbf{32.5} \\
@@ -217,32 +216,46 @@
 
     \begin{figure}[ht!]
         \centering
-        (a)\includegraphics[width=.45\textwidth]{../Fig/InAsFlashIntC/PrTrends_FlashIntC.png}
-        (b)\includegraphics[width=.45\textwidth]{../Fig/InAsFlashIntC/EcTrends_FlashIntC.png}
-        (c)\includegraphics[width=.45\textwidth]{../Fig/InAsFlashIntC/EnduSpaghetti_FlashIntC.png}
-        (d)\includegraphics[width=.45\textwidth]{../Fig/InAsFlashIntC/DDTrend_FlashIntC.png}
-        \caption{Figure showing all measured data from the first intensity-varied batch. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash. RTP reference is included.}\label{fig:res_FlashIntC}
+        (a)\includegraphics[width=.45\textwidth]{../Fig/FlashIntC_PrTrends.png}
+        (b)\includegraphics[width=.45\textwidth]{../Fig/FlashIntC_EcTrends.png}
+        (c)\includegraphics[width=.45\textwidth]{../Fig/FlashIntC_EnduTrends.png}
+        (d)\includegraphics[width=.45\textwidth]{../Fig/FlashIntC_DDTrends.png}
+        \caption{Figure showing all measured data from an intensity-varied batch. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash. RTP reference is included for Endurance and Defect Density.}\label{fig:res_FlashIntC}
     \end{figure}
 
     \begin{figure}[ht!]
         \centering
-        \includegraphics[width=.48\textwidth]{../Fig/InAsFlashNumA/PrTrends_FlashNumA.png}
-        \includegraphics[width=.48\textwidth]{../Fig/InAsFlashNumA/EcTrends_FlashNumA.png}
-        \includegraphics[width=.48\textwidth]{../Fig/InAsFlashNumA/EnduSpaghetti_FlashNumA.png}
-        \includegraphics[width=.48\textwidth]{../Fig/InAsFlashNumA/DDTrend_FlashNumA.png}
-        \caption{Figure showing all measured data from the first flashnumber-varied batch. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash at $\SI{25}{\joule/\centi\meter^2}$. RTP reference is included.}\label{fig:res_FlashNumA}
+        (a)\includegraphics[width=.45\textwidth]{../Fig/FlashNumA+C_PrTrends.png}
+        (b)\includegraphics[width=.45\textwidth]{../Fig/FlashNumA+C_EcTrends.png}
+        \caption{Figure showing Pr and Ec trends from flashnumber-varied batches. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash at $\SI{25}{\joule/\centi\meter^2}$ and \SI{20}{\joule/\centi\meter^2}.}\label{fig:res_FlashNumAC_PrEc}
     \end{figure}
 
     \begin{figure}[ht!]
         \centering
-        \includegraphics[width=.40\textwidth]{~/Pictures/image-placeholder-500.jpg}
-        \includegraphics[width=.40\textwidth]{~/Pictures/image-placeholder-500.jpg}
-        \includegraphics[width=.40\textwidth]{~/Pictures/image-placeholder-500.jpg}
-        \includegraphics[width=.40\textwidth]{~/Pictures/image-placeholder-500.jpg}
-        \caption{Figure showing all measured data from the second flashnumber-varied batch. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash at $\SI{20}{\joule/\centi\meter^2}$. RTP reference is included.}\label{fig:res_FlashNumC}
+        (a)\includegraphics[width=.45\textwidth]{../Fig/FlashNumA_EnduTrends.png}
+        (b)\includegraphics[width=.45\textwidth]{../Fig/FlashNumA_DDTrends.png}
+        (c)\includegraphics[width=.45\textwidth]{../Fig/FlashNumC_EnduTrends.png}
+        (d)\includegraphics[width=.45\textwidth]{../Fig/FlashNumC_DDTrends.png}
+        \caption{Figure showing Endurance and Defect Density from flashnumber-varied batches. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash at $\SI{20}{\joule/\centi\meter^2}$. RTP reference is included.}\label{fig:res_FlashNumAC_EnduDD}
     \end{figure}
 
-    
+    \begin{figure}[ht!]
+        \centering
+        (a)\includegraphics[width=.45\textwidth]{../Fig/FlashIntC+E_PrTrends.png}
+        (b)\includegraphics[width=.45\textwidth]{../Fig/FlashIntC+E_EcTrends.png}
+        (c)\includegraphics[width=.45\textwidth]{../Fig/FlashIntE_EnduTrends.png}
+        (d)\includegraphics[width=.45\textwidth]{../Fig/FlashIntE_DDTrends.png}
+        \caption{Figure showing all measured data from an intensity-varied batch. Low-doped subtrate, 270C ALD, HZO 1:1, 250C preheat, 5ms flash. RTP reference is included for Endurance and Defect Density.}\label{fig:res_FlashIntE}
+    \end{figure}
+
+    \begin{figure}[ht!]
+        \centering
+        (a)\includegraphics[width=.45\textwidth]{../Fig/FlashNumD_PrTrends.png}
+        (b)\includegraphics[width=.45\textwidth]{../Fig/FlashNumD_EcTrends.png}
+        (c)\includegraphics[width=.45\textwidth]{../Fig/FlashNumD_EnduTrends.png}
+        (d)\includegraphics[width=.45\textwidth]{../Fig/FlashNumD_DDTrends.png}
+        \caption{Figure showing all measured data from a flashnumber-varied batch. Low-doped subtrate, 270C ALD, HZO 1:1, 250C preheat, 5ms flash.}\label{fig:res_FlashNumD}
+    \end{figure}
 
     \section{Conclusion}
 

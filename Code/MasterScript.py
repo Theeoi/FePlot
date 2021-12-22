@@ -6,7 +6,7 @@ import PUNDPlotter
 import EnduPlotter
 import UniCVPlotter
 
-dataLoc = "../Data/InAsFlashIntE/UniCV/"
+dataLoc = "../Data/InAsFlashIntE/Endu/"
 saveFig = "../Fig/InAsFlashIntE/"
 
 gf1 = "293K"
@@ -186,12 +186,14 @@ dataToPlot = [
 ## FlashIntC Endu
 dataToPlot = [
         [
+            ["%s2/E3/"%dataLoc, gf3],
             ["%s2/C2/"%dataLoc, gf3],
             ["%s2/D1/"%dataLoc, gf3],
             ["%s2/D2/"%dataLoc, gf3],
             ["%s2/D3/"%dataLoc, gf3]
         ],
         [
+            ["%s1/D12/"%dataLoc, gf3],
             ["%s1/C4/"%dataLoc, gf3],
             ["%s1/C7/"%dataLoc, gf3],
             ["%s1/D4/"%dataLoc, gf3],
@@ -206,6 +208,7 @@ dataToPlot = [
             ["%s1/E9/"%dataLoc, gf3]
         ],
         [
+            ["%s5/D3/"%dataLoc, gf3],
             ["%s5/C7/"%dataLoc, gf3],
             ["%s5/C8/"%dataLoc, gf3],
             ["%s5/D10/"%dataLoc, gf3],
@@ -217,6 +220,7 @@ dataToPlot = [
             ["%s5/E9/"%dataLoc, gf3]
         ],
         [
+            ["../Data/InAsFlashNumA/Endu/4/E10/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D11/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D12/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D13/", gf3],
@@ -231,6 +235,7 @@ dataToPlot = [
 ## FlashNumA Endu
 dataToPlot = [
         [
+           ["%s1/D2/"%dataLoc, gf3],
            ["%s1/E3/"%dataLoc, gf3],
            ["%s1/D1/"%dataLoc, gf3],
            ["%s1/D13/"%dataLoc, gf3],
@@ -239,6 +244,7 @@ dataToPlot = [
            ["%s1/E2/"%dataLoc, gf3],
         ],
         [
+           ["%s2/D3/"%dataLoc, gf3],
            ["%s2/E1/"%dataLoc, gf3],
            ["%s2/C13/"%dataLoc, gf3],
            ["%s2/D1/"%dataLoc, gf3],
@@ -252,6 +258,7 @@ dataToPlot = [
            ["%s2/E2/"%dataLoc, gf3]
         ],
         [
+           ["%s3/E2/"%dataLoc, gf3],
            ["%s3/E1/"%dataLoc, gf3],
            ["%s3/C13/"%dataLoc, gf3],
            ["%s3/D1/"%dataLoc, gf3],
@@ -260,12 +267,14 @@ dataToPlot = [
            ["%s3/E8/"%dataLoc, gf3]
         ],
         [
+           ["../Data/InAsFlashNumC/Endu/4/D12/", gf3],
            ["../Data/InAsFlashNumC/Endu/4/D4/", gf3],
            ["../Data/InAsFlashNumC/Endu/4/D5/", gf3],
            ["../Data/InAsFlashNumC/Endu/4/D6/", gf3],
            ["../Data/InAsFlashNumC/Endu/4/E6/", gf3]
         ],
         [
+            ["../Data/InAsFlashNumA/Endu/4/E10/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D11/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D12/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D13/", gf3],
@@ -276,21 +285,25 @@ dataToPlot = [
             ["../Data/InAsFlashNumA/Endu/4/E9/", gf3]
         ]
     ]
-
+"""
 ## FlashIntE Endu
 dataToPlot = [
         [
+           ["%s1/D12/"%dataLoc, gf3],
            ["%s1/E1/"%dataLoc, gf3],
            ["%s1/E2/"%dataLoc, gf3],
         ],
         [
+           ["%s2/E6/"%dataLoc, gf3],
            ["%s2/E13/"%dataLoc, gf3],
            ["%s2/E12/"%dataLoc, gf3]
         ],
         [
+           ["%s3/E11/"%dataLoc, gf3],
            ["%s3/D11/"%dataLoc, gf3]
         ],
         [
+            ["../Data/InAsFlashNumA/Endu/4/E10/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D11/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D12/", gf3],
             ["../Data/InAsFlashNumA/Endu/4/D13/", gf3],
@@ -301,61 +314,47 @@ dataToPlot = [
             ["../Data/InAsFlashNumA/Endu/4/E9/", gf3]
         ]
     ]
-
+"""
 ## FlashNumC Endu
 dataToPlot = [
         [
+           ["%s1/E6/"%dataLoc, gf3],
            ["%s1/D5/"%dataLoc, gf3],
            ["%s1/E5/"%dataLoc, gf3]
         ],
         [
+           ["%s2/D4/"%dataLoc, gf3],
            ["%s2/D7/"%dataLoc, gf3],
            ["%s2/E7/"%dataLoc, gf3]
         ],
         [
+           ["%s3/E4/"%dataLoc, gf3],
            ["%s3/D4/"%dataLoc, gf3],
            ["%s3/D5/"%dataLoc, gf3],
            ["%s3/E5/"%dataLoc, gf3]
-        ],
-        [
-            ["../Data/InAsFlashNumA/Endu/4/D11/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/D12/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/D13/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/D9/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/E11/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/E12/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/E13/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/E9/", gf3]
         ]
     ]
 
 ## FlashNumD Endu
 dataToPlot = [
         [
+           ["../Data/InAsFlashIntE/Endu/3/E11/", gf3],
            ["../Data/InAsFlashIntE/Endu/3/D11/", gf3]
         ],
         [
+           ["%s4/E6/"%dataLoc, gf3],
            ["%s4/D12/"%dataLoc, gf3],
            ["%s4/D13/"%dataLoc, gf3],
            ["%s4/E12/"%dataLoc, gf3]
         ],
         [
+           ["%s5/E8/"%dataLoc, gf3],
            ["%s5/D1/"%dataLoc, gf3],
            ["%s5/D2/"%dataLoc, gf3],
            ["%s5/D3/"%dataLoc, gf3],
            ["%s5/D4/"%dataLoc, gf3],
            ["%s5/E2/"%dataLoc, gf3],
            ["%s5/E3/"%dataLoc, gf3]
-        ],
-        [
-            ["../Data/InAsFlashNumA/Endu/4/D11/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/D12/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/D13/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/D9/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/E11/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/E12/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/E13/", gf3],
-            ["../Data/InAsFlashNumA/Endu/4/E9/", gf3]
         ]
     ]
 
@@ -421,7 +420,7 @@ dataToPlot = [
             ["%s4/E12/"%dataLoc, gf4]
         ]
     ]
-"""
+
 ## FlashIntE UniCV
 dataToPlot = [
         [
@@ -447,7 +446,7 @@ dataToPlot = [
             ["../Data/InAsFlashNumA/UniCV/4/E12/", gf4]
         ]
     ]
-"""
+
 ## FlashNumC UniCV
 dataToPlot = [
         [
@@ -502,8 +501,8 @@ dataToPlot = [
 """
 
 #PUNDPlotter.PUNDTrend(dataToPlot, '', ['ALD 200C'], xlabel = 'Flash Intensity [J/cm²]')
-#EnduPlotter.PlotEndu(dataToPlot, ['30 J/cm²', '25 J/cm²', '20 J/cm²', 'RTP Reference'])
-UniCVPlotter.PlotDDGroup(dataToPlot, '', ['30 J/cm²', '25 J/cm²', '20 J/cm²', 'RTP Reference'])
+EnduPlotter.PlotEndu(dataToPlot, ['30 J/cm²', '25 J/cm²', '20 J/cm²', 'RTP Reference'])
+#UniCVPlotter.PlotDDGroup(dataToPlot, '', ['30 J/cm²', '25 J/cm²', '20 J/cm²', 'RTP Reference'])
 
 #plt.tight_layout()
 plt.show()

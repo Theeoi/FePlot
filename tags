@@ -96,7 +96,7 @@ d	Code/EndurancePlot.py	/^d = 10e-9 ## Ferroelectric layer thickness (m)$/;"	v
 d	Code/PUNDPlotter.py	/^d = 10e-9 ## Ferroelectric layer thickness (m)$/;"	v
 d	Code/UniCVPlotter.py	/^d = 10**-9 #Ferroelectric layer thickness (m)$/;"	v
 dTime	Code/EndurancePlot.py	/^            dTime = EnduTime[t] - EnduTime[t-1]$/;"	v
-dataLoc	Code/MasterScript.py	/^dataLoc = "..\/Data\/InAsFlashIntE\/UniCV\/"$/;"	v
+dataLoc	Code/MasterScript.py	/^dataLoc = "..\/Data\/InAsFlashIntE\/Endu\/"$/;"	v
 dataToPlot	Code/MasterScript.py	/^dataToPlot = [$/;"	v
 f	Code/UniCVPlotter.py	/^f = 10**6 #CV Frequency (Hz)$/;"	v
 fig	Code/EnduDataPlot.py	/^fig = plt.figure(figsize = (9,6))$/;"	v
@@ -152,6 +152,7 @@ tab:FlashIntC	Thesis/MasterThesis.tex	/^        \\caption{Selected processing co
 tab:RTPref	Thesis/MasterThesis.tex	/^        \\caption{Electrical characteristics for the RTP reference samples measured using a cycl/;"	l
 usage	Measurements/CVClean.sh	/^usage(){$/;"	f
 usage	Measurements/EnduClean.sh	/^usage(){$/;"	f
+usage	Measurements/EnduPUNDClean.sh	/^usage(){$/;"	f
 usage	Measurements/PUNDClean.sh	/^usage(){$/;"	f
 usage	Measurements/PyroClean.sh	/^usage(){$/;"	f
 usage	Measurements/SingleEndu.sh	/^usage(){$/;"	f
