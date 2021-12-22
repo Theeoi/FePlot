@@ -1,0 +1,2135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SdaData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0" xmlns="http://agilent.com/sta">
+<OnHandSetupList>
+<GroupList>
+<OnHandSetupGroup Name="PUND" Password="" ReadOnly="false">
+<SetupList>
+<OnHandSetup Softkey="Break of oxide" Subjected="true" RepeatCount="1">
+<TestSetup>
+<Title>Break of oxide</Title>
+<PrimitiveTest Name="I/V Sweep">
+<TestParameterList>
+<Parameter Name="Context.MainFrame" Index="0">
+<String>B1500A</String>
+</Parameter>
+<Parameter Name="Channel.UnitType" Index="0">
+<String>SMU</String>
+</Parameter>
+<Parameter Name="Channel.Unit" Index="0">
+<String>SMU2:HR/AS</String>
+</Parameter>
+<Parameter Name="Channel.IName" Index="0">
+<String>I1</String>
+</Parameter>
+<Parameter Name="Channel.VName" Index="0">
+<String>V1</String>
+</Parameter>
+<Parameter Name="Channel.Mode" Index="0">
+<String>V</String>
+</Parameter>
+<Parameter Name="Channel.Func" Index="0">
+<String>VAR1</String>
+</Parameter>
+<Parameter Name="Channel.UnitType" Index="1">
+<String>SMU</String>
+</Parameter>
+<Parameter Name="Channel.Unit" Index="1">
+<String>SMU1:HR/AS</String>
+</Parameter>
+<Parameter Name="Channel.IName" Index="1">
+<String>I2</String>
+</Parameter>
+<Parameter Name="Channel.VName" Index="1">
+<String>V2</String>
+</Parameter>
+<Parameter Name="Channel.Mode" Index="1">
+<String>V</String>
+</Parameter>
+<Parameter Name="Channel.Func" Index="1">
+<String>CONST</String>
+</Parameter>
+<Parameter Name="Channel.Index" Index="0">
+<String />
+</Parameter>
+<Parameter Name="Channel.Time" Index="0">
+<String />
+</Parameter>
+<Parameter Name="Measurement.Port.Unit" Index="0">
+<String>SMU2:HR/AS</String>
+</Parameter>
+<Parameter Name="Measurement.Port.SeriesResistor" Index="0">
+<String>NONE</String>
+</Parameter>
+<Parameter Name="Measurement.Port.Filter" Index="0">
+<String>ON</String>
+</Parameter>
+<Parameter Name="Measurement.Port.OutputVoltageComparison" Index="0">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Measurement.Port.Unit" Index="1">
+<String>SMU1:HR/AS</String>
+</Parameter>
+<Parameter Name="Measurement.Port.SeriesResistor" Index="1">
+<String>NONE</String>
+</Parameter>
+<Parameter Name="Measurement.Port.Filter" Index="1">
+<String>ON</String>
+</Parameter>
+<Parameter Name="Measurement.Port.OutputVoltageComparison" Index="1">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Measurement.Primary.Locus" Index="0">
+<String>Single</String>
+</Parameter>
+<Parameter Name="Measurement.Primary.Scale" Index="0">
+<String>LINEAR</String>
+</Parameter>
+<Parameter Name="Measurement.Primary.Start" Index="0">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Measurement.Primary.Stop" Index="0">
+<Double>10</Double>
+</Parameter>
+<Parameter Name="Measurement.Primary.Step" Index="0">
+<Double>0.05</Double>
+</Parameter>
+<Parameter Name="Measurement.Primary.Compliance" Index="0">
+<Double>0.1</Double>
+</Parameter>
+<Parameter Name="Measurement.Primary.PowerCompliance" Index="0">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Measurement.Aborting.Condition" Index="0">
+<String>CONTINUE AT ANY</String>
+</Parameter>
+<Parameter Name="Measurement.PostOutput.Value" Index="0">
+<String>START</String>
+</Parameter>
+<Parameter Name="Measurement.PostOutput.Retention" Index="0">
+<String>OFF</String>
+</Parameter>
+<Parameter Name="Measurement.Bias.Source" Index="0">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Measurement.Bias.Compliance" Index="0">
+<Double>0.1</Double>
+</Parameter>
+<Parameter Name="Measurement.Bias.Source" Index="1">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Measurement.Bias.Compliance" Index="1">
+<Double>0.1</Double>
+</Parameter>
+<Parameter Name="Measurement.Monitor.Unit" Index="0">
+<String>SMU2:HR/AS</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.Adc" Index="0">
+<String>HR ADC</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.Measurement" Index="0">
+<String>Compliance Side</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.RangingMode" Index="0">
+<String>LIMITED</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.RangeBoundary" Index="0">
+<String>1nA</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.RangeRating" Index="0">
+<String>BY FULL RANGE</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.RangeRatingCoeff" Index="0">
+<Number>50</Number>
+</Parameter>
+<Parameter Name="Measurement.Monitor.Unit" Index="1">
+<String>SMU1:HR/AS</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.Adc" Index="1">
+<String>HR ADC</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.Measurement" Index="1">
+<String>Compliance Side</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.RangingMode" Index="1">
+<String>LIMITED</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.RangeBoundary" Index="1">
+<String>1nA</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.RangeRating" Index="1">
+<String>BY FULL RANGE</String>
+</Parameter>
+<Parameter Name="Measurement.Monitor.RangeRatingCoeff" Index="1">
+<Number>50</Number>
+</Parameter>
+<Parameter Name="Measurement.Timing.Hold" Index="0">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Measurement.Timing.Delay" Index="0">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Measurement.Adc.HighSpeed.Mode" Index="0">
+<String>AUTO</String>
+</Parameter>
+<Parameter Name="Measurement.Adc.HighSpeed.Coeff" Index="0">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Measurement.Adc.HighResolution.AutoZero" Index="0">
+<String>OFF</String>
+</Parameter>
+<Parameter Name="Measurement.Adc.HighResolution.Mode" Index="0">
+<String>AUTO</String>
+</Parameter>
+<Parameter Name="Measurement.Adc.HighResolution.Coeff" Index="0">
+<Double>6</Double>
+</Parameter>
+<Parameter Name="Measurement.WaitTime.Source.Coeff" Index="0">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Measurement.WaitTime.Source.Offset" Index="0">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Measurement.WaitTime.Monitor.Coeff" Index="0">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Measurement.WaitTime.Monitor.Offset" Index="0">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Function.Analysis.Name" Index="0">
+<String>absI</String>
+</Parameter>
+<Parameter Name="Function.Analysis.Unit" Index="0">
+<String>A</String>
+</Parameter>
+<Parameter Name="Function.Analysis.Definition" Index="0">
+<String>abs(I1)</String>
+</Parameter>
+<Parameter Name="Output.Graph.Enabled" Index="0">
+<Boolean>true</Boolean>
+</Parameter>
+<Parameter Name="Output.Graph.AutoScaling" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="Output.Graph.XAxis.Data" Index="0">
+<String>V1</String>
+</Parameter>
+<Parameter Name="Output.Graph.XAxis.Scale" Index="0">
+<String>Linear</String>
+</Parameter>
+<Parameter Name="Output.Graph.XAxis.Left" Index="0">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Output.Graph.XAxis.Right" Index="0">
+<Double>3</Double>
+</Parameter>
+<Parameter Name="Output.Graph.XAxis.RunTimeAutoScale" Index="0">
+<Boolean>true</Boolean>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Data" Index="0">
+<String>I1</String>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Scale" Index="0">
+<String>Linear</String>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Bottom" Index="0">
+<Double>0.001</Double>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Top" Index="0">
+<Double>0.01</Double>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Group" Index="0">
+<String />
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.RunTimeAutoScale" Index="0">
+<Boolean>true</Boolean>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Data" Index="1">
+<String>absI</String>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Scale" Index="1">
+<String>Log</String>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Bottom" Index="1">
+<Double>0</Double>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Top" Index="1">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.Group" Index="1">
+<String />
+</Parameter>
+<Parameter Name="Output.Graph.YAxis.RunTimeAutoScale" Index="1">
+<Boolean>true</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Interpolation" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Var2StepCount" Index="0">
+<Number>1</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Var2StepScript" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Enabled" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Type" Index="0">
+<Number>1</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Fix" Index="0">
+<String>True</String>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.YAxis" Index="0">
+<Number>0</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point1.Type" Index="0">
+<Number>0</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point1.XY.X" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point1.XY.Y" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point1.Data.Var" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point1.Data.Condition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point1.Data.Start" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point1.Data.StartVar" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point1.Data.StartCondition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point2.Type" Index="0">
+<Number>0</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point2.XY.X" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point2.XY.Y" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point2.Data.Var" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point2.Data.Condition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point2.Data.Start" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point2.Data.StartVar" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.Point2.Data.StartCondition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line1.GradientExpr" Index="0">
+<String>0</String>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Enabled" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Type" Index="0">
+<Number>1</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Fix" Index="0">
+<String>True</String>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.YAxis" Index="0">
+<Number>0</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point1.Type" Index="0">
+<Number>0</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point1.XY.X" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point1.XY.Y" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point1.Data.Var" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point1.Data.Condition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point1.Data.Start" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point1.Data.StartVar" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point1.Data.StartCondition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point2.Type" Index="0">
+<Number>0</Number>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point2.XY.X" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point2.XY.Y" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point2.Data.Var" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point2.Data.Condition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point2.Data.Start" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point2.Data.StartVar" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.Point2.Data.StartCondition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Line2.GradientExpr" Index="0">
+<String>0</String>
+</Parameter>
+<Parameter Name="AutoAnalysis.Marker.Enabled" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Marker.Data.Var" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Marker.Data.Condition" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Marker.Data.Start" Index="0">
+<Boolean>false</Boolean>
+</Parameter>
+<Parameter Name="AutoAnalysis.Marker.Data.StartVar" Index="0">
+<String />
+</Parameter>
+<Parameter Name="AutoAnalysis.Marker.Data.StartCondition" Index="0">
+<String />
+</Parameter>
+</TestParameterList>
+</PrimitiveTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 1V - reverse" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 1V - reverse</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>10uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAVhY4MVCQ1wFWFjgxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAFYWODFQkNcBVhY4MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVN36guktQAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhAo+2OMQ30+iOC5zMMS5AVBLBwh36guktQAAAFABAABQSwECLQAUAAgACAAwhA1Td+oLpLUAAABQAQAAFQAkAAAAAAAAAAAAAAAAAAAAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkUEsFBgAAAAABAAEAZwAAABwBAAAAAA==</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYALB4OjFQkNcBsHg6MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 1.5V - reverse" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 1.5V - reverse</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>10uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYALB4OjFQkNcBsHg6MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVPxRt2ItQAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhAp+2OMQ30+iOC5zMMS5AVBLBwjxRt2ItQAAAFABAABQSwECLQAUAAgACAAwhA1T8UbdiLUAAABQAQAAFQAkAAAAAAAAAAAAAAAAAAAAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkUEsFBgAAAAABAAEAZwAAABwBAAAAAA==</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYALB4OjFQkNcBsHg6MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 2V - reverse" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 2V - reverse</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>10uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYALB4OjFQkNcBsHg6MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVPsaaB0tAAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAsHg6MVCQ1wGweDoxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhAYccIgfIFEclzkY4twAUEsHCOxpoHS0AAAAUAEAAFBLAQItABQACAAIADCEDVPsaaB0tAAAAFABAAAVACQAAAAAAAAAAAAAAAAAAABCaW5hcnlGb3JtYXR0ZWRWZWN0b3IKACAAAAAAAAEAGACweDoxUJDXAbB4OjFQkNcB/9f7b1ZayCRQSwUGAAAAAAEAAQBnAAAAGwEAAAAA</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAArbPDFQkNcBCts8MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 2.5V - reverse" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 2.5V - reverse</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>10uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAArbPDFQkNcBCts8MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVOvP8titQAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhApYHHCIHyBRHJc5GOLcAFBLBwivP8titQAAAFABAABQSwECLQAUAAgACAAwhA1Trz/LYrUAAABQAQAAFQAkAAAAAAAAAAAAAAAAAAAAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkUEsFBgAAAAABAAEAZwAAABwBAAAAAA==</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAArbPDFQkNcBCts8MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 3V - reverse" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 3V - reverse</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>100uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAArbPDFQkNcBCts8MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVNqxXZYtQAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhAo4HHCIHyBRHJc5GOLcAFBLBwhqxXZYtQAAAFABAABQSwECLQAUAAgACAAwhA1TasV2WLUAAABQAQAAFQAkAAAAAAAAAAAAAAAAAAAAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkUEsFBgAAAAABAAEAZwAAABwBAAAAAA==</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAArbPDFQkNcBCts8MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 3.5V - reverse" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 3.5V - reverse</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>1uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAArbPDFQkNcBCts8MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVMpkx1OtQAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhAp4HHCIHyBRHJc5GOLcAFBLBwgpkx1OtQAAAFABAABQSwECLQAUAAgACAAwhA1TKZMdTrUAAABQAQAAFQAkAAAAAAAAAAAAAAAAAAAAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkUEsFBgAAAAABAAEAZwAAABwBAAAAAA==</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgACts8MVCQ1wEK2zwxUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAArbPDFQkNcBCts8MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 4V - reverse" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 4V - reverse</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>1uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAGQ9PzFQkNcBZD0/MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVPgMA0ttQAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhAoEHHCIHyBRHJc5GOLcAFBLBwjgMA0ttQAAAFABAABQSwECLQAUAAgACAAwhA1T4DANLbUAAABQAQAAFQAkAAAAAAAAAAAAAAAAAAAAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkUEsFBgAAAAABAAEAZwAAABwBAAAAAA==</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAGQ9PzFQkNcBZD0/MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 2V" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 2V</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>100uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAGQ9PzFQkNcBZD0/MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVMMsoCHtAAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhAYO4BB3IFEclzkY4twAUEsHCAyygIe0AAAAUAEAAFBLAQItABQACAAIADCEDVMMsoCHtAAAAFABAAAVACQAAAAAAAAAAAAAAAAAAABCaW5hcnlGb3JtYXR0ZWRWZWN0b3IKACAAAAAAAAEAGABkPT8xUJDXAWQ9PzFQkNcB/9f7b1ZayCRQSwUGAAAAAAEAAQBnAAAAGwEAAAAA</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAGQ9PzFQkNcBZD0/MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 2.5V" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 2.5V</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>10uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAGQ9PzFQkNcBZD0/MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVNP5OuRtQAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhApYDuAQdyBRHJc5GOLcAFBLBwhP5OuRtQAAAFABAABQSwECLQAUAAgACAAwhA1TT+TrkbUAAABQAQAAFQAkAAAAAAAAAAAAAAAAAAAAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkUEsFBgAAAAABAAEAZwAAABwBAAAAAA==</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAZD0/MVCQ1wFkPT8xUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAGQ9PzFQkNcBZD0/MVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+<OnHandSetup Softkey="FE PUND 3V" Subjected="false" RepeatCount="1">
+<TestSetup>
+<Title>FE PUND 3V</Title>
+<ApplicationTest Name="WGFMU Pattern Editor" Affiliation="Public">
+<TestParameterList>
+<Parameter Name="Name" Index="0">
+<String>ExecutionMode</String>
+</Parameter>
+<Parameter Name="Value" Index="0">
+<String>Run Vector</String>
+</Parameter>
+<Parameter Name="Name" Index="1">
+<String>Enable1</String>
+</Parameter>
+<Parameter Name="Value" Index="1">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="2">
+<String>Channel1</String>
+</Parameter>
+<Parameter Name="Value" Index="2">
+<String>WGFMU1:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="3">
+<String>OperationMode1</String>
+</Parameter>
+<Parameter Name="Value" Index="3">
+<String>Fast IV Imeas</String>
+</Parameter>
+<Parameter Name="Name" Index="4">
+<String>VForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="4">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="5">
+<String>InitMeasRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="5">
+<String>10uA (Imeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="6">
+<String>Enable2</String>
+</Parameter>
+<Parameter Name="Value" Index="6">
+<String>Enable</String>
+</Parameter>
+<Parameter Name="Name" Index="7">
+<String>Channel2</String>
+</Parameter>
+<Parameter Name="Value" Index="7">
+<String>WGFMU2:RS	RSWGFMU</String>
+</Parameter>
+<Parameter Name="Name" Index="8">
+<String>OperationMode2</String>
+</Parameter>
+<Parameter Name="Value" Index="8">
+<String>PG Vmeas</String>
+</Parameter>
+<Parameter Name="Name" Index="9">
+<String>VForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="9">
+<String>Auto</String>
+</Parameter>
+<Parameter Name="Name" Index="10">
+<String>InitMeasRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="10">
+<String>5V (Vmeas)</String>
+</Parameter>
+<Parameter Name="Name" Index="11">
+<String>RepeatCount</String>
+</Parameter>
+<Parameter Name="Value" Index="11">
+<Double>1</Double>
+</Parameter>
+<Parameter Name="Name" Index="12">
+<String>WaveformCh1</String>
+</Parameter>
+<Parameter Name="Value" Index="12">
+<Binary>UEsDBBQACAAIADCEDVOP9TIDMgAAAGAAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAvp9BMVCQ1wG+n0ExUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBzwQVZIMqZagWWef+sKrEnp8ZXQYGuAFQSwcIj/UyAzIAAABgAAAAUEsBAi0AFAAIAAgAMIQNU4/1MgMyAAAAYAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAL6fQTFQkNcBvp9BMVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAACZAAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="13">
+<String>WaveformCh2</String>
+</Parameter>
+<Parameter Name="Value" Index="13">
+<Binary>UEsDBBQACAAIADCEDVOKHlartQAAAFABAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAvp9BMVCQ1wG+n0ExUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEE4rFxgihOZiDBD2IJAjEbVCmDrrPM60dmUvZ/Vn685JvkYD/5dL3H/lpfe/28xYx7WIPsf9Vl7SmZHGF/rN+wXFcx3l6sx+sVi0mifbXIOveHVSn2D+cILt17MN1eJPHwZe3UTPvKl2qGHGty7O8XdvU9+ZRvzyk9L07zdIG9zX3/3ul5Rfb5IGOFSqD6S+z5mdFdhAo4DuAQdyBRHJc5GOLcAFBLBwiKHlartQAAAFABAABQSwECLQAUAAgACAAwhA1Tih5Wq7UAAABQAQAAFQAkAAAAAAAAAAAAAAAAAAAAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAvp9BMVCQ1wG+n0ExUJDXAf/X+29WWsgkUEsFBgAAAAABAAEAZwAAABwBAAAAAA==</Binary>
+</Parameter>
+<Parameter Name="Name" Index="14">
+<String>MeasurementEvent</String>
+</Parameter>
+<Parameter Name="Value" Index="14">
+<Binary>UEsDBBQACAAIADCEDVMU9RqbTQAAAKwAAAAVACQAQmluYXJ5Rm9ybWF0dGVkVmVjdG9yCgAgAAAAAAABABgAvp9BMVCQ1wG+n0ExUJDXAf/X+29WWsgkY2BkYGD4DwQgGgTYQQxGEMEG4rFxMgEpTmYQwQIiWEEESIqTHUjwg2RhisGAnxlFpGOzAz8LTKTv7dYF349tsONnxRBhwzCHHV2EGwBQSwcIFPUam00AAACsAAAAUEsBAi0AFAAIAAgAMIQNUxT1GptNAAAArAAAABUAJAAAAAAAAAAAAAAAAAAAAEJpbmFyeUZvcm1hdHRlZFZlY3RvcgoAIAAAAAAAAQAYAL6fQTFQkNcBvp9BMVCQ1wH/1/tvVlrIJFBLBQYAAAAAAQABAGcAAAC0AAAAAAA=</Binary>
+</Parameter>
+<Parameter Name="Name" Index="15">
+<String>Output_to_File_for_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="15">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="16">
+<String>Output_Enable</String>
+</Parameter>
+<Parameter Name="Value" Index="16">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="17">
+<String>Output_Filename</String>
+</Parameter>
+<Parameter Name="Value" Index="17">
+<String>C:\WGFMUPatternEditor_Pattern.csv</String>
+</Parameter>
+<Parameter Name="Name" Index="18">
+<String>DataDisplay_for_RunVector</String>
+</Parameter>
+<Parameter Name="Value" Index="18">
+<String />
+</Parameter>
+<Parameter Name="Name" Index="19">
+<String>DataDisplay_PatternValidation</String>
+</Parameter>
+<Parameter Name="Value" Index="19">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="20">
+<String>DataDisplay_Mode</String>
+</Parameter>
+<Parameter Name="Value" Index="20">
+<String>x(time)_y(meas)</String>
+</Parameter>
+<Parameter Name="Name" Index="21">
+<String>LogToFile</String>
+</Parameter>
+<Parameter Name="Value" Index="21">
+<String>Disable</String>
+</Parameter>
+<Parameter Name="Name" Index="22">
+<String>LogFile</String>
+</Parameter>
+<Parameter Name="Value" Index="22">
+<String>C:\WGFMUPatternEditor_Log.log</String>
+</Parameter>
+<Parameter Name="Name" Index="23">
+<String>WarningLevel</String>
+</Parameter>
+<Parameter Name="Value" Index="23">
+<Double>2</Double>
+</Parameter>
+<Parameter Name="Name" Index="24">
+<String>IForceRange1</String>
+</Parameter>
+<Parameter Name="Value" Index="24">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="25">
+<String>IForceRange2</String>
+</Parameter>
+<Parameter Name="Value" Index="25">
+<String>10mA</String>
+</Parameter>
+<Parameter Name="Name" Index="26">
+<String>Result_Update_Interval_s</String>
+</Parameter>
+<Parameter Name="Value" Index="26">
+<Double>10</Double>
+</Parameter>
+</TestParameterList>
+</ApplicationTest>
+</TestSetup>
+</OnHandSetup>
+</SetupList>
+</OnHandSetupGroup>
+</GroupList>
+</OnHandSetupList>
+</SdaData>
