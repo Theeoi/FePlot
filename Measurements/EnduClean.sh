@@ -65,17 +65,21 @@ for FILEPATH0 in $FILEPATHS; do
         rm -r $DATALOC/temp_$FILENAME
         continue
     fi
-
+    
     #echo "Removing all lines after line $ENDLINE."
     END=$(wc -l $DATALOC/temp_$FILENAME | cut -f1 -d' ')
     ENDLINE=$(( $END - $ENDLINE + 2 ))
     head -n -$ENDLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
     mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
 
+    MAXVOLTAGE=$(cut -f 4 -d',' $DATALOC/temp_$FILENAME | sort -n | tail -1 | awk '{printf "%.1f", $1}')
+
     SAMPLENUM=$(echo $FILENAME | cut -f 8 -d'_')
     CONDENNUM=$(echo $FILENAME | cut -f 10 -d'_' | sed 's/([^)]*)//g')
 
-    NEWFILENAME=$(echo $FILENAME | cut -f 1,3,5-10 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
+    NEWFILENAME1=$(echo $FILENAME | cut -f 1 -d'_') 
+    NEWFILENAME2=$(echo $FILENAME | cut -f 3,5-10 -d'_')
+    NEWFILENAME=$(echo "${NEWFILENAME1}_${MAXVOLTAGE}V_${NEWFILENAME2}" | sed 's/[][]//g' | sed 's/([^)]*)//g')
 
     mkdir -p $DATADEST/$SAMPLENUM/$CONDENNUM
 

@@ -58,7 +58,11 @@ ENDLINE=$(( $END - $ENDLINE + 2 ))
 head -n -$ENDLINE $DATALOC/temp_$FILENAME > $DATALOC/temp_$FILENAME.tmp
 mv $DATALOC/temp_$FILENAME.tmp $DATALOC/temp_$FILENAME
 
-NEWFILENAME=$(echo $FILENAME | cut -f 1,3,5-10 -d'_' | sed 's/[][]//g' | sed 's/([^)]*)//g')
+MAXVOLTAGE=$(cut -f 4 -d',' $DATALOC/temp_$FILENAME | sort -n | tail -1 | awk '{printf "%.1f", $1}')
+
+NEWFILENAME1=$(echo $FILENAME | cut -f 1 -d'_') 
+NEWFILENAME2=$(echo $FILENAME | cut -f 3,5-10 -d'_')
+NEWFILENAME=$(echo "${NEWFILENAME1}_${MAXVOLTAGE}V_${NEWFILENAME2}" | sed 's/[][]//g' | sed 's/([^)]*)//g')
 
 echo "Removing spaces in data. Resulting file in $DATADEST/${NEWFILENAME}.csv"
 sed 's/ //g' $DATALOC/temp_$FILENAME > $DATADEST/$NEWFILENAME.csv

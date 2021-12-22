@@ -1,0 +1,124 @@
+Endurance Measure 1kHz After 300 000 Cycles [FlashNumD_5_25um_D4(5) ; 11/19/2021 4:16:44 PM]	->	Endurance Measure 1kHz After 300 000 Cycles [FlashNumD_5_25um_D4(5) ; 11_19_2021 4_16_44 PM].csv
+Endurance Measure 1kHz After 275 000 Cycles [FlashNumD_5_25um_D4(5) ; 11/19/2021 4:15:17 PM]	->	Endurance Measure 1kHz After 275 000 Cycles [FlashNumD_5_25um_D4(5) ; 11_19_2021 4_15_17 PM].csv
+Endurance Measure 1kHz After 250 000 Cycles(1)(1)(1) [FlashNumD_5_25um_D4(5) ; 11/19/2021 4:13:50 PM]	->	Endurance Measure 1kHz After 250 000 Cycles(1)(1)(1) [FlashNumD_5_25um_D4(5) ; 11_19_2021 4_13_50 PM].csv
+Endurance Measure 1kHz After 225 000 Cycles(1)(1) [FlashNumD_5_25um_D4(5) ; 11/19/2021 4:12:23 PM]	->	Endurance Measure 1kHz After 225 000 Cycles(1)(1) [FlashNumD_5_25um_D4(5) ; 11_19_2021 4_12_23 PM].csv
+Endurance Measure 1kHz After 200 000 Cycles(1)(1) [FlashNumD_5_25um_D4(4) ; 11/19/2021 4:10:42 PM]	->	Endurance Measure 1kHz After 200 000 Cycles(1)(1) [FlashNumD_5_25um_D4(4) ; 11_19_2021 4_10_42 PM].csv
+Endurance Measure 1kHz After 190 000 Cycles(1) [FlashNumD_5_25um_D4(4) ; 11/19/2021 4:10:04 PM]	->	Endurance Measure 1kHz After 190 000 Cycles(1) [FlashNumD_5_25um_D4(4) ; 11_19_2021 4_10_04 PM].csv
+Endurance Measure 1kHz After 180 000 Cycles(1) [FlashNumD_5_25um_D4(4) ; 11/19/2021 4:09:27 PM]	->	Endurance Measure 1kHz After 180 000 Cycles(1) [FlashNumD_5_25um_D4(4) ; 11_19_2021 4_09_27 PM].csv
+Endurance Measure 1kHz After 170 000 Cycles [FlashNumD_5_25um_D4(4) ; 11/19/2021 4:08:49 PM]	->	Endurance Measure 1kHz After 170 000 Cycles [FlashNumD_5_25um_D4(4) ; 11_19_2021 4_08_49 PM].csv
+Endurance Measure 1kHz After 160 000 Cycles [FlashNumD_5_25um_D4(4) ; 11/19/2021 4:08:11 PM]	->	Endurance Measure 1kHz After 160 000 Cycles [FlashNumD_5_25um_D4(4) ; 11_19_2021 4_08_11 PM].csv
+Endurance Measure 1kHz After 150 000 Cycles(1)(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:07:08 PM]	->	Endurance Measure 1kHz After 150 000 Cycles(1)(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_07_08 PM].csv
+Endurance Measure 1kHz After 140 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:06:30 PM]	->	Endurance Measure 1kHz After 140 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_06_30 PM].csv
+Endurance Measure 1kHz After 130 000 Cycles [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:05:52 PM]	->	Endurance Measure 1kHz After 130 000 Cycles [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_05_52 PM].csv
+Endurance Measure 1kHz After 120 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:05:14 PM]	->	Endurance Measure 1kHz After 120 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_05_14 PM].csv
+Endurance Measure 1kHz After 110 000 Cycles [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:04:36 PM]	->	Endurance Measure 1kHz After 110 000 Cycles [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_04_36 PM].csv
+Endurance Measure 1kHz After 100 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:03:58 PM]	->	Endurance Measure 1kHz After 100 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_03_58 PM].csv
+Endurance Measure 1kHz After 90 000 Cycles [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:03:21 PM]	->	Endurance Measure 1kHz After 90 000 Cycles [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_03_21 PM].csv
+Endurance Measure 1kHz After 80 000 Cycles [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:02:43 PM]	->	Endurance Measure 1kHz After 80 000 Cycles [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_02_43 PM].csv
+Endurance Measure 1kHz After 70 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:02:06 PM]	->	Endurance Measure 1kHz After 70 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_02_06 PM].csv
+Endurance Measure 1kHz After 60 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:01:28 PM]	->	Endurance Measure 1kHz After 60 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_01_28 PM].csv
+Endurance Measure 1kHz After 50 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:00:50 PM]	->	Endurance Measure 1kHz After 50 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_00_50 PM].csv
+Endurance Measure 1kHz After 40 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 4:00:13 PM]	->	Endurance Measure 1kHz After 40 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 4_00_13 PM].csv
+Endurance Measure 1kHz After 30 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 3:59:35 PM]	->	Endurance Measure 1kHz After 30 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 3_59_35 PM].csv
+Endurance Measure 1kHz After 20 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11/19/2021 3:58:57 PM]	->	Endurance Measure 1kHz After 20 000 Cycles(1) [FlashNumD_5_25um_D4(3) ; 11_19_2021 3_58_57 PM].csv
+FE PUND 3V - reverse [FlashNumD_5_25um_D4(2) ; 11/19/2021 3:58:03 PM]	->	FE PUND 3V - reverse [FlashNumD_5_25um_D4(2) ; 11_19_2021 3_58_03 PM].csv
+Endurance Measure 1kHz After 10 000 Cycles [FlashNumD_5_25um_D4(1) ; 11/19/2021 3:57:37 PM]	->	Endurance Measure 1kHz After 10 000 Cycles [FlashNumD_5_25um_D4(1) ; 11_19_2021 3_57_37 PM].csv
+Endurance Measure 1kHz After 1000 Cycles [FlashNumD_5_25um_D4(1) ; 11/19/2021 3:57:24 PM]	->	Endurance Measure 1kHz After 1000 Cycles [FlashNumD_5_25um_D4(1) ; 11_19_2021 3_57_24 PM].csv
+Endurance Measure 1kHz After 100 Cycles [FlashNumD_5_25um_D4(1) ; 11/19/2021 3:57:16 PM]	->	Endurance Measure 1kHz After 100 Cycles [FlashNumD_5_25um_D4(1) ; 11_19_2021 3_57_16 PM].csv
+Endurance Measure 1kHz After 10 Cycles [FlashNumD_5_25um_D4(1) ; 11/19/2021 3:57:08 PM]	->	Endurance Measure 1kHz After 10 Cycles [FlashNumD_5_25um_D4(1) ; 11_19_2021 3_57_08 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_D4(1) ; 11/19/2021 3:57:00 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_D4(1) ; 11_19_2021 3_57_00 PM].csv
+Endurance Measure 1kHz After 180 000 Cycles(1) [FlashNumD_5_25um_D3(4) ; 11/19/2021 3:55:54 PM]	->	Endurance Measure 1kHz After 180 000 Cycles(1) [FlashNumD_5_25um_D3(4) ; 11_19_2021 3_55_54 PM].csv
+Endurance Measure 1kHz After 170 000 Cycles [FlashNumD_5_25um_D3(4) ; 11/19/2021 3:55:16 PM]	->	Endurance Measure 1kHz After 170 000 Cycles [FlashNumD_5_25um_D3(4) ; 11_19_2021 3_55_16 PM].csv
+Endurance Measure 1kHz After 160 000 Cycles [FlashNumD_5_25um_D3(4) ; 11/19/2021 3:54:38 PM]	->	Endurance Measure 1kHz After 160 000 Cycles [FlashNumD_5_25um_D3(4) ; 11_19_2021 3_54_38 PM].csv
+Endurance Measure 1kHz After 150 000 Cycles(1)(1) [FlashNumD_5_25um_D3(4) ; 11/19/2021 3:54:00 PM]	->	Endurance Measure 1kHz After 150 000 Cycles(1)(1) [FlashNumD_5_25um_D3(4) ; 11_19_2021 3_54_00 PM].csv
+Endurance Measure 1kHz After 140 000 Cycles(1) [FlashNumD_5_25um_D3(4) ; 11/19/2021 3:53:22 PM]	->	Endurance Measure 1kHz After 140 000 Cycles(1) [FlashNumD_5_25um_D3(4) ; 11_19_2021 3_53_22 PM].csv
+Endurance Measure 1kHz After 130 000 Cycles [FlashNumD_5_25um_D3(4) ; 11/19/2021 3:52:45 PM]	->	Endurance Measure 1kHz After 130 000 Cycles [FlashNumD_5_25um_D3(4) ; 11_19_2021 3_52_45 PM].csv
+Endurance Measure 1kHz After 120 000 Cycles(1) [FlashNumD_5_25um_D3(4) ; 11/19/2021 3:52:07 PM]	->	Endurance Measure 1kHz After 120 000 Cycles(1) [FlashNumD_5_25um_D3(4) ; 11_19_2021 3_52_07 PM].csv
+Endurance Measure 1kHz After 110 000 Cycles [FlashNumD_5_25um_D3(4) ; 11/19/2021 3:51:30 PM]	->	Endurance Measure 1kHz After 110 000 Cycles [FlashNumD_5_25um_D3(4) ; 11_19_2021 3_51_30 PM].csv
+Endurance Measure 1kHz After 100 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:46:52 PM]	->	Endurance Measure 1kHz After 100 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_46_52 PM].csv
+Endurance Measure 1kHz After 90 000 Cycles [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:46:14 PM]	->	Endurance Measure 1kHz After 90 000 Cycles [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_46_14 PM].csv
+Endurance Measure 1kHz After 80 000 Cycles [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:45:37 PM]	->	Endurance Measure 1kHz After 80 000 Cycles [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_45_37 PM].csv
+Endurance Measure 1kHz After 70 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:44:59 PM]	->	Endurance Measure 1kHz After 70 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_44_59 PM].csv
+Endurance Measure 1kHz After 60 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:44:21 PM]	->	Endurance Measure 1kHz After 60 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_44_21 PM].csv
+Endurance Measure 1kHz After 50 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:43:44 PM]	->	Endurance Measure 1kHz After 50 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_43_44 PM].csv
+Endurance Measure 1kHz After 40 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:43:06 PM]	->	Endurance Measure 1kHz After 40 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_43_06 PM].csv
+Endurance Measure 1kHz After 30 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:42:28 PM]	->	Endurance Measure 1kHz After 30 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_42_28 PM].csv
+Endurance Measure 1kHz After 20 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11/19/2021 3:41:51 PM]	->	Endurance Measure 1kHz After 20 000 Cycles(1) [FlashNumD_5_25um_D3(3) ; 11_19_2021 3_41_51 PM].csv
+FE PUND 3V - reverse [FlashNumD_5_25um_D3(2) ; 11/19/2021 3:40:57 PM]	->	FE PUND 3V - reverse [FlashNumD_5_25um_D3(2) ; 11_19_2021 3_40_57 PM].csv
+Endurance Measure 1kHz After 10 000 Cycles [FlashNumD_5_25um_D3(1) ; 11/19/2021 3:40:36 PM]	->	Endurance Measure 1kHz After 10 000 Cycles [FlashNumD_5_25um_D3(1) ; 11_19_2021 3_40_36 PM].csv
+Endurance Measure 1kHz After 1000 Cycles [FlashNumD_5_25um_D3(1) ; 11/19/2021 3:40:23 PM]	->	Endurance Measure 1kHz After 1000 Cycles [FlashNumD_5_25um_D3(1) ; 11_19_2021 3_40_23 PM].csv
+Endurance Measure 1kHz After 100 Cycles [FlashNumD_5_25um_D3(1) ; 11/19/2021 3:40:15 PM]	->	Endurance Measure 1kHz After 100 Cycles [FlashNumD_5_25um_D3(1) ; 11_19_2021 3_40_15 PM].csv
+Endurance Measure 1kHz After 10 Cycles [FlashNumD_5_25um_D3(1) ; 11/19/2021 3:40:07 PM]	->	Endurance Measure 1kHz After 10 Cycles [FlashNumD_5_25um_D3(1) ; 11_19_2021 3_40_07 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_D3(1) ; 11/19/2021 3:39:59 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_D3(1) ; 11_19_2021 3_39_59 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_E3(4) ; 11/19/2021 3:39:10 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_E3(4) ; 11_19_2021 3_39_10 PM].csv
+Break of oxide [FlashNumD_5_25um_E2(3) ; 11/19/2021 3:38:41 PM]	->	Break of oxide [FlashNumD_5_25um_E2(3) ; 11_19_2021 3_38_41 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_D2(2) ; 11/19/2021 3:36:41 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_D2(2) ; 11_19_2021 3_36_41 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_D1(1) ; 11/19/2021 3:36:09 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_D1(1) ; 11_19_2021 3_36_09 PM].csv
+Endurance Measure 1kHz After 100 Cycles [FlashNumD_5_25um_E2(6) ; 11/19/2021 3:35:33 PM]	->	Endurance Measure 1kHz After 100 Cycles [FlashNumD_5_25um_E2(6) ; 11_19_2021 3_35_33 PM].csv
+Endurance Measure 1kHz After 10 Cycles [FlashNumD_5_25um_E2(6) ; 11/19/2021 3:35:25 PM]	->	Endurance Measure 1kHz After 10 Cycles [FlashNumD_5_25um_E2(6) ; 11_19_2021 3_35_25 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_E2(6) ; 11/19/2021 3:35:17 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_5_25um_E2(6) ; 11_19_2021 3_35_17 PM].csv
+Break of oxide [FlashNumD_5_25um_E1(5) ; 11/19/2021 3:34:26 PM]	->	Break of oxide [FlashNumD_5_25um_E1(5) ; 11_19_2021 3_34_26 PM].csv
+Endurance Measure 1kHz After 350 000 Cycles(1) [FlashNumD_4_25um_E12(4) ; 11/19/2021 3:28:15 PM]	->	Endurance Measure 1kHz After 350 000 Cycles(1) [FlashNumD_4_25um_E12(4) ; 11_19_2021 3_28_15 PM].csv
+Endurance Measure 1kHz After 300 000 Cycles [FlashNumD_4_25um_E12(4) ; 11/19/2021 3:25:26 PM]	->	Endurance Measure 1kHz After 300 000 Cycles [FlashNumD_4_25um_E12(4) ; 11_19_2021 3_25_26 PM].csv
+Endurance Measure 1kHz After 275 000 Cycles [FlashNumD_4_25um_E12(4) ; 11/19/2021 3:23:58 PM]	->	Endurance Measure 1kHz After 275 000 Cycles [FlashNumD_4_25um_E12(4) ; 11_19_2021 3_23_58 PM].csv
+Endurance Measure 1kHz After 250 000 Cycles(1)(1)(1) [FlashNumD_4_25um_E12(4) ; 11/19/2021 3:22:32 PM]	->	Endurance Measure 1kHz After 250 000 Cycles(1)(1)(1) [FlashNumD_4_25um_E12(4) ; 11_19_2021 3_22_32 PM].csv
+Endurance Measure 1kHz After 225 000 Cycles(1)(1) [FlashNumD_4_25um_E12(4) ; 11/19/2021 3:21:05 PM]	->	Endurance Measure 1kHz After 225 000 Cycles(1)(1) [FlashNumD_4_25um_E12(4) ; 11_19_2021 3_21_05 PM].csv
+Endurance Measure 1kHz After 200 000 Cycles(1)(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:19:12 PM]	->	Endurance Measure 1kHz After 200 000 Cycles(1)(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_19_12 PM].csv
+Endurance Measure 1kHz After 190 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:18:34 PM]	->	Endurance Measure 1kHz After 190 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_18_34 PM].csv
+Endurance Measure 1kHz After 180 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:17:56 PM]	->	Endurance Measure 1kHz After 180 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_17_56 PM].csv
+Endurance Measure 1kHz After 170 000 Cycles [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:12:25 PM]	->	Endurance Measure 1kHz After 170 000 Cycles [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_12_25 PM].csv
+Endurance Measure 1kHz After 160 000 Cycles [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:11:47 PM]	->	Endurance Measure 1kHz After 160 000 Cycles [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_11_47 PM].csv
+Endurance Measure 1kHz After 150 000 Cycles(1)(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:11:10 PM]	->	Endurance Measure 1kHz After 150 000 Cycles(1)(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_11_10 PM].csv
+Endurance Measure 1kHz After 140 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:10:32 PM]	->	Endurance Measure 1kHz After 140 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_10_32 PM].csv
+Endurance Measure 1kHz After 130 000 Cycles [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:09:54 PM]	->	Endurance Measure 1kHz After 130 000 Cycles [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_09_54 PM].csv
+Endurance Measure 1kHz After 120 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:09:16 PM]	->	Endurance Measure 1kHz After 120 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_09_16 PM].csv
+Endurance Measure 1kHz After 110 000 Cycles [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:08:39 PM]	->	Endurance Measure 1kHz After 110 000 Cycles [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_08_39 PM].csv
+Endurance Measure 1kHz After 100 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:08:01 PM]	->	Endurance Measure 1kHz After 100 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_08_01 PM].csv
+Endurance Measure 1kHz After 90 000 Cycles [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:07:23 PM]	->	Endurance Measure 1kHz After 90 000 Cycles [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_07_23 PM].csv
+Endurance Measure 1kHz After 80 000 Cycles [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:06:46 PM]	->	Endurance Measure 1kHz After 80 000 Cycles [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_06_46 PM].csv
+Endurance Measure 1kHz After 70 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:06:08 PM]	->	Endurance Measure 1kHz After 70 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_06_08 PM].csv
+Endurance Measure 1kHz After 60 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:05:30 PM]	->	Endurance Measure 1kHz After 60 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_05_30 PM].csv
+Endurance Measure 1kHz After 50 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:04:53 PM]	->	Endurance Measure 1kHz After 50 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_04_53 PM].csv
+Endurance Measure 1kHz After 40 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:04:15 PM]	->	Endurance Measure 1kHz After 40 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_04_15 PM].csv
+Endurance Measure 1kHz After 30 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:03:38 PM]	->	Endurance Measure 1kHz After 30 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_03_38 PM].csv
+Endurance Measure 1kHz After 20 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11/19/2021 3:03:00 PM]	->	Endurance Measure 1kHz After 20 000 Cycles(1) [FlashNumD_4_25um_E12(3) ; 11_19_2021 3_03_00 PM].csv
+FE PUND 3V - reverse [FlashNumD_4_25um_E12(2) ; 11/19/2021 3:02:04 PM]	->	FE PUND 3V - reverse [FlashNumD_4_25um_E12(2) ; 11_19_2021 3_02_04 PM].csv
+Endurance Measure 1kHz After 10 000 Cycles [FlashNumD_4_25um_E12(1) ; 11/19/2021 3:00:42 PM]	->	Endurance Measure 1kHz After 10 000 Cycles [FlashNumD_4_25um_E12(1) ; 11_19_2021 3_00_42 PM].csv
+Endurance Measure 1kHz After 1000 Cycles [FlashNumD_4_25um_E12(1) ; 11/19/2021 3:00:29 PM]	->	Endurance Measure 1kHz After 1000 Cycles [FlashNumD_4_25um_E12(1) ; 11_19_2021 3_00_29 PM].csv
+Endurance Measure 1kHz After 100 Cycles [FlashNumD_4_25um_E12(1) ; 11/19/2021 3:00:22 PM]	->	Endurance Measure 1kHz After 100 Cycles [FlashNumD_4_25um_E12(1) ; 11_19_2021 3_00_22 PM].csv
+Endurance Measure 1kHz After 10 Cycles [FlashNumD_4_25um_E12(1) ; 11/19/2021 3:00:14 PM]	->	Endurance Measure 1kHz After 10 Cycles [FlashNumD_4_25um_E12(1) ; 11_19_2021 3_00_14 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_4_25um_E12(1) ; 11/19/2021 3:00:06 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_4_25um_E12(1) ; 11_19_2021 3_00_06 PM].csv
+Endurance Measure 1kHz After 400 000 Cycles(1) [FlashNumD_4_25um_D12(5) ; 11/19/2021 2:51:06 PM]	->	Endurance Measure 1kHz After 400 000 Cycles(1) [FlashNumD_4_25um_D12(5) ; 11_19_2021 2_51_06 PM].csv
+Endurance Measure 1kHz After 350 000 Cycles(1) [FlashNumD_4_25um_D12(5) ; 11/19/2021 2:48:14 PM]	->	Endurance Measure 1kHz After 350 000 Cycles(1) [FlashNumD_4_25um_D12(5) ; 11_19_2021 2_48_14 PM].csv
+Endurance Measure 1kHz After 300 000 Cycles [FlashNumD_4_25um_D12(4) ; 11/19/2021 2:43:15 PM]	->	Endurance Measure 1kHz After 300 000 Cycles [FlashNumD_4_25um_D12(4) ; 11_19_2021 2_43_15 PM].csv
+Endurance Measure 1kHz After 275 000 Cycles [FlashNumD_4_25um_D12(4) ; 11/19/2021 2:41:48 PM]	->	Endurance Measure 1kHz After 275 000 Cycles [FlashNumD_4_25um_D12(4) ; 11_19_2021 2_41_48 PM].csv
+Endurance Measure 1kHz After 250 000 Cycles(1)(1)(1) [FlashNumD_4_25um_D12(4) ; 11/19/2021 2:40:21 PM]	->	Endurance Measure 1kHz After 250 000 Cycles(1)(1)(1) [FlashNumD_4_25um_D12(4) ; 11_19_2021 2_40_21 PM].csv
+Endurance Measure 1kHz After 225 000 Cycles(1)(1) [FlashNumD_4_25um_D12(4) ; 11/19/2021 2:38:54 PM]	->	Endurance Measure 1kHz After 225 000 Cycles(1)(1) [FlashNumD_4_25um_D12(4) ; 11_19_2021 2_38_54 PM].csv
+Endurance Measure 1kHz After 200 000 Cycles(1)(1) [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:27:32 PM]	->	Endurance Measure 1kHz After 200 000 Cycles(1)(1) [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_27_32 PM].csv
+Endurance Measure 1kHz After 190 000 Cycles(1) [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:26:55 PM]	->	Endurance Measure 1kHz After 190 000 Cycles(1) [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_26_55 PM].csv
+Endurance Measure 1kHz After 180 000 Cycles(1) [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:26:17 PM]	->	Endurance Measure 1kHz After 180 000 Cycles(1) [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_26_17 PM].csv
+Endurance Measure 1kHz After 170 000 Cycles [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:25:40 PM]	->	Endurance Measure 1kHz After 170 000 Cycles [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_25_40 PM].csv
+Endurance Measure 1kHz After 160 000 Cycles [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:25:02 PM]	->	Endurance Measure 1kHz After 160 000 Cycles [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_25_02 PM].csv
+Endurance Measure 1kHz After 150 000 Cycles(1)(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:21:56 PM]	->	Endurance Measure 1kHz After 150 000 Cycles(1)(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_21_56 PM].csv
+Endurance Measure 1kHz After 140 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:21:19 PM]	->	Endurance Measure 1kHz After 140 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_21_19 PM].csv
+Endurance Measure 1kHz After 130 000 Cycles [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:20:40 PM]	->	Endurance Measure 1kHz After 130 000 Cycles [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_20_40 PM].csv
+Endurance Measure 1kHz After 120 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:20:02 PM]	->	Endurance Measure 1kHz After 120 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_20_02 PM].csv
+Endurance Measure 1kHz After 110 000 Cycles [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:19:25 PM]	->	Endurance Measure 1kHz After 110 000 Cycles [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_19_25 PM].csv
+Endurance Measure 1kHz After 100 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:18:47 PM]	->	Endurance Measure 1kHz After 100 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_18_47 PM].csv
+Endurance Measure 1kHz After 90 000 Cycles [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:18:10 PM]	->	Endurance Measure 1kHz After 90 000 Cycles [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_18_10 PM].csv
+Endurance Measure 1kHz After 80 000 Cycles [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:17:32 PM]	->	Endurance Measure 1kHz After 80 000 Cycles [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_17_32 PM].csv
+Endurance Measure 1kHz After 70 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:16:54 PM]	->	Endurance Measure 1kHz After 70 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_16_54 PM].csv
+Endurance Measure 1kHz After 60 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:16:16 PM]	->	Endurance Measure 1kHz After 60 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_16_16 PM].csv
+Endurance Measure 1kHz After 50 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:15:38 PM]	->	Endurance Measure 1kHz After 50 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_15_38 PM].csv
+Endurance Measure 1kHz After 40 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:15:01 PM]	->	Endurance Measure 1kHz After 40 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_15_01 PM].csv
+Endurance Measure 1kHz After 30 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:14:23 PM]	->	Endurance Measure 1kHz After 30 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_14_23 PM].csv
+Endurance Measure 1kHz After 20 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11/19/2021 2:13:46 PM]	->	Endurance Measure 1kHz After 20 000 Cycles(1) [FlashNumD_4_25um_D12(2) ; 11_19_2021 2_13_46 PM].csv
+FE PUND 3V - reverse [FlashNumD_4_25um_D12(1) ; 11/19/2021 2:11:24 PM]	->	FE PUND 3V - reverse [FlashNumD_4_25um_D12(1) ; 11_19_2021 2_11_24 PM].csv
+FE PUND 3V - reverse [FlashNumD_4_25um_D12(4) ; 11/19/2021 2:10:40 PM]	->	FE PUND 3V - reverse [FlashNumD_4_25um_D12(4) ; 11_19_2021 2_10_40 PM].csv
+Endurance Measure 1kHz After 10 000 Cycles [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:09:54 PM]	->	Endurance Measure 1kHz After 10 000 Cycles [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_09_54 PM].csv
+Endurance Measure 1kHz After 1000 Cycles [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:09:41 PM]	->	Endurance Measure 1kHz After 1000 Cycles [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_09_41 PM].csv
+Endurance Measure 1kHz After 100 Cycles [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:09:33 PM]	->	Endurance Measure 1kHz After 100 Cycles [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_09_33 PM].csv
+Endurance Measure 1kHz After 10 Cycles [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:09:26 PM]	->	Endurance Measure 1kHz After 10 Cycles [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_09_26 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_4_25um_D12(3) ; 11/19/2021 2:09:18 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_4_25um_D12(3) ; 11_19_2021 2_09_18 PM].csv
+Endurance Measure 1kHz After 1 Cycle [FlashNumD_4_25um_D13(2) ; 11/19/2021 2:08:42 PM]	->	Endurance Measure 1kHz After 1 Cycle [FlashNumD_4_25um_D13(2) ; 11_19_2021 2_08_42 PM].csv
+Break of oxide [FlashNumD_4_25um_E13(1) ; 11/19/2021 2:07:17 PM]	->	Break of oxide [FlashNumD_4_25um_E13(1) ; 11_19_2021 2_07_17 PM].csv
