@@ -3,10 +3,21 @@
 import os
 import readline
 import glob
+import inquirer
+
+def prompt_choice(name: str, question: str, choice: list[str]) -> str:
+    q = [inquirer.List(name, message=question, choices=choice),]
+
+    return inquirer.prompt(q)[name]
+
+def prompt_mchoice(name: str, question: str, choice: list[str]) -> list[str]:
+    q = [inquirer.Checkbox(name, message=question, choices=choice),]
+
+    return inquirer.prompt(q)[name]
 
 def pathCompleter(text: str, state: int) -> str:
-    """
-    Function for generating the path autocomplete.
+    """ 
+    Function for generating the path autocomplete.  
     """
 
     if '~' in text:
@@ -17,7 +28,7 @@ def pathCompleter(text: str, state: int) -> str:
 
     return [x for x in glob.glob(text+'*')][state]
 
-def get_dataLoc() -> str:
+def get_dataloc() -> str:
     """
     Get a valid path from user with tab autocomplete feature.
     """
@@ -27,16 +38,29 @@ def get_dataLoc() -> str:
     readline.set_completer(pathCompleter)
 
     while True:
-        dataLoc: str = str(input("Enter data path: "))
-        if not os.path.isdir(dataLoc): 
-           print(f"The entered path '{dataLoc}' does not exist. Please try again.") 
+        data_loc: str = str(input("Enter data path: "))
+        if not os.path.isdir(data_loc): 
+           print(f"The entered path '{data_loc}' does not exist. Please try again.") 
            continue
         else:
-            return dataLoc
+            return data_loc
 
 def main() -> None:
-    dataLoc: str = get_dataLoc()
-    print(dataLoc)
+
+    question = "What type of data would you like to process?"
+    choices = ["PUND", "Endu", "UniCV"]
+    data_type: str = prompt_choice('type', question, choices)
+
+    data_loc: str = get_dataloc()
+    question = "Which sample series are to be included?"
+    choices = list(filter(lambda x: os.path.isdir(os.path.join(data_loc, x)), os.listdir(data_loc)))
+    data_series: list[str] = prompt_mchoice('series', question, choices)
+    for dir in data_series:
+        question = f"Which samples are to be included from {dir}?"
+        choices = list(filter(lambda x: os.path.isdir(os.path.join(data_loc,
+            dir, x)), os.listdir(os.path.join(data_loc, dir))))
+        data_samples: list[str] = prompt_mchoice(f'{dir}_samples', question,
+                choices)
 
 if __name__ == '__main__':
     main()
