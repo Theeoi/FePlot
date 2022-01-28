@@ -26,7 +26,8 @@ To use the program run
  - Start writing tests for the already implemented code
  - Refactor the already implemented code according to the tests
  - Move code from "Code"-directory to src as implementation continues
-
+ - Refactor Cleaning scripts to organise the data in a meaningful way (bash or
+   python?)
 
 
 
