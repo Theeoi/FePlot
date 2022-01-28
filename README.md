@@ -12,22 +12,21 @@ the goal of reducing the coupling and increasing code cohesion.
 
 ## Install
 
-Having MasterThesis as the working directory run 
-`pip install .`
-and all program dependancies will be installed.
+Having MasterThesis as the working directory run the following command to
+install the program and all dependancies:
+> pip install .
 
-To use the program run
-`python -m src`
+To use the program run:
+> feplot
 
 ## TODO
 (in no perticular order)
 
- - Figure out how to run the program without 'python -m'
+ - Refactor Cleaning scripts to organise the data in a meaningful way (bash or
+   python?)
  - Start writing tests for the already implemented code
  - Refactor the already implemented code according to the tests
  - Move code from "Code"-directory to src as implementation continues
- - Refactor Cleaning scripts to organise the data in a meaningful way (bash or
-   python?)
 
 
 
