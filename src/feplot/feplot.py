@@ -2,11 +2,13 @@
 
 import argparse
 import pathlib
-import os
-import readline
-import glob
+
+# import os
+# import readline
+# import glob
 
 # import inquirer
+from enum import Enum
 
 from feplot import __version__
 
@@ -20,35 +22,49 @@ from feplot import __version__
 
     # return inquirer.prompt(q)[name]
 
-def pathCompleter(text: str, state: int) -> str:
-    """ 
-    Function for generating the path autocomplete.  
+# def pathCompleter(text: str, state: int) -> str:
+    # """ 
+    # Function for generating the path autocomplete.  
+    # """
+
+    # if '~' in text:
+        # text = os.path.expanduser('~')
+
+    # if os.path.isdir(text):
+        # text += "/"
+
+    # return [x for x in glob.glob(text+'*')][state]
+
+# def get_dataloc() -> str:
+    # """
+    # Get a valid path from user with tab autocomplete feature.
+    # """
+
+    # readline.set_completer_delims("\t")
+    # readline.parse_and_bind("tab: complete")
+    # readline.set_completer(pathCompleter)
+
+    # while True:
+        # data_loc: str = str(input("Enter data path: "))
+        # if not os.path.isdir(data_loc): 
+           # print(f"The entered path '{data_loc}' does not exist. Please try again.") 
+           # continue
+        # else:
+            # return data_loc
+
+class Datatype(Enum):
     """
-
-    if '~' in text:
-        text = os.path.expanduser('~')
-
-    if os.path.isdir(text):
-        text += "/"
-
-    return [x for x in glob.glob(text+'*')][state]
-
-def get_dataloc() -> str:
+    Enum specifying the different available datatypes to process.
     """
-    Get a valid path from user with tab autocomplete feature.
-    """
+    PUND = 'pund'
+    ENDU = 'endu'
+    UNICV = 'unicv'
 
-    readline.set_completer_delims("\t")
-    readline.parse_and_bind("tab: complete")
-    readline.set_completer(pathCompleter)
-
-    while True:
-        data_loc: str = str(input("Enter data path: "))
-        if not os.path.isdir(data_loc): 
-           print(f"The entered path '{data_loc}' does not exist. Please try again.") 
-           continue
-        else:
-            return data_loc
+    def valuelist() -> list[str]:
+        """
+        Returns the values of the Datatype members.
+        """
+        return [member.value for _, member in Datatype.__members__.items()]
 
 def get_parser() -> argparse.ArgumentParser:
     """
@@ -59,7 +75,8 @@ def get_parser() -> argparse.ArgumentParser:
 
     parser.add_argument('type',
             help='specify type of data being processed',
-            choices=['pund', 'endu', 'unicv'])
+            nargs='?',
+            choices=Datatype.valuelist())
     parser.add_argument('-v', '--version', 
             help='display the current version of FePlot', 
             action='store_true')
@@ -81,11 +98,20 @@ def main() -> None:
         print(__version__)
         return
 
+    # if the positional argument is omitted/invalid - raise a ValueError
+    if args['type'] not in Datatype.valuelist():  
+        raise ValueError(
+            f"You forgot to add the positional argument of 'type'.\n\
+            Please see: feplot --help"
+            )
+    else:
+        data_type = args['type']
+
+    print(data_type)
+
     if args['clean_path']:
         print(f"Cleaning data in {args['clean_path']}!")
 
-    data_type = args['type']
-    print(data_type)
 
     # question = "What type of data would you like to process?"
     # choices = ["PUND", "Endu", "UniCV"]
