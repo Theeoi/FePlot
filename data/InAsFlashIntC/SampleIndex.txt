@@ -1,0 +1,27 @@
+Device structure:
+
+- InAs (n-doped ~1e16)
+- HZO (10 nm, Hf-Zr ratio 1:1)
+- TiN (10 nm)
+
+Samples 1-5 are flashed with FLA (250C preheat, 5ms flash) using the following energies:
+
+- 1: 30 J/cm2
+- 2: 25 J/cm2
+- 3: 20 J/cm2
+- 4: 15 J/cm2
+- 5: 32.5 J/cm2
+
+Each sample has data from multiple devices (ex. D1) where the size of the device is indicated by its assigned letter (C = 30um, D,E = 25um, F = 20um).
+The device size is also in the name of the individual data files.
+
+Each device has multiple data files from different measurement parameters:
+
+- Temperature: 13K or 293K
+- Voltage Sweep: 1V, 1.5V, 2V, 2.5V or 3V
+- Frequency: 1kHz, 10kHz, 100kHz, 1MHz or 10MHz
+- Sweep Direction: Up or Down
+
+These are indicated in the name of each data file.
+
+
