@@ -1,9 +1,9 @@
-# MasterThesis
+# FePlot
 
-Collection area for all files relating to my master thesis project conducted at
+Data analysis and plotting library for my master thesis work conducted at
 the Department of Electrical and Informations Technology, Faculty of
 Engineering, Lund University.
-The repo contains both my Python code for analysis and my thesis written in
+The repo currently contains both the Python code and my thesis written in
 LaTeX.
 
 The code presented here is written over quite some time with a MATLAB mindset
