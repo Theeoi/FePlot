@@ -10,6 +10,24 @@ The code presented here is written over quite some time with a MATLAB mindset
 and is pretty bad. I'm currently working on a big refactor of the project with
 the goal of reducing the coupling and increasing code cohesion.
 
-## TODO
+## Install
 
- - Refactor everything. Check the 'devel' branch for more information.
+Having MasterThesis as the working directory run 
+`pip install .`
+and all program dependancies will be installed.
+
+To use the program run
+`python -m src`
+
+## TODO
+(in no perticular order)
+
+ - Figure out how to run the program without 'python -m'
+ - Start writing tests for the already implemented code
+ - Refactor the already implemented code according to the tests
+ - Move code from "Code"-directory to src as implementation continues
+
+
+
+
+ 

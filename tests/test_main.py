@@ -1,6 +1,5 @@
 import pytest
 
-
 @pytest.mark.skip(reason="not implemented")
 def test_prompt_choise():
     pass
