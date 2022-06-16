@@ -60,11 +60,12 @@ class Datatype(Enum):
     ENDU = 'endu'
     UNICV = 'unicv'
 
-    def valuelist() -> list[str]:
+    @classmethod
+    def valuelist(cls) -> list[str]:
         """
         Returns the values of the Datatype members.
         """
-        return [member.value for _, member in Datatype.__members__.items()]
+        return [member.value for _, member in cls.__members__.items()]
 
 def get_parser() -> argparse.ArgumentParser:
     """
