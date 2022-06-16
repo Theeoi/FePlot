@@ -1,4 +1,4 @@
-@article{o2018stabilization,
+@article{oconnor2018stabilization,
   title={Stabilization of ferroelectric \ce{Hf_xZr_{1-x}O2} films using a millisecond flash lamp annealing technique},
   author={O’Connor, {\'E}amon and Halter, Mattia and Eltes, Felix and Sousa, Marilyne and Kellock, Andrew and Abel, Stefan and Fompeyrine, Jean},
   journal={Apl Materials},
@@ -9,7 +9,16 @@
   publisher={AIP Publishing LLC}
 }
 
-
+Paper laying the foundation for FLA processing of HZO films. Showing that it is
+possible with a MIM structure and achieved similar results to their RTP
+processed sample. Contains a bunch of good sources for the basics of HZO and how
+FLA might improve these devices.
+Key takeaways:
+- HfO2 already used in CMOS processing --> good compatibility.
+- They show that the preheating temperature is insufficient for crystallization
+(375C). I should do the same!
+- CV peaks coincide with Ec. Capacitance increases as charges move (switching).
+- Cites many sources for why the graphs look like they do. Worth to check out!
 
 @article{cheema2020one,
   title={One nanometer \ce{HfO2}-based ferroelectric tunnel junctions on silicon},
@@ -94,6 +103,30 @@
   publisher={AIP Publishing LLC}
 }
 
+A description of the uni-directional CV method for determining defect densities
+of oxides. Compares with the traditional bi-directional CV method and gives
+insight into the workings of both methods and how they complement eachother.
+Somewhat unclear if this is in contradiction to Robins explaination in
+Athle2022improved.
+Key takeaways:
+- The hysteresis in the uni-CV method is both time and voltage dependant since
+even if the fermi level changes due to a change in voltage the trapping time
+constant determines if a trap is active of not.
+- The equation used (eq1) assumes a chargesheet --> Numbers could be
+underestimations of the true defect density.
+- The hysteresis can arrise from the ferroelectric switching as well. We must
+hence be very careful not to go above the coercive field.
+- Improved performance could also be achieved by moving the trap energies away
+from the bandgap. However, the voltage required to write to FeFETs are generally
+higher which means we must also redice the defect density.
+- Bi-CV gives a depth profile on the order of a couple of nm (bulk) while the
+uni-CV takes everything (including interfaces). Through both methods we can find
+that the majority of defects are located at the interface.
+- The defect density at the interfaces does not change significantly between 10
+to 10^6 cycles which means the degradation of the memory window is probably due
+to bulk defects pinning the FE domains. However, the uni-method should be able
+to see these defects aswell but the defect could be out of the time window for
+the measurements.
 
 
 @phdthesis{boyn2016ferroelectric,
@@ -150,6 +183,17 @@
   year={2021},
   publisher={Wiley Online Library}
 }
+
+Not a super relevant paper for my thesis. Used PLA for crystallisation with both
+ns and ms pulses. The ns pulses were insufficient for crystallisation while the
+ms pulses gave comparable results to RTP and could probably be optimized
+further.
+Key takeaways:
+- PLA gives better control over the crystallisation parameters.
+- Pulses shorter than 50ns are insufficient for crystallisation (atleast with
+realistic thinknesses grown on Si)
+- The pulse duration can affect phase composition of the HZO film! This is clear
+in classical nucleation theory. Include in thesis?
 
 
 
@@ -231,10 +275,34 @@ indeed related to the thermal budget.
 This is shown by the defect density being lower in the 25J flash @200C compared
 to the 20J flash @270C.
 
+@article{boscke2011ferroelectricity,
+    author = {Böscke,T. S.  and Müller,J.  and Bräuhaus,D.  and Schröder,U.  and Böttger,U. },
+    title = {Ferroelectricity in hafnium oxide thin films},
+    journal = {Applied Physics Letters},
+    volume = {99},
+    number = {10},
+    pages = {102903},
+    year = {2011},
+    doi = {10.1063/1.3634052},
+    URL = {https://doi.org/10.1063/1.3634052},
+    eprint = {https://doi.org/10.1063/1.3634052}
+}
 
 
 
-
+@article{pesic2016physical,
+    author = {Pešić, Milan and Fengler, Franz Paul Gustav and Larcher, Luca and Padovani, Andrea and Schenk, Tony and Grimley, Everett D. and Sang, Xiahan and LeBeau, James M. and Slesazeck, Stefan and Schroeder, Uwe and Mikolajick, Thomas},
+    title = {Physical Mechanisms behind the Field-Cycling Behavior of HfO2-Based Ferroelectric Capacitors},
+    journal = {Advanced Functional Materials},
+    volume = {26},
+    number = {25},
+    pages = {4601-4612},
+    keywords = {FeCAP, ferroelectric HfO2, modeling, phase-change},
+    doi = {https://doi.org/10.1002/adfm.201600590},
+    url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/adfm.201600590},
+    eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/adfm.201600590},
+    year = {2016}
+}
 
 
 
