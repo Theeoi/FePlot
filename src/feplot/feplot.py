@@ -9,48 +9,11 @@ import pathlib
 
 # import inquirer
 from enum import Enum
+from typing import Any
+
+import feplot.pyro as pyro
 
 from feplot import __version__
-
-# def prompt_choice(name: str, question: str, choice: list[str]) -> str:
-    # q = [inquirer.List(name, message=question, choices=choice),]
-
-    # return inquirer.prompt(q)[name]
-
-# def prompt_mchoice(name: str, question: str, choice: list[str]) -> list[str]:
-    # q = [inquirer.Checkbox(name, message=question, choices=choice),]
-
-    # return inquirer.prompt(q)[name]
-
-# def pathCompleter(text: str, state: int) -> str:
-    # """ 
-    # Function for generating the path autocomplete.  
-    # """
-
-    # if '~' in text:
-        # text = os.path.expanduser('~')
-
-    # if os.path.isdir(text):
-        # text += "/"
-
-    # return [x for x in glob.glob(text+'*')][state]
-
-# def get_dataloc() -> str:
-    # """
-    # Get a valid path from user with tab autocomplete feature.
-    # """
-
-    # readline.set_completer_delims("\t")
-    # readline.parse_and_bind("tab: complete")
-    # readline.set_completer(pathCompleter)
-
-    # while True:
-        # data_loc: str = str(input("Enter data path: "))
-        # if not os.path.isdir(data_loc): 
-           # print(f"The entered path '{data_loc}' does not exist. Please try again.") 
-           # continue
-        # else:
-            # return data_loc
 
 class Datatype(Enum):
     """
@@ -59,6 +22,11 @@ class Datatype(Enum):
     PUND = 'pund'
     ENDU = 'endu'
     UNICV = 'unicv'
+    BICV = 'bicv'
+    PYRO = 'pyro'
+
+    def __init__(self, type: str) -> None:
+        self.type = type
 
     @classmethod
     def valuelist(cls) -> list[str]:
@@ -66,6 +34,23 @@ class Datatype(Enum):
         Returns the values of the Datatype members.
         """
         return [member.value for _, member in cls.__members__.items()]
+
+    def run(self) -> None:
+        """
+        Runs function bases on the Datatype.
+        """
+        if self.type == Datatype.PUND.value:
+            print(f"{self}")
+        elif self.type == Datatype.ENDU.value:
+            print(f"{self}")
+        elif self.type == Datatype.UNICV.value:
+            print(f"{self}")
+        elif self.type == Datatype.BICV.value:
+            print(f"{self}")
+        elif self.type == Datatype.PYRO.value:
+            pyro.main()
+        else:
+            raise ValueError(f"The selected datatype is not defined.")
 
 def get_parser() -> argparse.ArgumentParser:
     """
@@ -90,44 +75,35 @@ def get_parser() -> argparse.ArgumentParser:
 
     return parser
 
-
-def main() -> None:
-    parser = get_parser()
-    args = vars(parser.parse_args()) # Convert user arguments to a dict
-
-    if args['version']:
+def user_args(uargs: dict[str, Any]) -> None:
+    """
+    Do different thing depending on the input dictionary.
+    Dictionary should come from parser.parse_args().
+    """
+    if uargs['version']:
         print(__version__)
         return
 
+    # This is yet to be implemented!
+    if uargs['clean_path']:
+        print(f"Cleaning data in {uargs['clean_path']}!")
+
     # if the positional argument is omitted/invalid - raise a ValueError
-    if args['type'] not in Datatype.valuelist():  
+    if uargs['type'] not in Datatype.valuelist():  
         raise ValueError(
             f"You forgot to add the positional argument of 'type'.\n\
             Please see: feplot --help"
             )
     else:
-        data_type = args['type']
-
-    print(data_type)
-
-    if args['clean_path']:
-        print(f"Cleaning data in {args['clean_path']}!")
+        Datatype(uargs['type']).run()
 
 
-    # question = "What type of data would you like to process?"
-    # choices = ["PUND", "Endu", "UniCV"]
-    # data_type: str = prompt_choice('type', question, choices)
+def main() -> None:
+    parser = get_parser()
 
-    # data_loc: str = get_dataloc()
-    # question = "Which sample series are to be included?"
-    # choices = list(filter(lambda x: os.path.isdir(os.path.join(data_loc, x)), os.listdir(data_loc)))
-    # data_series: list[str] = prompt_mchoice('series', question, choices)
-    # for dir in data_series:
-        # question = f"Which samples are to be included from {dir}?"
-        # choices = list(filter(lambda x: os.path.isdir(os.path.join(data_loc,
-            # dir, x)), os.listdir(os.path.join(data_loc, dir))))
-        # data_samples: list[str] = prompt_mchoice(f'{dir}_samples', question,
-                # choices)
+    #convert args to dict and pass to user_args
+    user_args(vars(parser.parse_args()))
+
 
 if __name__ == '__main__':
     main()
