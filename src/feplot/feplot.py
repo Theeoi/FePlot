@@ -3,11 +3,6 @@
 import argparse
 import pathlib
 
-# import os
-# import readline
-# import glob
-
-# import inquirer
 from enum import Enum
 from typing import Any
 
@@ -60,7 +55,7 @@ def get_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter)
 
     parser.add_argument('type',
-            help='specify type of data being processed',
+            help='specify type of data to process',
             nargs='?',
             choices=Datatype.valuelist())
     parser.add_argument('-v', '--version', 
