@@ -1,0 +1,275 @@
+\documentclass[11pt,twoside]{eitExjobb}
+%\documentclass[11pt,twoside,final]{eitExjobb}  % Use final for the final version that will be printed
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Other fonts (Palatino as rm font, helvetica as sf font and courier as tt font. All fonts are normally installed with a standard LaTeX distribution.)
+% \usepackage{mathpazo} % Also in math mode
+% \usepackage[scaled=.95]{helvet}
+% \usepackage{courier}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ÅÄÖ
+\usepackage[utf8]{inputenc}  % Input encoding (this file): 8 bit unicode. Default by most text editors
+\usepackage[T1]{fontenc}     % Output encoding (pdf file)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Packages used in the example
+\usepackage{graphicx}   % Included graphics and some resizable boxes
+\usepackage{url}        % nice urls with line breaks 
+\usepackage{lipsum}     % nonsense text blocks
+\usepackage{booktabs}   % nicer table rules
+\usepackage[version=4]{mhchem}   % fancy chemical notation
+\usepackage{siunitx}    % better unit notation
+\usepackage{fancyref}   % improved labels
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%% Title page
+\Title{Flashlamp Annealing for Improved Ferroelectric Junctions}
+\Author{Theodor Blom\\\texttt{nat13tbl@student.lu.se}}
+\Supervisor{Mattias Borg}
+\Examiner{Mathieu Gisselbrecht}
+%% Set by default
+% \Date{\today}    %% Today's date
+% \Year{\the\year} %% This year shown in copyright
+% \Company{Department of Electrical and Information Technology\\Lund University}
+%%%%%%
+\MakeTitlePage{}  %%% Print title page and copyright page
+%%%%%% 
+\frontmatter    %%% Page numbering for front pages (small roman)
+%%%%% Abstract
+\chapter*{Abstract}
+
+%%%%% Abstract
+\chapter*{Popular Science Summary}
+\subsection*{A New Frontier of Computing}
+We all recognize the feeling of panic when your computer crashes and you realize
+you forgot to save your progress for the past couple of hours. In this scenario
+you wait for the computer to boot again and assess what you have lost. Imagine
+instead the computer booting instantly and you find yourself exactly where you
+left off. With an emerging technology in computer design this could become the
+new reality.\\
+
+The basic idea behind the fundamental building block of your electronic devices,
+known as the transistor, has since its invention in the 1960s been largely
+unchanged. The design which proved most successful is known as the
+Metal-Oxide-Semiconductor Field Effect Transistor (MOSFET) and is by far the
+most common design even to this day due to its cheap manufacturing process and
+its ability to be scaled down to ever smaller devices. However, in the last
+decade one has started to reach the limits of the MOSFET design, primarily due
+to limited scalability, and alternative designs are actively being explored.\\
+
+A promising design is the Ferroelectric Tunnel Junction (FTJ) which utilizes the
+small dimensions of the transistor to its advantage where electrons tunnel
+through a thin barrier. This barrier is then manipulated to either allow
+electrons though or not, resulting in the characteristic transistor
+functionality. In addition to being intrinsically small, the ferroelectric
+barrier allows the transistor to be toggleable where the state of the transistor
+is maintained even though power is lost. This ability means that electronic
+devices utilizing this design does not have to be booted up, as all transistors
+are already set to the desired state. Additionally, as power is only consumed as
+transistors are being toggled between states, these devices could reduce power
+consumption lengthening the battery life across all devices.\\
+
+However, for this to become the new reality of computers, the FTJ design must be
+improved further to prove as an effective alternative to the MOSFET design. One
+limiting factor is believed to be the interfaces of the ferroelectric barrier
+layer. Utilizing a new technique known as Flash-Lamp Annealing (FLA) the
+processing of the ferroelectric barrier layer can be made up to 10 000 times
+faster which could significantly improve the interfaces. This as the material
+can set much faster resulting in better defined interfaces. If successful, this
+could be a crucial step for this new transistor design to become a viable
+alternative to MOSFETs and bring in a new frontier of computing.\\
+
+%% ToC etc
+\tableofcontents
+\listoffigures
+\listoftables
+\cleardoublepage{}
+%%%%% Page numbering for the main thesis (arabic)
+\mainmatter{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introduction}\label{ch:intro}
+
+Mål: Introducera området och ge en överblick.\cite{athle2019development}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Semiconductors and Ferroelectrics}\label{ch:semiandferro}
+
+Mål: Klargöra varför III-V (utgå från Si) och FE är intressant. Varför gör vi detta? Vad är applikationern? Få med FTJ här!
+
+\section{III-V Semiconductors}
+
+Mål: Redogör för varför III-V är intressant. Direkt bandgap, lägre DOS --> FTJ
+
+\section{Ferroelectricity}
+
+Mål: Basics of FE;\ Kristallstrukturer (faser), Polarisation, Domäner och PE-kurvor.
+
+\subsection{\ce{HfZrO2}}
+
+Mål: Redogör för FE-\ce{HfO2} och beskriv hur \ce{Zr} kommer in i bilden.
+
+\section{Energyband Theory and Leakage Mechanics}
+
+Mål: Redogör för hur energibanden ser ut med Semiconductor-Insulator-Metal-cap och gå igenom de olika tunnelsätten.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Fabrication}\label{ch:fab}
+
+Mål: Redogör för hela processen på LNL.\ 
+
+\section{Processing Methods}
+
+Mål: Redogör för dem mest intressanta/relevanta metoderna. Kanske bara ALD och FLA?\ 
+
+\subsection{ALD}
+
+\subsection{Flashlamp Annealing}
+
+\section{Sample Fabrication Process}\label{sec:FabProc}
+
+Mål: Redogör för hela min process.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Electrical Characterization}\label{ch:char}
+
+Mål: Redogör för metoderna på E-huset.
+
+\section{PUND and Endurance}\label{sec:PandE}
+
+\section{Capacitance-Voltage}
+
+Frågor att besvara: 
+\begin{itemize}
+    \item Hur funkar metoderna? 
+    \item Vilka defekter ser vi med respektive metod? 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Results and Analysis}\label{ch:res}
+    %Mål: Presentera serierna i en rimlig ordning och dra slutsatser från varje serie.
+
+    %Tre steg:
+    %\begin{enumerate}
+        %\item FlashInt och Temperatur
+        %\item FlashNum vid olika FlashInt
+        %\item Förkristallisering för att minska Tpeak (270C och seedlayer)
+    %\end{enumerate}
+
+    %Fokus på frågeställingar!
+    %\begin{itemize}
+        %\item Utforska möjligheten kring FLA
+        %\item Hur bra devices kan vi göra? PUND och Endurance
+        %\item Fokus på interface defects genom CV!\  
+    %\end{itemize}
+
+\section{Flashlamp Intensity and Film Temperature}
+Crystalization of the hafnia films using the flash lamp annealing (FLA) technique does not immediately reveal the temperature achieved in the films. Due to the short time frames and the geometry of the FLA setup, one must simulate the achieved temperature in the film from the compositional structure of the samples and the measured peak backside temperature during annealing. Furthermore, the experiment parameters of preheating temperature and flash duration are crucial for the simulations and are throughout this work set to \SI{250}{\celsius} and \SI{5}{\milli\second} respectively. Figure~\ref{fig:res_ComsolSim} shows the resulting film temperature depending on flash intensity with the choosen set parameters.
+    
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.40\linewidth]{example-image}
+    \caption{Figure showing how flashintensity relates to the peaktemperarure of the films through simulations. From this figure onwards we can then stick to Peak Temperature instead of Flash Intensity.}\label{fig:res_ComsolSim}
+\end{figure}
+
+Explain in detail the figure above here and conclude the subsection. What type
+of figure can I expect here??
+
+\section{Sample Specifications and Characterization}
+In addition to the samples of focus in this work, samples were processed using RTP as the annealing method in paralell with FLA samples. These samples proves as a point of comparison for the characterization of the FLA samples throughout the work. The RTP samples were annealed at a temperature of \SI{600}{\celsius} for 30 seconds. Through the electrical characterization described in Section~\ref{sec:PandE} the remnant polarization ($P_r$), coercive field ($E_c$) and endurance were measured and tabulated in table~\ref{tab:RTPref}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Electrical characteristics for the RTP reference samples measured using a cycling voltage of \SI{3}{\volt}.}\label{tab:RTPref}
+    \begin{tabular}{rlrl}
+        \toprule
+        \multicolumn{4}{c}{PUND and Endurance}\\\midrule
+        Remnant Polarization & $P_r$ & $29.03 \pm 0.21$ & \si{\micro\coulomb/\centi\meter^2}\\
+        Coercive Field & $E_c$ & $1.23 \pm 0.18$ & \si{\mega\volt/\centi\meter}\\
+        Endurance & & $0.23 \pm 0.11$ & $10^5$ cycles\\\bottomrule
+        %Defect Density & $D_d$ & $10.0 \pm 1.0$ & $10^{12}$\si{/cm^2} \\
+    \end{tabular}
+\end{table}
+
+The processing of the FLA samples are outlined in Section~\ref{sec:FabProc}. For the first FLA series, hereby denoted sample series 1, the flash intensity was varied between 15-\SI{32.5}{\joule/\centi\meter^2} to reach different peak temperatures in the film. The film deposition and annealing conditions for these samples are summarized in table~\ref{tab:FlashIntC}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Selected processing conditions for sample series 1.}\label{tab:FlashIntC}
+    \begin{tabular}{rlccccc}
+        \toprule
+        \multicolumn{2}{l}{Sample Number} & 1 & 2 & 3 & 4 & 5 \\\midrule
+        \multicolumn{1}{c}{HZO} & & & & & & \\
+        Growth Temperature & [\si{\celsius}] & 200 & 200 & 200 & 200 & 200 \\
+        Film Thickness & [\si{\nano\meter}] & 10 & 10 & 10 & 10 & 10 \\\midrule
+        \multicolumn{1}{c}{FLA} & & & & & & \\
+        Preheat Temperature & [\si{\celsius}] & 250 & 250 & 250 & 250 & 250 \\
+        Flash Intensity & [\si{\joule/\centi\meter^2}] & \textbf{15} & \textbf{20} & \textbf{25} & \textbf{30} & \textbf{32.5} \\
+        Number of Flashes & & 1 & 1 & 1 & 1 & 1 \\\bottomrule
+    \end{tabular}
+\end{table}
+
+Resulting electrical characterization from sample series 1 are shown in figure~\ref{fig:res_FlashIntC}. Samples annealed with an intensity less than \SI{25}{\joule/\centi\meter^2} did not show any ferroelectric behaviour and are hence omitted from some of the figures. As shown in figure~\ref{fig:res_FlashIntC}a and b the PUND characteristics show ferroelectric behaviour with a strong dependance on peak film temperature. However, for higher peak temperatures these characteristics decline to both weaker polarization response and higher coercive fields which is undesireable. The peak PUND performance at \SI{30}{\joule/\centi\meter^2} does not reach the characteristics of the RTP references outlined in table~\ref{tab:RTPref} which shows that the energy deposited during the annealing process is not enough to crystalize the entire HZO film while not inducing other effects to reduce the ferroelectric response.\\
+
+Although reduced PUND characteristics were found for these samples, figure~\ref{fig:res_FlashIntC}c show an increased endurance for the flash annealed samples compared to the RTP reference.
+
+\begin{figure}[htbp]
+    \centering
+    (a)\includegraphics[width=.45\textwidth]{example-image}
+    (b)\includegraphics[width=.45\textwidth]{example-image}
+    (c)\includegraphics[width=.45\textwidth]{example-image}
+    (d)\includegraphics[width=.45\textwidth]{example-image}
+    \caption{Figure showing all measured data from an intensity-varied batch. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash. RTP reference is included for Endurance and Defect Density.}\label{fig:res_FlashIntC}
+\end{figure}
+
+%\begin{figure}[htbp]
+    %\centering
+    %(a)\includegraphics[width=.45\textwidth]{../Fig/FlashNumA+C_PrTrends.png}
+    %(b)\includegraphics[width=.45\textwidth]{../Fig/FlashNumA+C_EcTrends.png}
+    %\caption{Figure showing Pr and Ec trends from flashnumber-varied batches. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash at $\SI{25}{\joule/\centi\meter^2}$ and \SI{20}{\joule/\centi\meter^2}.}\label{fig:res_FlashNumAC_PrEc}
+%\end{figure}
+
+%\begin{figure}[htbp]
+    %\centering
+    %(a)\includegraphics[width=.45\textwidth]{../Fig/FlashNumA_EnduTrends.png}
+    %(b)\includegraphics[width=.45\textwidth]{../Fig/FlashNumA_DDTrends.png}
+    %(c)\includegraphics[width=.45\textwidth]{../Fig/FlashNumC_EnduTrends.png}
+    %(d)\includegraphics[width=.45\textwidth]{../Fig/FlashNumC_DDTrends.png}
+    %\caption{Figure showing Endurance and Defect Density from flashnumber-varied batches. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash at $\SI{20}{\joule/\centi\meter^2}$. RTP reference is included.}\label{fig:res_FlashNumAC_EnduDD}
+%\end{figure}
+
+%\begin{figure}[htbp]
+    %\centering
+    %(a)\includegraphics[width=.45\textwidth]{../Fig/FlashIntC+E_PrTrends.png}
+    %(b)\includegraphics[width=.45\textwidth]{../Fig/FlashIntC+E_EcTrends.png}
+    %(c)\includegraphics[width=.45\textwidth]{../Fig/FlashIntE_EnduTrends.png}
+    %(d)\includegraphics[width=.45\textwidth]{../Fig/FlashIntE_DDTrends.png}
+    %\caption{Figure showing all measured data from an intensity-varied batch. Low-doped subtrate, 270C ALD, HZO 1:1, 250C preheat, 5ms flash. RTP reference is included for Endurance and Defect Density.}\label{fig:res_FlashIntE}
+%\end{figure}
+
+%\begin{figure}[htbp]
+    %\centering
+    %(a)\includegraphics[width=.45\textwidth]{../Fig/FlashNumD_PrTrends.png}
+    %(b)\includegraphics[width=.45\textwidth]{../Fig/FlashNumD_EcTrends.png}
+    %(c)\includegraphics[width=.45\textwidth]{../Fig/FlashNumD_EnduTrends.png}
+    %(d)\includegraphics[width=.45\textwidth]{../Fig/FlashNumD_DDTrends.png}
+    %\caption{Figure showing all measured data from a flashnumber-varied batch. Low-doped subtrate, 270C ALD, HZO 1:1, 250C preheat, 5ms flash.}\label{fig:res_FlashNumD}
+%\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conclussion}\label{chap:conc}
+
+Mål: Wrap it up. Lägg fram de främsta resultaten/ideerna och ge tips på hur man kan undersöka vidare.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% References
+\bibliography{Exjobbreport.bib}
+\bibliographystyle{ieeetr}
+
+
+%%%%%%%%%%%%%%%%%%
+%\appendix
+%%%%%%%%%%%%%%%%%%%
+%\chapter{Some extra material}
+
+\end{document}

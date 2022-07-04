@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Exjobbreport.aux
+The style file: ieeetr.bst
+Database file #1: Exjobbreport.bib
+You're missing an entry type---line 176 of file Exjobbreport.bib
+ : 10^12 @ 
+ :         3V. They go further implementing Nanosecond Laser Annealing to further
+I'm skipping whatever remains of this entry
+You're missing an entry type---line 401 of file Exjobbreport.bib
+ : This is shown by the defect density being lower in the 25J flash @
+ :                                                                   200C compared
+I'm skipping whatever remains of this entry
+You're missing an entry type---line 402 of file Exjobbreport.bib
+ : to the 20J flash @
+ :                   270C.
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 446 of file Exjobbreport.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 1 entry,
+            1876 wiz_defined-function locations,
+            482 strings with 3636 characters,
+and the built_in function-call counts, 153 in all, are:
+= -- 11
+> -- 4
+< -- 0
++ -- 2
+- -- 1
+* -- 9
+:= -- 33
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 9
+empty$ -- 18
+format.name$ -- 1
+if$ -- 32
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 6
+num.names$ -- 1
+pop$ -- 4
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 1
+width$ -- 2
+write$ -- 10
+(There were 4 error messages)

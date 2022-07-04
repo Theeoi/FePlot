@@ -1,0 +1,19 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{}%
+\contentsline {chapter}{\numberline {2}Semiconductors and Ferroelectrics}{3}{}%
+\contentsline {section}{\numberline {2.1}III-V Semiconductors}{3}{}%
+\contentsline {section}{\numberline {2.2}Ferroelectricity}{3}{}%
+\contentsline {subsection}{\numberline {2.2.1}\ce {HfZrO2}}{3}{}%
+\contentsline {section}{\numberline {2.3}Energyband Theory and Leakage Mechanics}{3}{}%
+\contentsline {chapter}{\numberline {3}Fabrication}{5}{}%
+\contentsline {section}{\numberline {3.1}Processing Methods}{5}{}%
+\contentsline {subsection}{\numberline {3.1.1}ALD}{5}{}%
+\contentsline {subsection}{\numberline {3.1.2}Flashlamp Annealing}{5}{}%
+\contentsline {section}{\numberline {3.2}Sample Fabrication Process}{5}{}%
+\contentsline {chapter}{\numberline {4}Electrical Characterization}{7}{}%
+\contentsline {section}{\numberline {4.1}PUND and Endurance}{7}{}%
+\contentsline {section}{\numberline {4.2}Capacitance-Voltage}{7}{}%
+\contentsline {chapter}{\numberline {5}Results and Analysis}{9}{}%
+\contentsline {section}{\numberline {5.1}Flashlamp Intensity and Film Temperature}{9}{}%
+\contentsline {section}{\numberline {5.2}Sample Specifications and Characterization}{9}{}%
+\contentsline {chapter}{\numberline {6}Conclussion}{13}{}%
+\contentsline {chapter}{References}{15}{}%
