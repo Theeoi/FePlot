@@ -1,0 +1,8 @@
+*__pycache__*
+.coverage
+*.egg*
+build/
+thesis/sources/
+thesis/Exjobbreport.*
+!Exjobbreport.tex
+!Exjobbreport.bib
