@@ -145,6 +145,14 @@ Mål: Redogör för dem mest intressanta/relevanta metoderna. Kanske bara ALD oc
 
 \subsection{Flashlamp Annealing}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=.45\linewidth]{example-image}
+    \caption{Schematic image of the FLA experimental setup. Should include the
+    most important parts such as flashlamps, sample location, preheating
+    elements and pyrometer.}\label{fig:fab_FLAsetup}
+\end{figure}
+
 \section{Sample Fabrication Process}\label{sec:FabProc}
 
 Mål: Redogör för hela min process.
@@ -180,16 +188,35 @@ Frågor att besvara:
         %\item Fokus på interface defects genom CV!\  
     %\end{itemize}
 \section{Flashlamp Intensity and Film Temperature}
-Crystalization of the hafnia films using the flash lamp annealing (FLA) technique does not immediately reveal the temperature achieved in the films. Due to the short time frames and the geometry of the FLA setup, one must simulate the achieved temperature in the film from the compositional structure of the samples and the measured peak backside temperature during annealing. Furthermore, the experiment parameters of preheating temperature and flash duration are crucial for the simulations and are throughout this work set to \SI{250}{\celsius} and \SI{5}{\milli\second} respectively. Figure~\ref{fig:res_ComsolSim} shows the resulting film temperature depending on flash intensity with the choosen set parameters.
-    
+Crystallization of the hafnia films using the flash lamp annealing (FLA)
+technique does not immediately reveal the temperature achieved in the films. Due
+to the short time frames and the geometry of the FLA setup, one must simulate
+the achieved temperature in the film from the structure of the samples and the
+flash parameters. Flash duration and preheating temperature were set to
+\SI{5}{\milli\second} and \SI{250}{\celsius} respectively in order to be below
+the critical crystallization temperature before the FLA
+flash~\cite{migita2019phase}. Other simulation parameters are tabulated in
+table~\ref{tab:app_simparam} and produce figure~\ref{fig:res_Comsol} showing the
+resulting back and front peak temperature for different pulse energies. The figure also
+includes pyrometer measurements of the back temperature during annealing (green). The
+measured temperatures are in reasonable agreement with the simulations proving
+the accuracy of our model. The discrepancies are attributed to the preheating
+elements being in close proximity to the pyrometer focus area (See figure~\ref{fig:fab_FLAsetup}).
+
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=.40\linewidth]{example-image}
-    \caption{Figure showing how flashintensity relates to the peaktemperarure of the films through simulations. From this figure onwards we can then stick to Peak Temperature instead of Flash Intensity.}\label{fig:res_ComsolSim}
+    \includegraphics[width=.45\linewidth]{fig/COMSOLFlashInt.png}
+    \caption{Simulated back and front peak temperatures of our samples using the
+    simulation parameters tabulated in~\ref{tab:app_simparam}. Pyrometer
+    measurements of the back temperature measured during annealing (green) confirm
+    the accuracy of these simulations.}\label{fig:res_Comsol}
 \end{figure}
 
-Explain in detail the figure above here and conclude the subsection. What type
-of figure can I expect here??
+These simulations give
+
+\begin{equation}
+    T_{peak} = 495.5 + 16.3 \cdot E_{pulse}
+\end{equation}
 
 \section{Sample Specifications and Characterization}
 In addition to the samples of focus in this work, samples were processed using RTP as the annealing method in paralell with FLA samples. These samples proves as a point of comparison for the characterization of the FLA samples throughout the work. The RTP samples were annealed at a temperature of \SI{600}{\celsius} for 30 seconds. Through the electrical characterization described in Section~\ref{sec:PandE} the remnant polarization ($P_r$), coercive field ($E_c$) and endurance were measured and tabulated in table~\ref{tab:RTPref}.
@@ -284,8 +311,22 @@ Mål: Wrap it up. Lägg fram de främsta resultaten/ideerna och ge tips på hur 
 
 
 %%%%%%%%%%%%%%%%%%
-%\appendix
+\appendix
 %%%%%%%%%%%%%%%%%%%
-%\chapter{Some extra material}
+\chapter{Extra material}
+\begin{table}[htbp]
+    \centering
+    \caption{Relevant simulation parameters used in COMSOL to achieve
+    figure~\ref{fig:res_Comsol}. The \ce{InAs/HZO/TiN} is part of the sample
+while \ce{Si} is a carrier wafer part of the FLA experimental setup.}\label{tab:app_simparam}
+    \begin{tabular}{crcc}
+        \toprule
+        Layer & Thickness & Doping & Reflectivity \\\midrule
+        \ce{TiN} & \SI{10}{\nano\meter} &~- & 0.41 \\ 
+        \ce{HZO} & \SI{10}{\nano\meter} & 1:1 (\ce{Hf/Zr}) &~- \\ 
+        \ce{InAs} & \SI{280}{\micro\meter} & \SI{1e16}{\per\centi\meter\tothe{3}} &~- \\ 
+        \ce{Si} & \SI{280}{\micro\meter} &~- &~- \\\bottomrule
+    \end{tabular}
+\end{table}
 
 \end{document}
