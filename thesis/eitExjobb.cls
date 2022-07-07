@@ -235,8 +235,10 @@
 \def\Title#1{\gdef\sh@Title{#1}}
 \def\Author#1{\gdef\sh@Author{#1}}
 \def\Supervisor#1{\gdef\sh@Supervisor{#1}}
+\def\CoSupervisor#1{\gdef\sh@CoSupervisor{#1}}
 \def\Advisor#1{\gdef\sh@Supervisor{#1}}  % Backward comaptibility
 \def\Examiner#1{\gdef\sh@Examiner{#1}}
+\def\Info#1{\gdef\sh@Info{#1}}
 \def\Date#1{\gdef\sh@Date{#1}}
 \def\Year#1{\gdef\sh@Year{#1}}
 \def\Company#1{\gdef\sh@Company{#1}}
@@ -244,7 +246,9 @@
 \Title{Title}
 \Author{Author}
 \Supervisor{Supervisor}
+\CoSupervisor{CoSupervisor}
 \Examiner{Examiner}
+\Info{Info}
 \Date{\today}
 \Year{\the\year} %% this year
 \Company{Department of Electrical and Information Technology\\Lund University}
@@ -257,7 +261,9 @@
     \large \sh@Author\\[\baselineskip]
     \large \sh@Company\\[2\baselineskip]
     Supervisor: \sh@Supervisor\\[\baselineskip]
-    Examiner: \sh@Examiner\\[\baselineskip]
+    Co-Supervisor: \sh@CoSupervisor\\[\baselineskip]
+    Examiner: \sh@Examiner\\[2\baselineskip]
+    \sh@Info\\
     \sh@Date
   \end{center}
   \vfill\vfill\strut
