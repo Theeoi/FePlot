@@ -199,39 +199,56 @@ the critical crystallization temperature before the FLA
 flash~\cite{migita2019phase}. Other simulation parameters are tabulated in
 table~\ref{tab:app_simparam} and produce figure~\ref{fig:res_Comsol} showing the
 resulting back and front peak temperature for different pulse energies. The figure also
-includes pyrometer measurements of the back temperature during annealing (green). The
-measured temperatures are in reasonable agreement with the simulations proving
-the accuracy of our model. The discrepancies are attributed to the preheating
-elements being in close proximity to the pyrometer focus area (See figure~\ref{fig:fab_FLAsetup}).
+includes pyrometer measurements of the back temperature during annealing
+(green). The discrepancies on the order of \SI{20}{\kelvin} between simulated
+back peak temperature (black) and the measured values are attributed to a likely
+lower reflectivity of the \ce{TiN} capping layer compared to the ideal values of
+the simulation. Therefore, the model is deemed to be in reasonable agreement
+with the experimental data and gives an estimate of the achieved surface peak temperature.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=.45\linewidth]{fig/COMSOLFlashInt.png}
+    \includegraphics[width=.41\linewidth]{fig/COMSOLFlashInt.png}
     \caption{Simulated back and front peak temperatures of our samples using the
     simulation parameters tabulated in~\ref{tab:app_simparam}. Pyrometer
     measurements of the back temperature measured during annealing (green) confirm
     the accuracy of these simulations.}\label{fig:res_Comsol}
 \end{figure}
 
-These simulations give
-
-\begin{equation}
-    T_{peak} = 495.5 + 16.3 \cdot E_{pulse}
-\end{equation}
+Figure~\ref{fig:res_Comsol} reveal a linear relationship between the pulse
+energy ($E_{pulse}$) and the peak HZO film temperature ($T_{peak}$) for our
+sample and FLA parameters (eq~\ref{eq:app_filmtemp}). This gives a more
+convenient reference going forward using the achieved film temperature rather
+than the pulse energy when describing different samples. The usually reported
+crystallization temperature required to form the ferroelectric orthorhombic
+phase of HZO is in the range of 670~-
+\SI{870}{\kelvin}~\cite{muller2012ferroelectricity, athle2022improved}.
+The simulated peak surface temperatures in the 20~-
+\SI{30}{\joule\per\square\centi\meter} pulse energy range are significantly
+above this critical temperature and should therefore yield a sufficiently high
+peak temperature to achieve ferroelectric properties in the HZO.\@
 
 \section{Sample Specifications and Characterization}
-In addition to the samples of focus in this work, samples were processed using RTP as the annealing method in paralell with FLA samples. These samples proves as a point of comparison for the characterization of the FLA samples throughout the work. The RTP samples were annealed at a temperature of \SI{600}{\celsius} for 30 seconds. Through the electrical characterization described in Section~\ref{sec:PandE} the remnant polarization ($P_r$), coercive field ($E_c$) and endurance were measured and tabulated in table~\ref{tab:RTPref}.
+As a reference point, samples were processed using rapid thermal processing
+(RTP) as the annealing method in parallell to the FLA samples. These samples
+proves as a point of comparison for the characterization of the FLA samples
+throughout the work. The RTP samples were annealed at a temperature of
+\SI{870}{\kelvin} for 30 seconds. The electrical characterization of these
+samples, as described in Chapter~\ref{ch:char} the remnant polarization ($P_r$), coercive
+field ($E_c$), endurance and defect density ($D_d$) were measured and tabulated in table~\ref{tab:RTPref}.
 
 \begin{table}[htbp]
     \centering
-    \caption{Electrical characteristics for the RTP reference samples measured using a cycling voltage of \SI{3}{\volt}.}\label{tab:RTPref}
+    \caption{Electrical characteristics for the RTP reference samples.}\label{tab:RTPref}
     \begin{tabular}{rlrl}
         \toprule
         \multicolumn{4}{c}{PUND and Endurance}\\\midrule
         Remnant Polarization & $P_r$ & $29.03 \pm 0.21$ & \si{\micro\coulomb/\centi\meter^2}\\
         Coercive Field & $E_c$ & $1.23 \pm 0.18$ & \si{\mega\volt/\centi\meter}\\
-        Endurance & & $0.23 \pm 0.11$ & $10^5$ cycles\\\bottomrule
-        %Defect Density & $D_d$ & $10.0 \pm 1.0$ & $10^{12}$\si{/cm^2} \\
+        Endurance & & $23 \pm 11$ & $10^3$ cycles\\
+        Defect Density & $D_d$ & $10.0 \pm 1.0$ &
+        $10^{12}$ \si{\per\square\centi\meter}
+        \\\bottomrule
     \end{tabular}
 \end{table}
 
@@ -329,5 +346,9 @@ while \ce{Si} is a carrier wafer part of the FLA experimental setup.}\label{tab:
         \ce{Si} & \SI{280}{\micro\meter} &~- &~- \\\bottomrule
     \end{tabular}
 \end{table}
+
+\begin{equation}\label{eq:app_filmtemp}
+    T_{peak} [\si{\kelvin}] = 495.5 + 16.3 \cdot E_{pulse} [\si{\joule\per\square\centi\meter}]
+\end{equation}
 
 \end{document}
