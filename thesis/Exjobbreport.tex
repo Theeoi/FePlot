@@ -276,10 +276,10 @@ samples are summarized in table~\ref{tab:FlashIntC}.
 \end{table}
 
 Resulting electrical characterization from sample series 1 are shown in
-figure~\ref{fig:res_FlashIntC}. Samples annealed with an intensity less than
+figure~\ref{fig:res_IntC}. Samples annealed with an intensity less than
 \SI{25}{\joule/\centi\meter^2} did not show any ferroelectric behaviour and are
 hence omitted from some of the figures. As shown in
-figure~\ref{fig:res_FlashIntC}a and b the PUND characteristics show
+figure~\ref{fig:res_IntC}a and b the PUND characteristics show
 ferroelectric behaviour with a strong dependance on peak film temperature.
 However, for higher peak temperatures these characteristics decline to both
 weaker polarization response and higher coercive fields which is undesireable.
@@ -290,16 +290,30 @@ crystalize the entire HZO film while not inducing other effects to reduce the
 ferroelectric response.
 
 Although reduced PUND characteristics were found for these samples,
-figure~\ref{fig:res_FlashIntC}c show an increased endurance for the flash
+figure~\ref{fig:res_IntCEndu} show an increased endurance for the flash
 annealed samples compared to the RTP reference.
 
 \begin{figure}[htbp]
     \centering
-    (a)\includegraphics[width=.45\textwidth]{example-image}
-    (b)\includegraphics[width=.45\textwidth]{example-image}
-    (c)\includegraphics[width=.45\textwidth]{example-image}
-    (d)\includegraphics[width=.45\textwidth]{example-image}
-    \caption{Figure showing all measured data from an intensity-varied batch. Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash. RTP reference is included for Endurance and Defect Density.}\label{fig:res_FlashIntC}
+    \begin{subfigure}{.4\linewidth}
+        \includegraphics[width=\linewidth]{fig/FlashIntC_PrTrends.png}
+        \caption{}\label{fig:res_IntCPr}
+    \end{subfigure}
+    \begin{subfigure}{.4\linewidth}
+        \includegraphics[width=\linewidth]{fig/FlashIntC_EcTrends.png}
+        \caption{}\label{fig:res_IntCEc}
+    \end{subfigure}
+    \begin{subfigure}{.4\linewidth}
+        \includegraphics[width=\linewidth]{fig/FlashIntC_EnduTrends.png}
+        \caption{}\label{fig:res_IntCEndu}
+    \end{subfigure}
+    \begin{subfigure}{.4\linewidth}
+        \includegraphics[width=\linewidth]{fig/FlashIntC_DDTrends.png}
+        \caption{}\label{fig:res_IntCDD}
+    \end{subfigure}
+    \caption{Figure showing all measured data from an intensity-varied batch.
+    Low-doped subtrate, 200C ALD, HZO 1:1, 250C preheat, 5ms flash. RTP
+    reference is included for Endurance and Defect Density.}\label{fig:res_IntC}
 \end{figure}
 
 %\begin{figure}[htbp]
