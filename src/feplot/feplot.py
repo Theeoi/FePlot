@@ -9,6 +9,7 @@ from enum import Enum
 from typing import Any, Literal
 
 import feplot.pyro as pyro
+import feplot.pund as pund
 
 from feplot import __version__
 
@@ -39,7 +40,7 @@ class Datatype(Enum):
         paths: tuple[str, ...] | Literal[''] = self.select_file()
 
         if self.type == Datatype.PUND.value:
-            print(f"{self}")
+            pund.main(paths)
         elif self.type == Datatype.ENDU.value:
             print(f"{self}")
         elif self.type == Datatype.UNICV.value:
