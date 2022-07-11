@@ -2,9 +2,11 @@
 
 import argparse
 import pathlib
+import tkinter as tk
+from tkinter import filedialog
 
 from enum import Enum
-from typing import Any
+from typing import Any, Literal
 
 import feplot.pyro as pyro
 
@@ -32,8 +34,10 @@ class Datatype(Enum):
 
     def run(self) -> None:
         """
-        Runs function bases on the Datatype.
+        Gets data files and runs function based on the Datatype.
         """
+        paths: tuple[str, ...] | Literal[''] = self.select_file()
+
         if self.type == Datatype.PUND.value:
             print(f"{self}")
         elif self.type == Datatype.ENDU.value:
@@ -43,9 +47,19 @@ class Datatype(Enum):
         elif self.type == Datatype.BICV.value:
             print(f"{self}")
         elif self.type == Datatype.PYRO.value:
-            pyro.main()
+            pyro.main(paths)
         else:
             raise ValueError(f"The selected datatype is not defined.")
+
+    def select_file(self) -> tuple[str, ...] | Literal['']:
+        tk.Tk().withdraw()
+        paths = filedialog.askopenfilenames(
+                initialdir=".", 
+                title=f"{self.type} file selector", 
+                filetypes=((".dat files", "*.dat"), (".csv files", "*.csv"))
+                )
+
+        return paths
 
 def get_parser() -> argparse.ArgumentParser:
     """
