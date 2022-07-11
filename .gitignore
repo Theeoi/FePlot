@@ -3,8 +3,3 @@
 .coverage
 *.egg*
 build/
-thesis/fig/*.png
-thesis/sources/
-thesis/Exjobbreport.*
-!Exjobbreport.tex
-!Exjobbreport.bib
