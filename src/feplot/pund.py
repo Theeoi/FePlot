@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 
-def get_data(path: str) -> tuple[list[float], ...]:
-    data = ([], [], [])
+import os
+import matplotlib.pyplot as plt
+
+
+def get_data(path: str) -> dict[str, list[float]]:
+    data = {"time": [], "current": [], "voltage": []}
     with open(path, 'r') as file:
         for line in file.readlines():
-            data[0].append(float(line.split(",")[1]))
-            data[1].append(float(line.split(",")[2]))
-            data[2].append(float(line.split(",")[3]))
+            data["time"].append(float(line.split(",")[1]))
+            data["current"].append(float(line.split(",")[2]))
+            data["voltage"].append(float(line.split(",")[3]))
 
     return data
 
