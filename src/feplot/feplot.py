@@ -58,7 +58,7 @@ class Datatype(Enum):
         paths = filedialog.askopenfilenames(
                 initialdir=".", 
                 title=f"{self.type} file selector", 
-                filetypes=((".dat files", "*.dat"), (".csv files", "*.csv"))
+                filetypes=(("All files", "*.*"), (".dat files", "*.dat"), (".csv files", "*.csv"))
                 )
 
         return paths
