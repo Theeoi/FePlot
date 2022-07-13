@@ -1,19 +1,7 @@
-#!/usr/bin/python
-import tkinter as tk
-from tkinter import filedialog
+#!/usr/bin/env python
+
 import numpy as np
 import matplotlib.pyplot as plt
-
-from typing import Literal
-
-def select_file() -> tuple[str, ...] | Literal['']:
-    tk.Tk().withdraw()
-    paths = filedialog.askopenfilenames(
-            initialdir=".", 
-            title="PYRO File Selector", 
-            filetypes=((".dat files", "*.dat"),))
-
-    return paths
 
 def get_data(path: str) -> tuple[list[float], ...]:
     data = ([], [])
@@ -38,8 +26,7 @@ def get_pyro_figure() -> plt.Axes:
 
     return ax
 
-def main() -> None:
-    paths: tuple[str, ...] | Literal[''] = select_file()
+def main(paths: tuple[str, ...]) -> None:
 
     for path in paths:
         pyro_data: tuple[list[float], ...] = get_data(path)
@@ -57,5 +44,3 @@ def main() -> None:
 
     plt.show()
 
-if __name__ == '__main__':
-    main()
