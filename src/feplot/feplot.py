@@ -38,9 +38,10 @@ class Datatype(Enum):
         Gets data files and runs function based on the Datatype.
         """
         paths: tuple[str, ...] | Literal[''] = self.select_file()
+        plotparams = {'raw': True,} # Plot everything by default for dev purposes
 
         if self.type == Datatype.PUND.value:
-            pund.main(paths)
+            pund.main(paths, plotparams)
         elif self.type == Datatype.ENDU.value:
             print(f"{self}")
         elif self.type == Datatype.UNICV.value:
