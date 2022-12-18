@@ -3,3 +3,6 @@
 .coverage
 *.egg*
 build/
+
+.envrc
+.direnv/
